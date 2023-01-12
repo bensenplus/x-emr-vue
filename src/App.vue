@@ -9,11 +9,11 @@ import Editor from './components/Editor.vue';
     <ul>
       <li @click="openDoc(100)">病案首页</li>
       <li @click="openDoc(101)">专业评估表</li>
+      <li @click="openDoc(102)">超声检查</li>
       <br/>
       <li @click="execCommand('form')">表单模式</li>
       <li @click="execCommand('design')">设计模式</li>
       <br/>
-      <li @click="execCommand('preview')">打印预览</li>
       <li @click="execCommand('print')">打印</li>
       <li @click="execCommand('zoomout')">放大</li>
       <li @click="execCommand('zoomin')">缩小</li>
