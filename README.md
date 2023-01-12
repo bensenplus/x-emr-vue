@@ -8,8 +8,7 @@
 
 ## 如何使用
 
-搭建Vue环境,参考[www.vuepress.cn](https://www.vuepress.cn/guide/getting-started.html)
-
+编辑器使用说明参考 [www.x-emr.cn](https://www.x-emr.cn)
 
 ### 安装
 
@@ -28,3 +27,5 @@ npm run dev
 ```sh
 npm run build
 ```
+
+搭建Vue环境,参考 [www.vuepress.cn](https://www.vuepress.cn/guide/getting-started.html)
