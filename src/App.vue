@@ -7,8 +7,8 @@ import Editor from './components/Editor.vue';
     <img alt="Vue logo" class="logo" src="./assets/logo.svg"/>
     <br/>
     <ul>
-      <li @click="openDoc(100)">病案首页</li>
-      <li @click="openDoc(101)">专业评估表</li>
+      <li @click="openDoc(100)">评估表</li>
+      <li @click="openDoc(101)">病案首页</li>
       <li @click="openDoc(102)">超声检查</li>
       <br/>
       <li @click="execCommand('form')">表单模式</li>

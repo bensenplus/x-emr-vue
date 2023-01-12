@@ -1,28 +1,22 @@
-# demo
+## 概要
 
-This template should help get you started developing with Vue 3 in Vite.
+基于HTML5的电子病历编辑器的Vue版演示程序。
 
-## Recommended IDE Setup
+![image]()
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
+## 安装
 
 ```sh
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+### 运行
 
 ```sh
 npm run dev
 ```
 
-### Compile and Minify for Production
+### 编译
 
 ```sh
 npm run build
