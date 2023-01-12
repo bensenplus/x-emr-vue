@@ -2,7 +2,7 @@
 
 基于HTML5的电子病历编辑器的Vue版演示程序。
 
-![image]()
+![image](https://gitee.com/bensenplus/x-emr-vue/raw/master/demo.png)
 
 ## 安装
 
