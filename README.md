@@ -4,7 +4,14 @@
 
 ![image](https://gitee.com/bensenplus/x-emr-vue/raw/master/demo.png)
 
-## 安装
+---
+
+## 如何使用
+
+搭建Vue环境,参考[www.vuepress.cn/)](https://www.vuepress.cn/guide/getting-started.html)
+
+
+### 安装
 
 ```sh
 npm install
