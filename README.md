@@ -8,7 +8,7 @@
 
 ## 如何使用
 
-搭建Vue环境,参考[www.vuepress.cn/)](https://www.vuepress.cn/guide/getting-started.html)
+搭建Vue环境,参考[www.vuepress.cn](https://www.vuepress.cn/guide/getting-started.html)
 
 
 ### 安装
