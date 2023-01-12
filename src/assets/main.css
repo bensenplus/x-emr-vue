@@ -1,17 +1,8 @@
 @import './base.css';
-
-html,body{height:100%;}
 #app {
   padding: 1rem;
   height: 100%;
   font-weight: normal;
-}
-
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
 }
 
 @media (hover: hover) {
@@ -21,12 +12,9 @@ a,
 }
 
 @media (min-width: 1024px) {
-  body {
-    height: 100%;
-  }
-
   #app {
     display: grid;
+    height: 100%;
     grid-template-columns: 1fr 9fr;
   }
 }
