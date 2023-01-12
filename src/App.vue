@@ -4,28 +4,50 @@ import Editor from './components/Editor.vue';
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
+    <img alt="Vue logo" class="logo" src="./assets/logo.svg"/>
+    <br/>
+    <ul>
+      <li @click="openDoc(100)">病案首页</li>
+      <li @click="openDoc(101)">专业评估表</li>
+      <br/>
+      <li @click="execCommand('form')">表单模式</li>
+      <li @click="execCommand('design')">设计模式</li>
+      <br/>
+      <li @click="execCommand('preview')">打印预览</li>
+      <li @click="execCommand('print')">打印</li>
+      <li @click="execCommand('zoomout')">放大</li>
+      <li @click="execCommand('zoomin')">缩小</li>
+      <li @click="execCommand('fullscreen')">全屏</li>
+    </ul>
   </header>
   <main>
       <Editor />
   </main>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
-}
+<script>
+  function openDoc(id){
+    editor.loadHtml('/doc/'+id+'.html', id)
+  }
 
+  function execCommand(cmd){
+    editor.execCommand(cmd)
+  }
+</script>
+
+<style scoped>
 .logo {
   display: block;
   margin: 0;
   width: 60px;
 }
 
+li {
+  cursor: pointer;
+}
+
 @media (min-width: 1024px) {
   main,header {
-    display: flex;
-    place-items: flex-start;
     height: 100%;
   }
 
