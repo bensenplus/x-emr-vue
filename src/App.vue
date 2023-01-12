@@ -5,10 +5,12 @@ import Editor from './components/Editor.vue';
 <template>
   <header>
     <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
+  </header>
+  <main>
     <div class="wrapper">
       <Editor />
     </div>
-  </header>
+  </main>
 </template>
 
 <style scoped>
@@ -18,14 +20,14 @@ header {
 
 .logo {
   display: block;
-  margin: 0 auto 2rem;
+  margin: 0;
+  width: 60px;
 }
 
 @media (min-width: 1024px) {
   header {
     display: flex;
     place-items: center;
-    /* padding-right: calc(var(--section-gap) / 2); */
   }
 
   .logo {
@@ -36,6 +38,12 @@ header {
     display: flex;
     place-items: flex-start;
     flex-wrap: wrap;
+  }
+  main .wrapper {
+    display: flex;
+    place-items: flex-start;
+    flex-wrap: wrap;
+    height: 100%;
   }
 }
 </style>
