@@ -8,16 +8,9 @@
         <script src = "/vender/jquery/jquery.ztree.core.min.js"></script>
         <script src = "/vender/jquery/jquery.ztree.exedit.min.js"></script>
         <script src = "/vender/jquery/jquery.ztree.exhide.min.js"></script>
-        <script src="/vender/requirejs/require.js"></script>
+        <script src="/js/editor.js"></script>
         <script>
-          require.config({
-              baseUrl: '/js',
-              paths: {
-                  'editor': 'editor'
-              }
-          })
-          require(['editor'], function () {
-            parent.editor = editor
+          $(function() {
             let option = {
               mode:'form',
               scale: 1.0,
@@ -25,6 +18,8 @@
             }
             editor.init(option)
             editor.loadHtml('/doc/101.html','100')
+            //用于父页面调用
+            parent.editor = editor
           })
       </script>
     </head>
