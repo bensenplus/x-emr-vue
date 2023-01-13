@@ -8,18 +8,25 @@
         <script src = "/vender/jquery/jquery.ztree.core.min.js"></script>
         <script src = "/vender/jquery/jquery.ztree.exedit.min.js"></script>
         <script src = "/vender/jquery/jquery.ztree.exhide.min.js"></script>
-        <script  data-main="/js/editor"  src="/vender/requirejs/require.js"></script>
+        <script src="/vender/requirejs/require.js"></script>
         <script>
-          let $option = {
-            mode:'form',
-            scale: 1.0,
-            container:'#editor',
-            ready:function(){
-                parent.editor = editor
-                editor.loadHtml('/doc/101.html','100')
+          require.config({
+              baseUrl: '/js',
+              paths: {
+                  'editor': 'editor'
+              }
+          })
+          require(['editor'], function () {
+            parent.editor = editor
+            let option = {
+              mode:'form',
+              scale: 1.0,
+              container:'#editor',
             }
-          }
-        </script>
+            editor.init(option)
+            editor.loadHtml('/doc/101.html','100')
+          })
+      </script>
     </head>
     <body>
         <!-- 默认id 为editor -->
