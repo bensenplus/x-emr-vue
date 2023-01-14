@@ -12,13 +12,22 @@
         <script>
           $(function() {
             let option = {
-              mode:'form',
-              scale: 1.0,
-              container:'#editor',
-            }
+                mode:'form',
+                scale: .9,
+                container:'#editor',
+                toolbar :{
+                    hide: true,
+                }
+              }
             editor.init(option)
-            editor.loadHtml('/doc/101.html','100')
+            if(window.frameElement){
+                let id = window.frameElement.getAttribute('id')
+                parent[id] = editor
+                let doc =  window.frameElement.getAttribute('doc')
+                if(doc) editor.loadHtml(doc,'100')
+            }
             //用于父页面调用
+
             parent.editor = editor
           })
       </script>

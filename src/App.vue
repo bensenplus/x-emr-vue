@@ -1,5 +1,5 @@
 <script setup>
-import Editor from './components/Editor.vue';
+  import Editor from './components/Editor.vue';
 </script>
 
 <template>
@@ -21,17 +21,21 @@ import Editor from './components/Editor.vue';
     </ul>
   </header>
   <main>
-      <Editor />
+      <Editor id="editor1" width="100%" height="50%" doc="/doc/100.html"/>
+      &nbsp;
+      <Editor id="editor2" width="49%"  height="50%" doc="/doc/101.html"/>
+      &nbsp;
+      <Editor id="editor3" width="49%"  height="50%" doc="/doc/102.html"/>
   </main>
 </template>
 
 <script>
   function openDoc(id){
-    editor.loadHtml('/doc/'+id+'.html', id)
+    editor1.loadHtml('/doc/'+id+'.html', id)
   }
 
   function execCommand(cmd){
-    editor.execCommand(cmd)
+    editor1.execCommand(cmd)
   }
 </script>
 
