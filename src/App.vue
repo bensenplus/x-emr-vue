@@ -22,10 +22,9 @@
   </header>
   <main>
       <Editor id="editor1" width="100%" height="50%" doc="/doc/100.html"/>
+      <Editor id="editor2" width="50%"  height="50%" doc="/doc/101.html"/>
       &nbsp;
-      <Editor id="editor2" width="49%"  height="50%" doc="/doc/101.html"/>
-      &nbsp;
-      <Editor id="editor3" width="49%"  height="50%" doc="/doc/102.html"/>
+      <Editor id="editor3" style="width:calc(50% - 15px)"  height="50%" doc="/doc/102.html"/>
   </main>
 </template>
 

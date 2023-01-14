@@ -16,7 +16,7 @@
                 scale: .9,
                 container:'#editor',
                 toolbar :{
-                    hide: true,
+                    hide: false,
                 }
               }
             editor.init(option)
@@ -26,9 +26,6 @@
                 let doc =  window.frameElement.getAttribute('doc')
                 if(doc) editor.loadHtml(doc,'100')
             }
-            //用于父页面调用
-
-            parent.editor = editor
           })
       </script>
     </head>
