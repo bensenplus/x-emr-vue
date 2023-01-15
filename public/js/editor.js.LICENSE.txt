@@ -70,41 +70,6 @@ OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-/*!
- * Sizzle CSS Selector Engine v2.3.6
- * https://sizzlejs.com/
- *
- * Copyright JS Foundation and other contributors
- * Released under the MIT license
- * https://js.foundation/
- *
- * Date: 2021-02-16
- */
-
-/*!
- * jQuery JavaScript Library v3.6.0
- * https://jquery.com/
- *
- * Includes Sizzle.js
- * https://sizzlejs.com/
- *
- * Copyright OpenJS Foundation and other contributors
- * Released under the MIT license
- * https://jquery.org/license
- *
- * Date: 2021-03-02T17:08Z
- */
-
-/** @license
-jSignature v2 SVG export plugin.
-
-*/
-
-/** @license
-jSignature v2 jSignature's Undo Button and undo functionality plugin
-
-*/
-
 /** @preserve
 base64 encoder
 MIT, GPL
@@ -116,13 +81,5 @@ http://phpjs.org/functions/base64_encode
 +   bugfixed by: Pellentesque Malesuada
 +   improved by: Kevin van Zonneveld (http://kevin.vanzonneveld.net)
 +   improved by: Rafal Kukawski (http://kukawski.pl)
-
-*/
-
-/** @preserve
-jSignature v2 "${buildDate}" "${commitID}"
-Copyright (c) 2012 Willow Systems Corp http://willow-systems.com
-Copyright (c) 2010 Brinley Ang http://www.unbolt.net
-MIT License <http://www.opensource.org/licenses/mit-license.php>
 
 */
