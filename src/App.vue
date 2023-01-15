@@ -27,8 +27,7 @@
   <main>
       <Editor id="editor1" width="100%" height="50%" doc="/doc/100.html"/>
       <Editor id="editor2" width="50%"  height="50%" doc="/doc/101.html"/>
-      &nbsp;
-      <Editor id="editor3" style="width:calc(50% - 15px)"  height="50%" doc="/doc/102.html"/>
+      &nbsp;<Editor id="editor3" style="width:calc(50% - 15px)"  height="50%" doc="/doc/102.html"/>
   </main>
 </template>
 
@@ -39,6 +38,8 @@
 
   function execCommand(cmd){
     editor1.execCommand(cmd)
+    editor2.execCommand(cmd)
+    editor3.execCommand(cmd)
   }
 </script>
 

@@ -11,12 +11,8 @@
                     height: '300px',
                     id:'editor',
                     frameborder: 0
-               },
-               editor: null
+               }
           }
-     },
-     mounted() {
-        
      }
     }
 </script>

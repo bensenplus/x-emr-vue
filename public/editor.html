@@ -17,7 +17,18 @@
                 container:'#editor',
                 toolbar :{
                     hide: false,
-                }
+                    file : {hide : true},
+                    start : {hide : false},
+                    insert : {hide: true},
+                    revision : {hide: false},
+                    view : {hide: true},
+                    layout: {hide:false},
+                    help : {hide: false}
+                },
+                statusbar : {
+                    hide: false
+                },
+                disableCommand:[]
               }
             editor.init(option)
             if(window.frameElement){
