@@ -1,3 +1,18 @@
 <template>
-     <iframe id="editor" src="editor.html" width="100%" height="100%"></iframe>
+     <iframe src="editor.html" v-bind="objectOfAttrs"></iframe>
 </template>
+
+<script>
+    export default {
+     data() {
+          return {
+               objectOfAttrs:{
+                    width: '300px',
+                    height: '300px',
+                    id:'editor',
+                    frameborder: 0
+               }
+          }
+     }
+    }
+</script>
