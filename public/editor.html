@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="shortcut icon" href="/favicon.svg" type="image/svg+xml"/>
-        <link rel='stylesheet' href='/stylesheets/editor.css' />
-        <link rel="stylesheet" href="/vender/jquery/zTreeStyle/zTreeStyle.css" type="text/css">
-        <script src = "/vender/jquery/jquery.js"></script>
-        <script src = "/vender/jquery/jquery.ztree.core.min.js"></script>
-        <script src = "/vender/jquery/jquery.ztree.exedit.min.js"></script>
-        <script src = "/vender/jquery/jquery.ztree.exhide.min.js"></script>
-        <script src="/js/editor.js"></script>
+        <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml"/>
+        <link rel='stylesheet' href='./stylesheets/editor.css' />
+        <link rel="stylesheet" href="./vender/jquery/zTreeStyle/zTreeStyle.css" type="text/css">
+        <script src = "./vender/jquery/jquery.js"></script>
+        <script src = "./vender/jquery/jquery.ztree.core.min.js"></script>
+        <script src = "./vender/jquery/jquery.ztree.exedit.min.js"></script>
+        <script src = "./vender/jquery/jquery.ztree.exhide.min.js"></script>
+        <script src="./js/editor.js"></script>
         <script>
           $(function() {
             let option = {
@@ -17,7 +17,7 @@
               container:'#editor',
             }
             editor.init(option)
-            editor.loadHtml('/doc/101.html','100')
+            editor.loadHtml('./doc/100.html','100')
             //用于父页面调用
             parent.editor = editor
           })
