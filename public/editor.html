@@ -31,14 +31,12 @@
                 disableCommand:[]
               }
             editor.init(option)
-            editor.loadHtml('./doc/100.html','100')
-            //用于父页面调用
-            parent.editor = editor
+            //如果是iframe
             if(window.frameElement){
                 let id = window.frameElement.getAttribute('id')
                 parent[id] = editor
                 let doc =  window.frameElement.getAttribute('doc')
-                if(doc) editor.loadHtml(doc,'100')
+                if(doc) editor.loadHtml(doc, '100')
             }
           })
       </script>
