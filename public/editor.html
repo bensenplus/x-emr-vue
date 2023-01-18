@@ -3,40 +3,50 @@
     <head>
         <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml"/>
         <link rel='stylesheet' href='./stylesheets/editor.css' />
-        <link rel="stylesheet" href="./vender/jquery/zTreeStyle/zTreeStyle.css" type="text/css">
+        <link rel="stylesheet" href="./vender/jquery/zTreeStyle/zTreeStyle.css" type="text/css">  <!--仅设计模式需要引用-->
         <script src = "./vender/jquery/jquery.js"></script>
-        <script src = "./vender/jquery/jquery.ztree.core.min.js"></script>
-        <script src = "./vender/jquery/jquery.ztree.exedit.min.js"></script>
-        <script src = "./vender/jquery/jquery.ztree.exhide.min.js"></script>
-        <script src="./js/editor.js"></script>
+        <script src = "./vender/jquery/jquery.ztree.core.min.js"></script> <!--仅设计模式需要引用-->
+        <script src = "./vender/jquery/jquery.ztree.exedit.min.js"></script><!--仅设计模式需要引用-->
+        <script src = "./vender/jquery/jquery.ztree.exhide.min.js"></script><!--仅设计模式需要引用-->
+        <script src="./js/editor.js"></script> 
         <script>
           $(function() {
+            //配置项可以不设置，会使用默认设置
             let option = {
-                mode:'form',
-                scale: .9,
-                container:'#editor',
+                baseUrl:'/',                    //基本URL
+                saveUrl:'/doc/',                //保存URL
+                pdfUrl:'/pdf',                  //pdf下载地址
+                mode:'form',                    //form:表单模式，design:设计模式
+                scale: .9,                      //缩放比例
+                container:'#editor',            //编辑器容器对象ID
                 toolbar :{
-                    hide: false,
-                    file : {hide : true},
-                    start : {hide : false},
-                    insert : {hide: true},
-                    revision : {hide: false},
-                    view : {hide: true},
-                    layout: {hide:false},
-                    help : {hide: false}
+                    hide: false,                //是否隐藏工具栏
+                    file : {hide : true},       //是否隐藏文件
+                    start : {hide : false},     //是否隐藏开始
+                    insert : {hide: true},      //是否隐藏插入
+                    revision : {hide: false},   //是否隐藏审阅
+                    view : {hide: true},        //是否隐藏视图
+                    layout: {hide:false},       //是否隐藏页面
+                    help : {hide: false}        //是否隐藏帮助
                 },
                 statusbar : {
-                    hide: false
+                    hide: false                 //是否隐藏状态栏
                 },
-                disableCommand:[]
-              }
+                disableCommand:['new','open']        //屏蔽文档命令，同时隐藏对应工具栏按钮
+            }
+            //编辑器初始化
             editor.init(option)
-            //如果是iframe
+
+            //用于父页面调用
             if(window.frameElement){
                 let id = window.frameElement.getAttribute('id')
                 parent[id] = editor
                 let doc =  window.frameElement.getAttribute('doc')
-                if(doc) editor.loadHtml(doc, '100')
+                //指定文档ID加载病历文档
+                if(doc) editor.loadHtml(doc,'100').then(function(){
+                    //设置文本
+                    editor.setFieldTextById('patientName', '蒋华良')
+                })
             }
           })
       </script>
