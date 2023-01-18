@@ -12,54 +12,63 @@
       <li @click="openDoc(101)">病案首页</li>
       <li @click="openDoc(102)">超声检查</li>
     </ul>
-    <br>
     命令
     <ul>
-      <li @click="execCommand('form')">表单模式</li>
-      <li @click="execCommand('design')">设计模式</li>
-      <li @click="execCommand('print')">打印</li>
-      <li @click="execCommand('preview')">打印预览</li>
-      <li @click="execCommand('zoomout')">放大</li>
-      <li @click="execCommand('zoomin')">缩小</li>
-      <li @click="execCommand('fullscreen')">全屏</li>
+      <li @click="exec('form')">表单模式</li>
+      <li @click="exec('design')">设计模式</li>
+      <li @click="exec('print')">打印</li>
+      <li @click="exec('preview')">打印预览</li>
+      <li @click="exec('zoomout')">放大</li>
+      <li @click="exec('zoomin')">缩小</li>
+      <li @click="exec('fullscreen')">全屏</li>
     </ul>
   </header>
   <main>
-      <Editor id="editor1" width="100%" height="50%" doc="/doc/100.html"/>
-      <Editor id="editor2" width="50%"  height="50%" doc="/doc/101.html"/>
-      &nbsp;<Editor id="editor3" style="width:calc(50% - 15px)"  height="50%" doc="/doc/102.html"/>
+      <Editor id="editor1" doc="/doc/100.html"/>
+      <Editor id="editor2" doc="/doc/101.html"/>
+      <Editor id="editor3" doc="/doc/102.html"/>
   </main>
 </template>
 
 <script>
+
   function openDoc(id){
     editor1.loadHtml('/doc/'+id+'.html', id)
   }
 
-  function execCommand(cmd){
+  function exec(cmd){
     editor1.execCommand(cmd)
-    editor2.execCommand(cmd)
-    editor3.execCommand(cmd)
   }
 </script>
 
 <style scoped>
-.logo {
-  display: block;
-  margin: 0;
-  width: 60px;
-}
 
 li {
   cursor: pointer;
 }
 
-@media (min-width: 1024px) {
-  main,header {
+
+.logo {
+    margin: 0 2rem 0 0;
+}
+
+main {
     height: 100%;
-  }
+}
+
+#editor1 { width: 100%; height: 50%;}
+#editor2 { width: 50%; height: 50%;}
+#editor3 { width: calc(50% - 6px); height: 50%; margin-left: 6px;}
+
+
+@media (max-width: 1024px) {
+ul,li {display: inline-block; padding-left: 15px;}
+#editor1 { width: 100%; height: 100%;}
+#editor2 { width: 100%; height: 100%;}
+#editor3 { width: 100%; height: 100%; margin:0}
 
   .logo {
+    width: 50px;
     margin: 0 2rem 0 0;
   }
 }

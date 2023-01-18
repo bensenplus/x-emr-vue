@@ -40,8 +40,9 @@
             //用于父页面调用
             if(window.frameElement){
                 let id = window.frameElement.getAttribute('id')
-                parent[id] = editor
                 let doc =  window.frameElement.getAttribute('doc')
+                
+                parent[id] = editor
                 //指定文档ID加载病历文档
                 if(doc) editor.loadHtml(doc,'100').then(function(){
                     //设置文本
