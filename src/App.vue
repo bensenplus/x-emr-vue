@@ -22,6 +22,8 @@
       <li @click="exec('zoomin')">缩小</li>
       <li @click="exec('fullscreen')">全屏</li>
     </ul>
+    <br><br>
+    <a href="https://gitee.com/bensenplus/x-emr-vue" target="_blank">源码下载</a>
   </header>
   <main>
       <Editor id="editor1" doc="/doc/100.html"/>
@@ -46,8 +48,9 @@
 li {
   cursor: pointer;
 }
-
-
+a {
+  color: #ccc;
+}
 .logo {
     margin: 0 2rem 0 0;
 }
