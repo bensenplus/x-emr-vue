@@ -21,18 +21,19 @@
                 container:'#editor',            //编辑器容器对象ID
                 toolbar :{
                     hide: false,                //是否隐藏工具栏
+                    disableCommand:['template'],        //屏蔽文档命令，同时隐藏对应工具栏按钮
                     file : {hide : false},       //是否隐藏文件
                     start : {hide : false},     //是否隐藏开始
-                    insert : {hide: true},      //是否隐藏插入
+                    insert : {hide: false},      //是否隐藏插入
                     revision : {hide: false},   //是否隐藏审阅
-                    view : {hide: true},        //是否隐藏视图
-                    layout: {hide:false},       //是否隐藏页面
+                    page : {hide: false},        //是否隐藏页面
+                    print : {hide:false},       //是否隐藏打印
+                    export : {hide:false},       //是否隐藏导出
                     help : {hide: false}        //是否隐藏帮助
                 },
                 statusbar : {
                     hide: false                 //是否隐藏状态栏
-                },
-                disableCommand:['new','open']        //屏蔽文档命令，同时隐藏对应工具栏按钮
+                }
             }
             //编辑器初始化
             editor.init(option)
