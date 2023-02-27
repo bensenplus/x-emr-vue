@@ -20,6 +20,8 @@
       <li @click="exec('preview')">打印预览</li>
       <li @click="exec('zoomout')">放大</li>
       <li @click="exec('zoomin')">缩小</li>
+      <li @click="exec('previewpdf')">预览PDF</li>
+      <li @click="exec('exportpdf')">导出PDF</li>
       <li @click="exec('fullscreen')">全屏</li>
     </ul>
     <br><br>
