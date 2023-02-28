@@ -14,25 +14,25 @@
             //配置项可以不设置，会使用默认设置
             let option = {
                 baseUrl:'./',                    //基本URL
-                saveUrl:'/doc/',                //保存URL
+                saveUrl:'/doc/',                 //保存URL
                 pdfUrl:'https://www.x-emr.cn/pdf/post',  //pdf生成服务
-                mode:'form',                    //form:表单模式，design:设计模式
-                scale: .9,                      //缩放比例
-                container:'#editor',            //编辑器容器对象ID
+                mode:'form',                     //form:表单模式，design:设计模式
+                scale: .9,                       //缩放比例
+                container:'#editor',             //编辑器容器对象ID
                 toolbar :{
-                    hide: false,                //是否隐藏工具栏
-                    disableCommand:['template'],        //屏蔽文档命令，同时隐藏对应工具栏按钮
+                    hide: false,                 //是否隐藏工具栏
+                    disableCommand:['template'], //屏蔽文档命令，同时隐藏对应工具栏按钮
                     file : {hide : false},       //是否隐藏文件
-                    start : {hide : false},     //是否隐藏开始
+                    start : {hide : false},      //是否隐藏开始
                     insert : {hide: false},      //是否隐藏插入
-                    revision : {hide: false},   //是否隐藏审阅
+                    revision : {hide: false},    //是否隐藏审阅
                     page : {hide: false},        //是否隐藏页面
-                    print : {hide:false},       //是否隐藏打印
+                    print : {hide:false},        //是否隐藏打印
                     export : {hide:false},       //是否隐藏导出
-                    help : {hide: false}        //是否隐藏帮助
+                    help : {hide: false}         //是否隐藏帮助
                 },
                 statusbar : {
-                    hide: false                 //是否隐藏状态栏
+                    hide: false                  //是否隐藏状态栏
                 }
             }
             //编辑器初始化
