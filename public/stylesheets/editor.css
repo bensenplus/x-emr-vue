@@ -57,6 +57,13 @@ input[type="number"] {
     border-bottom: 2px solid #09f;
 }
 
+#_tool-tab span.disable,
+#_tool-panel-head span.disable {
+    font-weight: normal;
+    border-bottom: none;
+    color: lightgray;
+}
+
 #_template-panel li{
     cursor: pointer;
 }
@@ -71,7 +78,7 @@ input[type="number"] {
 }
 
 .tool-contain {
-    display:flex;
+    display: flex;
     overflow: hidden;
     align-items: center;
     background: #fff;
@@ -331,6 +338,21 @@ input[type="number"] {
 
 .table-panel .table-row .table-cel:last-child {
     margin-right: 0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 60px 140px;
+    grid-gap: 10px;
+    /* background-color: #fff; */
+    padding: 10px;
+}
+
+.grid-container > label {
+    text-align: right;
+}
+.grid-container > div {
+    text-align: left;
 }
 
 .icons-16 {
