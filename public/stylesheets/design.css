@@ -50,6 +50,7 @@ a {
     outline: none;
     text-decoration: none;
     color: #000;
+    min-height: 20px;
 }
 
 a.input {
@@ -59,22 +60,25 @@ a.input {
 }
 
 a.input:focus {
-    color: black;
     background-color: #aff;
 }
 
-/* a.input:before {
+a.input:before {
     content: "[";
-    color: blue
+    color: blue;
 }
 
 .input:after {
     content: "]";
     color: blue
-} */
+}
 
 a.blank {
     color: lightgray;
+}
+
+.input[contenteditable=false]{
+    background-color: white;
 }
 
 .white-blank {
@@ -108,7 +112,7 @@ group{
     outline: 1px solid #ccc;
 }
 
-#_dropdownbox {
+#_dropdownbox, #_datalist {
     list-style: none;
     position: absolute;
     max-height: 300px;
@@ -123,7 +127,7 @@ group{
     padding: 1px 0;
 }
 
-#_dropdownbox > li {
+#_dropdownbox> li, #_datalist > li {
     padding: 0 10px;
     font-size: 14px;
     line-height: 1.5;
@@ -131,7 +135,7 @@ group{
     align-items: center;
 }
 
-#_dropdownbox > li:hover {
+#_dropdownbox > li:hover, #_datalist > li:hover {
     background: lightgray;
 }
 

@@ -47,6 +47,7 @@ a {
     outline: none;
     text-decoration: none;
     color: #000;
+    min-height: 20px;
 }
 
 a.input {
@@ -54,8 +55,11 @@ a.input {
     color: black;
 }
 
+.input[contenteditable=false]{
+    background-color: white;
+}
+
 a.input:focus {
-    color: black;
     background-color: #aff;
 }
 
@@ -96,7 +100,7 @@ td {
     height: 24px;
 }
 
-#_dropdownbox {
+#_dropdownbox, #_datalist {
     list-style: none;
     position: absolute;
     max-height: 300px;
@@ -111,7 +115,7 @@ td {
     padding: 1px 0;
 }
 
-#_dropdownbox > li {
+#_dropdownbox> li, #_datalist > li {
     padding: 0 10px;
     font-size: 14px;
     line-height: 1.5;
@@ -119,7 +123,7 @@ td {
     align-items: center;
 }
 
-#_dropdownbox > li:hover {
+#_dropdownbox > li:hover, #_datalist > li:hover {
     background: lightgray;
 }
 
