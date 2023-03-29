@@ -266,7 +266,7 @@ group{
     text-align: center;
     white-space:nowrap;
     top: 20px; 
-    left: 0;
+    left: 50%;
     padding: 0 5px 1px;
     font-size: 11px;
     color: #fff!important;
@@ -274,8 +274,6 @@ group{
     background: #ff6969;
     z-index: 1;
     border-radius: 5px;
-    -webkit-box-shadow: 0 5px 10px #dedede;
-    box-shadow: 0 5px 10px #dedede;
     user-select: none;
     -webkit-user-select: none;
 }

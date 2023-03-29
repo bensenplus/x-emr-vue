@@ -262,8 +262,8 @@ td {
     background: #ff6969;
     z-index: 1;
     border-radius: 5px;
-    -webkit-box-shadow: 0 5px 10px #dedede;
-    box-shadow: 0 5px 10px #dedede;
+    /* -webkit-box-shadow: 0 5px 10px #dedede; */
+    /* box-shadow: 0 5px 10px #dedede; */
     user-select: none;
     -webkit-user-select: none;
 }

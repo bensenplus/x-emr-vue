@@ -359,6 +359,31 @@ input[type="number"] {
     border-top:1px solid #aaa;
 }
 
+#_path{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    position:absolute;
+    bottom:5px;
+    font-size: 9px;
+}
+
+#_path div{
+   border: 1px solid #aaa;
+   border-radius: 3px;
+   padding: 2px;
+   margin: 2px;
+   cursor: pointer;
+}
+
+#_path div:last-child{
+    background-color: #aaa;
+}
+
+#_path div:hover{
+    background-color: #f99;
+}
+
 .icons-16 {
     vertical-align: middle;
     display: inline-block;
