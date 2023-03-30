@@ -13,12 +13,20 @@
           $(function() {
             //配置项可以不设置，会使用默认设置
             let option = {
-                baseUrl:'./',                    //基本URL
-                saveUrl:'/doc/',                 //保存URL
-                pdfUrl:'https://www.x-emr.cn/pdf/post',  //pdf生成服务
                 mode:'form',                     //form:表单模式，design:设计模式
                 scale: .9,                       //缩放比例
                 container:'#editor',             //编辑器容器对象ID
+                baseUrl:'./',                    //基本URL
+                saveUrl:'/doc/',                 //保存URL
+                pdfUrl:'https://www.x-emr.cn/pdf/post',  //pdf生成服务
+                dictionary:{                //知识库
+                    treeUrl:'https://www.x-emr.cn/dicttree',    //树结构数据URL
+                    itemUrl: 'https://www.x-emr.cn/dictitem'    //项数据URL，点击树节点传入节点id, 如： dictitem?id=1001
+                },
+                referance:{                 //引用项
+                    treeUrl:'https://www.x-emr.cn/refertree',   //树结构数据URL
+                    itemUrl: 'https://www.x-emr.cn/referitem'   //项数据URL，点击树节点传入节点id, 如： dictitem?id=1001
+                },
                 toolbar :{
                     hide: false,                 //是否隐藏工具栏
                     disableCommand:['template'], //屏蔽文档命令，同时隐藏对应工具栏按钮

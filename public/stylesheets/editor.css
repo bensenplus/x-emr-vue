@@ -360,11 +360,14 @@ input[type="number"] {
 }
 
 #_path{
+    background-color: #e6e6e6;
+    border-top: 1px solid #aaa;
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     position:absolute;
-    bottom:5px;
+    bottom:0px;
+    padding: 10px 0;
     font-size: 9px;
 }
 
@@ -377,11 +380,11 @@ input[type="number"] {
 }
 
 #_path div:last-child{
-    background-color: #aaa;
+    font-weight: bold;
 }
 
 #_path div:hover{
-    background-color: #f99;
+    border-color: red;
 }
 
 .icons-16 {
