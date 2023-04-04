@@ -39,10 +39,18 @@ input[type="number"] {
     text-align: right;
 }
 
+input[readonly=true] {
+    background: #eee;
+}
+
+#_tool-panel-head {
+    display: flex;
+}
+
 #_tool-tab span,
 #_tool-panel-head span {
     line-height: 25px;
-    margin: auto 10px;
+    margin: auto 8px;
     font-size: 14px;
 }
 
@@ -350,6 +358,7 @@ input[type="number"] {
 .grid-container > label {
     text-align: right;
 }
+
 .grid-container > div {
     text-align: left;
 }
@@ -359,32 +368,25 @@ input[type="number"] {
     border-top:1px solid #aaa;
 }
 
+#_style-list{
+    padding: 10px;
+    border-top:1px solid #aaa;
+    grid-template-columns:auto auto; 
+    grid-gap: 5px;
+}
+
 #_path{
-    background-color: #e6e6e6;
-    border-top: 1px solid #aaa;
     display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    position:absolute;
-    bottom:0px;
-    padding: 10px 0;
-    font-size: 9px;
 }
 
 #_path div{
-   border: 1px solid #aaa;
-   border-radius: 3px;
-   padding: 2px;
-   margin: 2px;
+   padding: 0 5px;
    cursor: pointer;
 }
 
-#_path div:last-child{
-    font-weight: bold;
-}
-
 #_path div:hover{
-    border-color: red;
+    background: lightgray;
+    font-weight: bold;
 }
 
 .icons-16 {

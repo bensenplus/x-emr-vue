@@ -64,12 +64,12 @@ a.input:focus {
 }
 
 a.input:before {
-    content: "[";
+    content: "{";
     color: blue;
 }
 
 .input:after {
-    content: "]";
+    content: "}";
     color: blue
 }
 
