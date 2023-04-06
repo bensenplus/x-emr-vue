@@ -369,8 +369,7 @@ input[readonly=true] {
 }
 
 #_style-list{
-    padding: 10px;
-    border-top:1px solid #aaa;
+    margin: 0 0 20px 0;
     grid-template-columns:auto auto; 
     grid-gap: 5px;
 }

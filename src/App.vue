@@ -14,6 +14,7 @@
     </ul>
     命令
     <ul>
+      <li @click="exec('readonly')">只读模式</li>
       <li @click="exec('form')">表单模式</li>
       <li @click="exec('design')">设计模式</li>
       <li @click="exec('print')">打印</li>
