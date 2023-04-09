@@ -1,22 +1,18 @@
 <template>
      <lay-container>
-     <lay-tab v-model="current">
+     <lay-tab v-model="currentTab">
           <lay-tab-item title="编辑器" id="1">
-               <Editor id='doc1' doc="/doc/101.html"></Editor>
+               <Editor id='doc1' height="400px" doc="/doc/102.html" @DocLoaded="onDocLoaded"></Editor>
                <lay-row space="10">
-                    <lay-col md="4" sm="12" xs="24">
-                         <lay-input :allow-clear="true" v-model="patientName" placeholder="请输入患者姓名"></lay-input>
+                    <lay-col md="3" sm="12" xs="24">
+                         <lay-input :allow-clear="true" v-model="patientName" placeholder="患者姓名" @change="getData()"></lay-input>
                     </lay-col>
-                    <lay-col md="4" sm="12" xs="24">
-                         <lay-button @click="setPatientName()">设置</lay-button>
+                    <lay-col md="3" sm="12" xs="24">
+                         <lay-input :allow-clear="true" v-model="sex" placeholder="患者性别" @change="getData()"></lay-input>
                     </lay-col>
-               </lay-row>
-               <lay-row space="10">
-                    <lay-col md="4" sm="12" xs="24">
-                         <lay-button @click="getJsonData()">getJsonData</lay-button>
-                    </lay-col>
-                    <lay-col md="20" sm="12" xs="24">
-                         <lay-textarea rows="10" v-model="json"></lay-textarea>
+                    <lay-col md="6" sm="12" xs="24"></lay-col>
+                    <lay-col md="12" sm="12" xs="24">
+                         <lay-textarea rows="12" v-model="json"></lay-textarea>
                     </lay-col>
                </lay-row>
           </lay-tab-item>
@@ -30,16 +26,22 @@
 <script setup>
 import { ref } from 'vue'
 
+const currentTab = ref("1")
 const patientName = ref('周杰伦')
+const sex = ref('男')
 const json = ref('')
+var editor;
 
-const setPatientName = () => {
-     doc1.setFieldTextById('patientName', patientName.value)
-}
-const getJsonData = () => {
-     json.value = JSON.stringify(doc1.getJsonData(),null, 4)
+//文档加载完成
+const onDocLoaded = (e) => {
+     editor =  e.editor
+     getData()
 }
 
-const current = ref("1")
+const getData = () => {
+     editor.setFieldTextById('patientName', patientName.value)
+     editor.setFieldTextById('sex', sex.value)
+     json.value = JSON.stringify(editor.getJsonData(),null, 4)
+}
 
 </script>
