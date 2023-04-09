@@ -2,7 +2,7 @@
      <lay-container>
      <lay-tab v-model="current">
           <lay-tab-item title="编辑器" id="1">
-               <Editor id='doc1' doc="/doc/101.html"></Editor>
+               <Editor doc="/doc/101.html" @DocLoaded="onDocLoaded"></Editor>
                <lay-button @click="execCommand('readonly')">只读模式</lay-button>
                <lay-button @click="execCommand('form')">表单模式</lay-button>
                <lay-button @click="execCommand('design')">设计模式</lay-button>
@@ -19,9 +19,14 @@
 
 <script setup>
 import { ref } from 'vue'
+var editor
+//文档加载完成
+const onDocLoaded = (e) => {
+     editor =  e.editor
+}
 
 const execCommand = (cmd) => {
-     doc1.execCommand(cmd)
+     editor.execCommand(cmd)
 }
 const current = ref("1")
 

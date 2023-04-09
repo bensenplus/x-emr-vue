@@ -7,8 +7,8 @@
     theme="light"
     >
       <lay-menu-item id="home">首页</lay-menu-item>
-      <lay-menu-item id="cmd">命令</lay-menu-item>
-      <lay-menu-item id="data">数据</lay-menu-item>
+      <lay-menu-item id="cmd">文档命令</lay-menu-item>
+      <lay-menu-item id="data">病历数据</lay-menu-item>
 
     </lay-menu>
   </template>
