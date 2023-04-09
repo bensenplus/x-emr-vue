@@ -34,8 +34,14 @@ body {
     word-break: break-all;
 }
 
-input[type=checkbox]{
+input{
     font-size: 10pt;
+}
+
+input[disabled]{
+    border: 1px solid #000;
+    background-color:#000;
+    color:#000;
 }
 
 h1,h2,h3 {

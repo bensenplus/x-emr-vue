@@ -369,14 +369,15 @@ input[readonly=true] {
 }
 
 #_style-list{
-    padding: 10px;
-    border-top:1px solid #aaa;
+    margin: 0 0 20px 0;
     grid-template-columns:auto auto; 
     grid-gap: 5px;
 }
 
 #_path{
     display: flex;
+    line-height: 20px;
+    overflow: hidden;
 }
 
 #_path div{
@@ -665,61 +666,11 @@ input[readonly=true] {
     display:flex; align-items:center; position: absolute; bottom:0; width: 100%; border-top:1px solid #ccc;
 }
 
-/* 移动设备 */
-/* @media only screen and (max-width: 1024px) {
-    body {
-        font-size: large;
-    }
-    #_layout {
-        position: relative; top:0; left:0; width: 100%; height: 100%; user-select: none; -webkit-user-select: none;
-    }
-    
-    #_toolbar{
-        position: absolute; width: 120px; z-index:1; background-color: #fff; border: 1px solid#000;
-    }
-
-    .tool-contain {
-        display: none;
-        flex-direction:column;
-        position: absolute;
-        top: 0;
-        left: 120px;
-        overflow: hidden;
-        background: #fff;
-        height: auto;
-        margin:0 3px;
-        border: 1px solid#000;
-    }
-
-    .btn{
-        line-height: 40px;
-        font-size: 30px;
-    }
-
+@media only screen and (max-width: 1024px) {
     #user_info{
-        position:absolute; top: 0px; display:flex;  cursor:pointer; font-size: 25px;
+        display: none;
     }
-
-    #_tool-tab{
-        margin-top: 40px;
-        display: flex;
-        flex-direction:column;
-    }
-    #_tool-tab span, #_tool-panel-head span {
-        line-height: 40px;
-        margin: auto;
-        font-size: 25px;
-    }
-    
     #_toolpanel{
-        display:none; position: absolute; right:0; top:0; width: 240px; height: calc(100% - 76px); scrollbar-width: thin; background:#e6e6e6; border-left:1px solid #ccc;
+        display:none; position: absolute; bottom: 20px; width: 100%; right:auto; top:auto;height:40%; scrollbar-width: thin; background:#e6e6e6; border-left:1px solid #ccc;
     }
-    
-    #_container{
-        position: absolute; top: 0px; width:100%; height: calc(100% - 76px);
-    }
-    
-    #_statusbar{
-        display:flex; align-items:center; position: absolute; bottom:0; width: 100%; border-top:1px solid #ccc;
-    }
-} */
+}
