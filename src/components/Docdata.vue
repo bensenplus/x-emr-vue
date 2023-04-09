@@ -57,12 +57,12 @@ const onDocLoaded = (e) => {
 }
 
 const bindData = () => {
-     json.value = JSON.stringify(editor.getJsonData(),null, 8)
      editor.setFieldTextById('name', patient.value.name)
      editor.setFieldTextById('sex', patient.value.sex)
      editor.setFieldTextById('age', patient.value.age)
      editor.setFieldTextById('unit', patient.value.unit)
      editor.setFieldTextById('check_no', patient.value.checkNo)
+     json.value = JSON.stringify(editor.getJsonData(),null, 8)
 }
 
 </script>
