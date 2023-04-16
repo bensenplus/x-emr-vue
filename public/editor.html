@@ -18,15 +18,6 @@
                 container:'#editor',             //编辑器容器对象ID
                 baseUrl:'./',                    //基本URL
                 saveUrl:'/doc/',                 //保存URL
-                pdfUrl:'https://www.x-emr.cn/pdf/post',  //pdf生成服务
-                dictionary:{                //知识库
-                    treeUrl:'https://www.x-emr.cn/dicttree',    //树结构数据URL
-                    itemUrl: 'https://www.x-emr.cn/dictitem'    //项数据URL，点击树节点传入节点code 和一级分类type, 如:dictitem?code=1001&type=1
-                },
-                referance:{                 //引用项
-                    treeUrl:'https://www.x-emr.cn/refertree',   //树结构数据URL
-                    itemUrl: 'https://www.x-emr.cn/referitem'   //项数据URL，点击树节点传入节点id, 如： dictitem?id=1001
-                },
                 toolbar :{
                     hide: false,                 //是否隐藏工具栏
                     disableCommand:['template'], //屏蔽文档命令，同时隐藏对应工具栏按钮
@@ -41,7 +32,15 @@
                 },
                 statusbar : {
                     hide: false                  //是否隐藏状态栏
-                }
+                },
+                dictionary: [           //知识库
+                    {type:'symptoms', title: '体征', isParent:true, treeUrl:'https://www.x-emr.cn/dict', itemUrl:'https://www.x-emr.cn/dictitem'},
+                    {type:'signs', title: '症状', isParent:true, treeUrl:'https://www.x-emr.cn/dict', itemUrl:'https://www.x-emr.cn/dictitem'},
+                    {type:'meta', title: '卫生信息数据元', isParent:true, treeUrl:'https://www.x-emr.cn/dict', itemUrl:'https://www.x-emr.cn/dictitem'},
+                    {type:'stand', title: '电子病历数据集', isParent:true, treeUrl:'https://www.x-emr.cn/dict', itemUrl:'https://www.x-emr.cn/dictitem'},
+                    {type:'insutance', title: '国家医保标准', isParent:true, treeUrl:'https://www.x-emr.cn/insutance', itemUrl:'https://www.x-emr.cn/institem'},
+                    {type:'province', title: 'A省数据平台标准', isParent:true, treeUrl:'https://www.x-emr.cn/province', itemUrl:'https://www.x-emr.cn/provitem'},
+                ]
             }
             //编辑器初始化
             editor.init(option)

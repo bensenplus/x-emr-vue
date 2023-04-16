@@ -349,7 +349,7 @@ input[readonly=true] {
 }
 
 .grid-container {
-    margin: 10px 0;
+    padding: 10px 0;
     display: grid;
     grid-template-columns: 60px 140px;
     grid-gap: 10px;
