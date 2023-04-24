@@ -1,9 +1,12 @@
-.pagebreaker{ display:block; height: 15px;}
+.pagebreaker{ 
+    display:block; height: 15px;
+}
 
 @media print {
     .pagebreaker {
       display: none !important;
     }
+
     html, body {
         margin: 0;
     }
@@ -68,7 +71,7 @@ a {
 }
 
 a.input {
-    background-color: #fff;
+    background-color: transparent;
     color: black;
 }
 
