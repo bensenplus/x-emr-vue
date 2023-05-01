@@ -26,6 +26,8 @@ declare module '@vue/runtime-core' {
     LayMenuItem: typeof import('@layui/layui-vue')['LayMenuItem']
     LayRow: typeof import('@layui/layui-vue')['LayRow']
     LaySide: typeof import('@layui/layui-vue')['LaySide']
+    LaySplitPanel: typeof import('@layui/layui-vue')['LaySplitPanel']
+    LaySplitPanelItem: typeof import('@layui/layui-vue')['LaySplitPanelItem']
     LayTab: typeof import('@layui/layui-vue')['LayTab']
     LayTabItem: typeof import('@layui/layui-vue')['LayTabItem']
     LayTextarea: typeof import('@layui/layui-vue')['LayTextarea']

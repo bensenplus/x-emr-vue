@@ -9,6 +9,7 @@
                <lay-button @click="execCommand('print')">打印</lay-button>
                <lay-button @click="execCommand('previewpdf')">PDF</lay-button>
                <lay-button @click="execCommand('previewhtml')">HTML</lay-button>
+               <lay-button @click="execCommand('exportjson')">导出</lay-button>
           </lay-tab-item>
           <lay-tab-item title="代码" id="2">
                

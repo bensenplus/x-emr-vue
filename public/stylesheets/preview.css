@@ -64,31 +64,22 @@ textarea {
     outline: none;
 }
 
-a {
+field {
     outline: none;
     text-decoration: none;
     color: #000;
-}
-
-a.input {
     background-color: transparent;
-    color: black;
 }
 
-/* a.input:focus {
-    color: black;
-    background-color: #aff;
-} */
-
-a.blank {
+field.blank {
     color: transparent;
 }
 
-.white-blank {
+field.white-blank {
     color: rgba(255, 255, 255, 0)
 }
 
-a.error {
+field.error {
     color: red;
 }
 

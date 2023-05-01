@@ -46,46 +46,41 @@ textarea {
     outline: none;
 }
 
-a {
+field {
     outline: none;
     text-decoration: none;
     color: #000;
+    background-color: #eff;
     min-height: 20px;
 }
 
-a.input {
-    background-color: #eff;
-    color: black;
-    cursor:default;
+field[contenteditable=false]{
+    background-color: white;
 }
 
-a.input:focus {
+field:focus {
     background-color: #aff;
 }
 
-a.input:before {
+field:before {
     content: "{";
     color: blue;
 }
 
-.input:after {
+field:after {
     content: "}";
     color: blue
 }
 
-a.blank {
+field.blank {
     color: lightgray;
 }
 
-.input[contenteditable=false]{
-    background-color: white;
-}
-
-.white-blank {
+field.white-blank {
     color: rgba(255, 255, 255, 0)
 }
 
-a.error {
+field.error {
     color: red;
 }
 
