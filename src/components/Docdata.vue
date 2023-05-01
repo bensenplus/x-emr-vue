@@ -2,7 +2,7 @@
      <lay-container>
      <lay-tab v-model="currentTab">
           <lay-tab-item title="编辑器" id="1">
-               <Editor id='doc1' height="400px" doc="/doc/102.html" @DocLoaded="onDocLoaded"></Editor>
+               <Editor id='doc1' height="500vh" doc="/doc/102.html" @DocLoaded="onDocLoaded"></Editor>
 
                <lay-row space="10">
                     <lay-col md="6" sm="12" xs="24">

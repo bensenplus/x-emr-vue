@@ -8,7 +8,7 @@ export default {
           return {
                objectOfAttrs:{
                     width:'100%',
-                    height:'600px',
+                    height:'700vh',
                     frameborder: 0
                }
           }

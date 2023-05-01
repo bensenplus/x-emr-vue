@@ -9,7 +9,9 @@
         <Menu></Menu>
       </lay-side>
       <lay-body>
-        <router-view></router-view>
+        <lay-fullscreen>
+          <router-view></router-view>
+        </lay-fullscreen>
       </lay-body>
     </lay-layout>
   </lay-config-provider>
@@ -25,5 +27,8 @@ html, body,  #app, .layout{
   width: 100%;
   height: 100%;
   color: white;
+}
+.layui-container{
+  height: 100%;
 }
 </style>
