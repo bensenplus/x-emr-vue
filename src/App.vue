@@ -3,32 +3,22 @@
 </script>
 
 <template>
-  <lay-config-provider :theme="theme">
-    <lay-layout class="layout">
-      <lay-side>
+  <div class="common-layout">
+    <el-container>
+      <el-aside width="160px">
         <Menu></Menu>
-      </lay-side>
-      <lay-body>
-        <lay-fullscreen>
-          <router-view></router-view>
-        </lay-fullscreen>
-      </lay-body>
-    </lay-layout>
-  </lay-config-provider>
+      </el-aside>
+      <el-main>
+        <router-view></router-view>
+      </el-main>
+    </el-container>
+  </div>
 </template>
-
-<script>
-  import { ref } from 'vue';
-  const theme = ref('dark')
-</script>
-
 <style>
-html, body,  #app, .layout{
+html, body,  #app{
+  margin: 0; padding: 0;
   width: 100%;
   height: 100%;
   color: white;
-}
-.layui-container{
-  height: 100%;
 }
 </style>
