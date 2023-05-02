@@ -1,7 +1,7 @@
 <template>
      <el-container>
         <el-main>
-          <Editor id='102' doc="/doc/102.html" @DocLoaded="onDocLoaded"></Editor>
+          <Editor id='302' doc="/doc/302.html" @DocLoaded="onDocLoaded"></Editor>
         </el-main>
         <el-aside width="300px">
           <el-form  @change="bindData()">

@@ -15,7 +15,7 @@
         </el-menu-item>
         <el-menu-item index="data">
           <el-icon><document /></el-icon>
-          <span>病历数据</span>
+          <span>数据绑定</span>
         </el-menu-item>
       </el-menu>
 
