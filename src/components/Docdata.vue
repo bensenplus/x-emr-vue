@@ -1,44 +1,35 @@
 <template>
-     <lay-container>
-     <lay-tab v-model="currentTab">
-          <lay-tab-item title="编辑器" id="1">
-               <Editor id='doc1' height="500vh" doc="/doc/102.html" @DocLoaded="onDocLoaded"></Editor>
-
-               <lay-row space="10">
-                    <lay-col md="6" sm="12" xs="24">
-                         <lay-form  :model="patient" :pane="true" @change="bindData()">
-                              <lay-form-item label="姓名">
-                                   <lay-input v-model="patient.name" ></lay-input>
-                              </lay-form-item>
-                              <lay-form-item label="性别">
-                                   <lay-input v-model="patient.sex"></lay-input>
-                              </lay-form-item>
-                              <lay-form-item label="年龄">
-                                   <lay-input v-model="patient.age"></lay-input><lay-input v-model="patient.unit"></lay-input>
-                              </lay-form-item>
-                              <lay-form-item label="检查号">
-                                   <lay-input v-model="patient.checkNo"></lay-input>
-                              </lay-form-item>
-                         </lay-form>
-                    </lay-col>
-                    <lay-col md="6" sm="12" xs="24">
-                    </lay-col>
-                    <lay-col md="12" sm="12" xs="24">
-                         <lay-textarea rows="12" v-model="json"></lay-textarea>
-                    </lay-col>
-               </lay-row>
-          </lay-tab-item>
-          <lay-tab-item title="代码" id="2">
-               
-          </lay-tab-item>
-     </lay-tab>
-     </lay-container>
+     <el-container>
+        <el-main>
+          <Editor id='102' doc="/doc/102.html" @DocLoaded="onDocLoaded"></Editor>
+        </el-main>
+        <el-aside width="300px">
+          <el-form  @change="bindData()">
+                    <el-form-item label="姓名">
+                         <el-col :span="12"><el-input v-model="patient.name" ></el-input></el-col>
+                    </el-form-item>
+                    <el-form-item label="性别">
+                         <el-col :span="6"><el-input v-model="patient.sex"></el-input></el-col>
+                    </el-form-item>
+                    <el-form-item label="年龄">
+                         <el-col :span="6"><el-input v-model="patient.age"></el-input></el-col>
+                         <el-col :span="6"><el-input v-model="patient.unit"></el-input></el-col>
+                    </el-form-item>
+                    <el-form-item label="检查号">
+                         <el-col :span="12"><el-input v-model="patient.checkNo"></el-input></el-col>
+                    </el-form-item>
+                    <el-form-item label="JSON">
+                         <el-input type="textarea" :rows="25" v-model="json" style="font-size: xx-small;"></el-input>
+                    </el-form-item>
+               </el-form>
+        </el-aside>
+      </el-container>
 </template>
 
 <script setup>
+import Editor from './Editor.vue';
 import { ref } from 'vue'
 
-const currentTab = ref("1")
 const patient = ref({
      name:'周杰伦',
      sex: '男',

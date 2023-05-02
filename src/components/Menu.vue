@@ -6,7 +6,7 @@
         @select="handleSelect"
       >
         <el-menu-item index="home">
-          <el-icon><icon-menu /></el-icon>
+          <el-icon><home-filled /></el-icon>
           <span>首页</span>
         </el-menu-item>
         <el-menu-item index="cmd">
@@ -23,6 +23,7 @@
   
   <script lang="ts" setup>
   import router from '../router'
+  import {Document, Menu as IconMenu, HomeFilled} from '@element-plus/icons-vue'
   
   const handleSelect = (key) => {
     router.push(key)
