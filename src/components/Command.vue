@@ -9,12 +9,12 @@
                     <el-button-group style="margin-left: 20px;">
                          <el-button plain type="primary" @click="execCommand('print')">打印</el-button>
                          <el-button plain type="primary" @click="execCommand('preview')">打印预览</el-button>
-                         <el-button plain type="primary" @click="execCommand('previewpdf')">预览PDF</el-button>
-                         <el-button plain type="primary" @click="execCommand('previewhtml')">预览HTML</el-button>
+                         <el-button plain type="primary" @click="execCommand('previewPdf')">预览PDF</el-button>
+                         <el-button plain type="primary" @click="execCommand('previewHtml')">预览HTML</el-button>
                     </el-button-group>
                     <el-button-group style="margin-left: 20px;">
-                         <el-button plain type="primary" @click="execCommand('exportjson')">导出JSON</el-button>
-                         <el-button plain type="primary" @click="execCommand('exportxml')">导出XML</el-button>
+                         <el-button plain type="primary" @click="execCommand('exportJson')">导出JSON</el-button>
+                         <el-button plain type="primary" @click="execCommand('exportXml')">导出XML</el-button>
                     </el-button-group>
                </el-header>
                <el-main>
