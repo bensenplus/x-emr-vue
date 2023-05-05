@@ -107,7 +107,9 @@ group{
     outline: 1px solid #ccc;
 }
 
-#_dropdownbox, #_datalist {
+#_dropdownbox, 
+#_datalist {
+    z-index: 2;
     list-style: none;
     position: absolute;
     max-height: 300px;
