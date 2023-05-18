@@ -11,16 +11,16 @@ export default {
   props: ['file'],
   mounted() {
     let container = document.getElementById('container')
-    
-    axios.get(this.file).then((result) => {
-        console.log(result.data)
-        let editor = new EditorView({
-          doc: result.data,
-          extensions: [basicSetup, javascript()],
-          parent: container
-        })
-    })
-
+    if(this.file){
+      axios.get(this.file).then((result) => {
+          console.log(result.data)
+          let editor = new EditorView({
+            doc: result.data,
+            extensions: [basicSetup, javascript()],
+            parent: container
+          })
+      })
+    }
   }
 }
 </script>

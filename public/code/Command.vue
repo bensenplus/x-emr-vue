@@ -35,6 +35,5 @@ const onDocLoaded = (e) => {
 const execCommand = (cmd) => {
      editor.execCommand(cmd)
 }
-const current = ref("1")
 
 </script>
