@@ -13,8 +13,7 @@ export default {
     let container = document.getElementById('container')
     if(this.file){
       axios.get(this.file).then((result) => {
-          console.log(result.data)
-          let editor = new EditorView({
+          new EditorView({
             doc: result.data,
             extensions: [basicSetup, javascript()],
             parent: container
