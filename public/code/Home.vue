@@ -10,7 +10,7 @@
                <Editor id="302" doc="/doc/302.html"></Editor>
           </el-tab-pane>
           <el-tab-pane label="代码" name="code">
-               <CodeView file="/code/Home.vue"></CodeView>
+               <CodeView file="/doc/157.html"></CodeView>
           </el-tab-pane>
      </el-tabs>
 </template>

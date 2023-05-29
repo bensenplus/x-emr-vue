@@ -46,46 +46,41 @@ textarea {
     outline: none;
 }
 
-a {
+field {
     outline: none;
     text-decoration: none;
     color: #000;
+    background-color: #eff;
     min-height: 20px;
 }
 
-a.input {
-    background-color: #eff;
-    color: black;
-    cursor:default;
+field[contenteditable=false]{
+    background-color: white;
 }
 
-a.input:focus {
+field:focus {
     background-color: #aff;
 }
 
-a.input:before {
+field:before {
     content: "{";
     color: blue;
 }
 
-.input:after {
+field:after {
     content: "}";
     color: blue
 }
 
-a.blank {
+field.blank {
     color: lightgray;
 }
 
-.input[contenteditable=false]{
-    background-color: white;
-}
-
-.white-blank {
+field.white-blank {
     color: rgba(255, 255, 255, 0)
 }
 
-a.error {
+field.error {
     color: red;
 }
 
@@ -104,15 +99,28 @@ td {
     height: 24px;
 }
 
-group{
-    border: 1px dashed gray;
+[tag=true]::before{
+    font-size: xx-small;
+    content: attr(title);
+    cursor: pointer;
+    white-space:nowrap;
+    color: white;
+    padding: 0px 5px;
+	position: absolute;
+    left: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 3px;
 }
 
 #_page {
+    position: relative;
+    z-index: 1;
     outline: 1px solid #ccc;
 }
 
-#_dropdownbox, #_datalist {
+#_dropdownbox, 
+#_datalist {
+    z-index: 2;
     list-style: none;
     position: absolute;
     max-height: 300px;
@@ -141,6 +149,7 @@ group{
 
 #_contexMenu {
     position: absolute;
+    z-index: 2;
     cursor: hand;
     outline: none;
     min-width: 180px;
@@ -169,9 +178,8 @@ group{
     background: lightgray;
 }
 
-#_catalogPanel, 
+#_tagPanel, 
 #_historyPanel {
-    font-size:12px;
     position: fixed;
     top:0;
     z-index: 0;
@@ -188,15 +196,15 @@ group{
 }
 
 #_historyList > li,
-#_catalogList > li {
+#_tagList > li {
     cursor: pointer;
     white-space: nowrap;
-    overflow: hidden;
+    /* overflow: hidden; */
     text-overflow: ellipsis;
 }
 
 #_historyList > li:hover,
-#_catalogList > li:hover {
+#_tagList > li:hover {
     color: #000;
     font-weight: bold;
 }

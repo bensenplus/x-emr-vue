@@ -560,7 +560,7 @@ var $dp, WdatePicker;
 
 	function showPicker(cfg, preLoad) {
 		var nodeName = cfg.el ? cfg.el.nodeName : 'INPUT';
-		if (preLoad || cfg.eCont || new RegExp(/input|textarea|div|span|p|a/ig).test(nodeName)) {
+		if (preLoad || cfg.eCont || new RegExp(/input|textarea|div|field|span|p|a/ig).test(nodeName)) {
 			cfg.elProp = cfg.elProp || nodeName == 'INPUT' ? 'value' : 'innerHTML'
 		} else {
 			return
