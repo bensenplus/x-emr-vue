@@ -1,5 +1,9 @@
 <template>
-  <div id="container" style="width: 100%; height: 100%; color: #000;"></div>
+  <el-collapse>
+    <el-collapse-item title="查看代码">
+      <div id="container" style="width: 100%; height: 100%; background-color: white; color: black;"></div>
+    </el-collapse-item>
+  </el-collapse>
 </template>
 
 <script>
@@ -14,8 +18,8 @@ export default {
     if(this.file){
       axios.get(this.file).then((result) => {
           new EditorView({
-            doc: result.data,
             extensions: [basicSetup, javascript()],
+            doc: result.data,
             parent: container
           })
       })

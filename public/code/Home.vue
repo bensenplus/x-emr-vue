@@ -9,10 +9,8 @@
           <el-tab-pane label="超声检查" name="302">
                <Editor id="302" doc="/doc/302.html"></Editor>
           </el-tab-pane>
-          <el-tab-pane label="代码" name="code">
-               <CodeView file="/doc/157.html"></CodeView>
-          </el-tab-pane>
      </el-tabs>
+     <CodeView file="/code/Home.vue"></CodeView>
 </template>
 
 <script setup>

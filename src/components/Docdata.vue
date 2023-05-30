@@ -1,34 +1,31 @@
 <template>
-<el-tabs v-model="activeName">
-     <el-tab-pane label="数据绑定" name="1">
-          <el-container>
-               <Editor id='302' doc="/doc/302.html" @DocLoaded="onDocLoaded"></Editor>
-               <el-drawer v-model="drawer" title="数据">
-                    <el-form  @change="bindData()">
-                         <el-form-item label="姓名">
-                              <el-col :span="12"><el-input v-model="patient.name" ></el-input></el-col>
-                         </el-form-item>
-                         <el-form-item label="性别">
-                              <el-col :span="6"><el-input v-model="patient.sex"></el-input></el-col>
-                         </el-form-item>
-                         <el-form-item label="年龄">
-                              <el-col :span="6"><el-input v-model="patient.age"></el-input></el-col>
-                              <el-col :span="6"><el-input v-model="patient.unit"></el-input></el-col>
-                         </el-form-item>
-                         <el-form-item label="检查号">
-                              <el-col :span="12"><el-input v-model="patient.checkNo"></el-input></el-col>
-                         </el-form-item>
-                         <el-form-item label="JSON">
-                              <el-input type="textarea" :rows="25" v-model="json" style="font-size: xx-small;"></el-input>
-                         </el-form-item>
-                    </el-form>
-               </el-drawer>
-          </el-container>
-     </el-tab-pane>
-     <el-tab-pane label="代码" name="2">
-          <CodeView file="/code/Docdata.vue"></CodeView>
-     </el-tab-pane>
-</el-tabs>
+     <el-header style="height: 25px;">
+          <el-button plain type="primary"  @click="drawer = true">编辑数据</el-button>
+     </el-header>
+     <el-main>
+          <Editor id='302' doc="/doc/302.html" @DocLoaded="onDocLoaded"></Editor>
+     </el-main>
+     <el-drawer v-model="drawer" title="数据">
+          <el-form  @change="bindData()">
+               <el-form-item label="姓名">
+                    <el-col :span="12"><el-input v-model="patient.name" ></el-input></el-col>
+               </el-form-item>
+               <el-form-item label="性别">
+                    <el-col :span="6"><el-input v-model="patient.sex"></el-input></el-col>
+               </el-form-item>
+               <el-form-item label="年龄">
+                    <el-col :span="6"><el-input v-model="patient.age"></el-input></el-col>
+                    <el-col :span="6"><el-input v-model="patient.unit"></el-input></el-col>
+               </el-form-item>
+               <el-form-item label="检查号">
+                    <el-col :span="12"><el-input v-model="patient.checkNo"></el-input></el-col>
+               </el-form-item>
+               <el-form-item label="JSON">
+                    <el-input type="textarea" :rows="25" v-model="json" style="font-size: xx-small;"></el-input>
+               </el-form-item>
+          </el-form>
+     </el-drawer>
+     <CodeView file="/code/Docdata.vue"></CodeView>
 </template>
 
 <script setup>
@@ -45,7 +42,6 @@ const patient = ref({
 })
 
 const json = ref('')
-const activeName = ref("1")
 const drawer = ref(true)
 
 //文档加载完成
