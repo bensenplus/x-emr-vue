@@ -305,12 +305,6 @@ input[readonly=true] {
     background: #eee;
 }
 
-.cell-table td {
-    width: 10px;
-    height: 10px;
-    border: #000 solid 1px;
-}
-
 .items-container {
     display: inline-flex;
     align-items: center;
@@ -343,9 +337,14 @@ input[readonly=true] {
     pointer-events: none;
 }
 
-.table-panel .table-cel.active {
-    border: 1px solid rgba(73, 145, 242, .2);
-    background: rgba(73, 145, 242, .15);
+.table-cell td {
+    width: 10px;
+    height: 10px;
+    border: #000 solid 1px;
+}
+
+.table-cell .active{
+    background: rgba(0, 0, 255, 0.2);
 }
 
 .table-panel .table-row .table-cel:last-child {

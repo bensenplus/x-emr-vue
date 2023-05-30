@@ -54,7 +54,7 @@ field {
     min-height: 20px;
 }
 
-field[contenteditable=false]{
+field[contenteditable=false] {
     background-color: white;
 }
 
@@ -99,14 +99,14 @@ td {
     height: 24px;
 }
 
-[tag=true]::before{
+[tag=true]::before {
     font-size: xx-small;
     content: attr(title);
     cursor: pointer;
-    white-space:nowrap;
+    white-space: nowrap;
     color: white;
     padding: 0px 5px;
-	position: absolute;
+    position: absolute;
     left: 5px;
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 3px;
@@ -118,7 +118,7 @@ td {
     outline: 1px solid #ccc;
 }
 
-#_dropdownbox, 
+#_dropdownbox,
 #_datalist {
     z-index: 2;
     list-style: none;
@@ -135,7 +135,8 @@ td {
     padding: 1px 0;
 }
 
-#_dropdownbox> li, #_datalist > li {
+#_dropdownbox>li,
+#_datalist>li {
     padding: 0 10px;
     font-size: 14px;
     line-height: 1.5;
@@ -143,7 +144,8 @@ td {
     align-items: center;
 }
 
-#_dropdownbox > li:hover, #_datalist > li:hover {
+#_dropdownbox>li:hover,
+#_datalist>li:hover {
     background: lightgray;
 }
 
@@ -164,7 +166,7 @@ td {
     -webkit-user-select: none;
 }
 
-#_contexMenu > li {
+#_contexMenu>li {
     padding: 0 20px;
     font-size: 12px;
     line-height: 2;
@@ -174,20 +176,20 @@ td {
     justify-content: space-between;
 }
 
-#_contexMenu > li:hover {
+#_contexMenu>li:hover {
     background: lightgray;
 }
 
-#_tagPanel, 
+#_tagPanel,
 #_historyPanel {
     position: fixed;
-    top:0;
+    top: 0;
     z-index: 0;
-    padding:10px;
-    height:100%;
-    width:160px;
+    padding: 10px;
+    height: 100%;
+    width: 160px;
     display: none;
-    text-align:left;
+    text-align: left;
     overflow-x: hidden;
     text-overflow: ellipsis;
     overflow-y: auto;
@@ -195,16 +197,16 @@ td {
     -webkit-user-select: none;
 }
 
-#_historyList > li,
-#_tagList > li {
+#_historyList>li,
+#_tagList>li {
     cursor: pointer;
     white-space: nowrap;
     /* overflow: hidden; */
     text-overflow: ellipsis;
 }
 
-#_historyList > li:hover,
-#_tagList > li:hover {
+#_historyList>li:hover,
+#_tagList>li:hover {
     color: #000;
     font-weight: bold;
 }
@@ -269,15 +271,15 @@ td {
     right: -35px;
 }
 
-.message{
+.message {
     position: absolute;
     text-align: center;
-    white-space:nowrap;
-    top: 20px; 
+    white-space: nowrap;
+    top: 20px;
     left: 50%;
     padding: 0 5px 1px;
     font-size: 11px;
-    color: #fff!important;
+    color: #fff !important;
     max-width: none;
     background: #ff6969;
     z-index: 1;
@@ -286,13 +288,13 @@ td {
     -webkit-user-select: none;
 }
 
-.message::after{
+.message::after {
     content: '';
     width: 0;
-	height: 0;
-	border: 5px solid;
-	position: absolute;
-	top: -10px;
-	left: 5px;
-	border-color: transparent transparent #ff6969;
+    height: 0;
+    border: 5px solid;
+    position: absolute;
+    top: -10px;
+    left: 5px;
+    border-color: transparent transparent #ff6969;
 }
