@@ -1,6 +1,6 @@
 <template>
   <el-collapse>
-    <el-collapse-item title="查看代码">
+    <el-collapse-item title="源码">
       <div id="container" style="width: 100%; height: 100%; background-color:white; color: black;"></div>
     </el-collapse-item>
   </el-collapse>

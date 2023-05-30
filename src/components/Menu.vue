@@ -17,6 +17,10 @@
           <el-icon><document /></el-icon>
           <span>数据绑定</span>
         </el-menu-item>
+          <el-menu-item index="editor">
+            <el-icon><document /></el-icon>
+            <span>editor.html</span>
+          </el-menu-item>
       </el-menu>
 
   </template>
