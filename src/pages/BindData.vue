@@ -50,11 +50,9 @@ const onDocLoaded = (e) => {
 }
 
 const bindData = () => {
-     editor.setBindObject(patient.value.name,'name')
-     editor.setBindObject(patient.value.sex, 'sex')
-     editor.setBindObject(patient.value.age, 'age')
-     editor.setBindObject(patient.value.unit, 'unit')
-     editor.setBindObject(patient.value.checkNo,'check_no')
+     
+     editor.setBindObject(patient.value)
+
      json.value = JSON.stringify(editor.getBindObject(), null, 8)
 }
 
