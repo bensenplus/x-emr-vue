@@ -1,10 +1,7 @@
 <template>
-     <el-header style="height: 25px;">
-          <el-button plain type="primary"  @click="drawer = true">编辑数据</el-button>
-     </el-header>
-     <el-main>
-          <Editor id='302' doc="/doc/302.html" @DocLoaded="onDocLoaded"></Editor>
-     </el-main>
+     <el-switch v-model="drawer" size="large" active-text="显示绑定数据"/>
+     <Editor id='302' doc="/doc/302.html" @DocLoaded="onDocLoaded" style="margin: 10px 0;"></Editor>
+
      <el-drawer v-model="drawer" title="数据">
           <el-form  @change="bindData()">
                <el-form-item label="姓名">
@@ -25,12 +22,12 @@
                </el-form-item>
           </el-form>
      </el-drawer>
-     <CodeView file="/code/Docdata.vue"></CodeView>
+     <CodeView file="/code/BindData.vue"></CodeView>
 </template>
 
 <script setup>
-import Editor from './Editor.vue';
-import CodeView from './CodeView.vue';
+import Editor from '@/components/Editor.vue';
+import CodeView from '@/components/CodeView.vue';
 import { ref } from 'vue'
 
 const patient = ref({
@@ -42,7 +39,7 @@ const patient = ref({
 })
 
 const json = ref('')
-const drawer = ref(true)
+const drawer = ref(false)
 
 //文档加载完成
 var editor

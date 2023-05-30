@@ -1,5 +1,5 @@
 <template>
-     <iframe src="editor.html" v-bind="objectOfAttrs"></iframe>
+  <iframe src="editor.html" v-bind="objectOfAttrs"></iframe>
 </template>
 
 <script>

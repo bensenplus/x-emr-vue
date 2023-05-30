@@ -1,7 +1,7 @@
 import * as VueRouter from 'vue-router'
-import Home from './components/Home.vue'
-import Command from './components/Command.vue'
-import DocData from './components/DocData.vue'
+import Home from './pages/Home.vue'
+import Command from './pages/Command.vue'
+import DocData from './pages/BindData.vue'
 
 const routes = [
     { path: '/', component: Home },

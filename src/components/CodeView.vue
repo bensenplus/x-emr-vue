@@ -1,11 +1,9 @@
 <template>
-  <el-footer>
-    <el-collapse>
-      <el-collapse-item title="查看代码">
-        <div id="container" style="width: 100%; height: 100%; background-color:white; color: black;"></div>
-      </el-collapse-item>
-    </el-collapse>
-</el-footer>
+  <el-collapse>
+    <el-collapse-item title="查看代码">
+      <div id="container" style="width: 100%; height: 100%; background-color:white; color: black;"></div>
+    </el-collapse-item>
+  </el-collapse>
 </template>
 
 <script>
