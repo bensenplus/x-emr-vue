@@ -10,7 +10,7 @@
                <Editor id="302" doc="/doc/302.html"></Editor>
           </el-tab-pane>
      </el-tabs>
-     <Source file="/code/Home.vue"></Source>
+     <Source src="/code/Home.vue"></Source>
 </template>
 
 <script setup>

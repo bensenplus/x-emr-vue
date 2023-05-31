@@ -1,10 +1,16 @@
 <template>
-  <el-collapse v-model="activeName" accordion>
-    <el-collapse-item title="源码" name="1">
-      <div id="container" style="width: 100%; height: 100%; background-color:white; color: black;"></div>
+  <el-collapse v-model="activeName" accordion @change="handleChange">
+    <el-collapse-item title="Source" name="1">
+      <div ref="container" style="width: 100%; height: 100%; background-color:white; color: black;" tabindex="0"></div>
     </el-collapse-item>
   </el-collapse>
 </template>
+
+<style>
+.el-collapse-item__header {
+  text-align: right;
+}
+</style>
 
 <script>
 import {EditorView, basicSetup} from "codemirror"
@@ -24,15 +30,22 @@ export default {
     if(this.open){
       this.activeName = '1'
     }
-    let container = document.getElementById('container')
     if(this.src){
       axios.get(this.src).then((result) => {
           new EditorView({
+            parent: this.$refs.container,
             extensions: [basicSetup, javascript()],
             doc: result.data,
-            parent: container
+            readonly: ''
           })
       })
+    }
+  },
+  methods:{
+    handleChange(val){
+       if(val == '1'){
+        this.$refs.container.focus()
+       }  
     }
   }
 }
