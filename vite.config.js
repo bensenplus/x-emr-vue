@@ -9,7 +9,7 @@ export default defineConfig({
   },
   plugins: [
     vue(),
-    copy({ src: 'src/page/**', dest: 'public/code' })
+    copy({ src: 'src/pages/**/*', dest: 'dist/public/code' })
   ],
   resolve: {
     alias: {
