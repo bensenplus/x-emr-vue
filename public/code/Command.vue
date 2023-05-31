@@ -15,6 +15,9 @@
                <el-button plain type="primary" @click="execCommand('exportJson')">导出JSON</el-button>
                <el-button plain type="primary" @click="execCommand('exportXml')">导出XML</el-button>
           </el-button-group>
+          <el-button-group style="margin-left: 20px;">
+               <el-button plain type="primary" @click="execCommand('mobile')">移动填报</el-button>
+          </el-button-group>
      </el-row>
      <el-row>
           <Editor doc="/doc/999.html" @DocLoaded="onDocLoaded" style="margin: 10px 0;"></Editor>
