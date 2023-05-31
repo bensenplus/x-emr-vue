@@ -1,6 +1,6 @@
 <template>
 
-<el-menu default-active="home" class="el-menu-vertical-demo"  @select="handleSelect" >
+<el-menu default-active="home"  @select="handleSelect" >
         <el-menu-item index="home">
           <el-icon><home-filled /></el-icon>
           <span>首页</span>

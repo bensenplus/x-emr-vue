@@ -1,16 +1,10 @@
 <template>
   <el-collapse v-model="activeName" accordion @change="handleChange">
     <el-collapse-item title="Source" name="1">
-      <div ref="container" style="width: 100%; height: 100%; background-color:white; color: black;" tabindex="0"></div>
+      <div ref="container" style="width: 100%; height: 100%; background-color:#def; color: black;" tabindex="0"></div>
     </el-collapse-item>
   </el-collapse>
 </template>
-
-<style>
-.el-collapse-item__header {
-  text-align: right;
-}
-</style>
 
 <script>
 import {EditorView, basicSetup} from "codemirror"
