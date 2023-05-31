@@ -20,13 +20,13 @@
           <Editor doc="/doc/999.html" @DocLoaded="onDocLoaded" style="margin: 10px 0;"></Editor>
      </el-row>
 
-     <CodeView file="/code/Command.vue"></CodeView>
+     <Source src="/code/Command.vue"></Source>
 
 </template>
 
 <script setup>
 import Editor from '@/components/Editor.vue';
-import CodeView from '@/components/CodeView.vue';
+import Source from '@/components/Source.vue';
 import { ref } from 'vue'
 
 const activeName = ref('1')

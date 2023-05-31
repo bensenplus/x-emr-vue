@@ -10,12 +10,12 @@
                <Editor id="302" doc="/doc/302.html"></Editor>
           </el-tab-pane>
      </el-tabs>
-     <CodeView file="/code/Home.vue"></CodeView>
+     <Source file="/code/Home.vue"></Source>
 </template>
 
 <script setup>
 import Editor from '@/components/Editor.vue';
-import CodeView from '@/components/CodeView.vue';
+import Source from '@/components/Source.vue';
 import { ref } from 'vue'
 
   const activeName = ref('999')

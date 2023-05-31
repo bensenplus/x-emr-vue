@@ -22,12 +22,12 @@
                </el-form-item>
           </el-form>
      </el-drawer>
-     <CodeView file="/code/BindData.vue"></CodeView>
+     <Source src="/code/BindData.vue"></Source>
 </template>
 
 <script setup>
 import Editor from '@/components/Editor.vue';
-import CodeView from '@/components/CodeView.vue';
+import Source from '@/components/Source.vue';
 import { ref } from 'vue'
 
 const patient = ref({
