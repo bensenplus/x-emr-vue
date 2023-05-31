@@ -1,7 +1,7 @@
 <template>
-    <h2>/components/Editor.vue</h2>
+    <h4>/components/Editor.vue</h4>
     <Source src="/code/Editor.vue" open="true"></Source>
-    <h2>/editor.html</h2>
+    <h4>/editor.html</h4>
     <Source src="/editor.html" open="true"></Source>
 </template>
 

@@ -1,7 +1,9 @@
 <template>
     <el-container>
-      <el-header height="30px">
-        <el-switch v-model="dark" @change="changeMode()" :active-icon="Moon" :inactive-icon="Sunny" inline-prompt style="position: absolute; right:10px;"/>
+      <el-header class="menu-header">
+        <img src="./assets/xemr.svg"/>
+        <span style="flex-grow: 1;"></span>
+        <el-switch v-model="dark" @change="changeMode()" :active-icon="Moon" :inactive-icon="Sunny" inline-prompt/>
       </el-header>
       <el-container>
         <el-aside width="150px">
@@ -13,6 +15,16 @@
       </el-container>
   </el-container>
 </template>
+
+<style>
+  .menu-header{
+    display:flex;
+    align-items:center;
+    height:45px; 
+    border-bottom: 1px solid var(--el-menu-border-color); 
+  }
+
+</style>
 
 <script setup>
   import Menu from './components/Menu.vue';

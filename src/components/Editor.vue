@@ -8,7 +8,7 @@
                return {
                     objectOfAttrs:{
                          width:'100%',
-                         height:'700vh',
+                         height:'650vh',
                          frameborder: 0
                     }
                }
