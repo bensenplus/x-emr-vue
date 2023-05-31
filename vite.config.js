@@ -1,13 +1,15 @@
 import { fileURLToPath, URL } from 'node:url'
-
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
+import copy from 'rollup-plugin-copy'
+
 export default defineConfig({
   server:{
     port:80
   },
   plugins: [
-    vue()
+    vue(),
+    copy({ src: 'src/page/**', dest: 'public/code' })
   ],
   resolve: {
     alias: {
