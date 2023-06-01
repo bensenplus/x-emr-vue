@@ -99,6 +99,10 @@ td {
     height: 24px;
 }
 
+group{
+    outline: 1px dashed blue;
+}
+
 [tag=true]::before {
     font-size: xx-small;
     content: attr(title);
