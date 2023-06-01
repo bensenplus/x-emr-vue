@@ -1,7 +1,7 @@
 <template>
-  <el-collapse v-model="activeName" accordion @change="handleChange">
+  <el-collapse v-model="activeName" accordion @change="handleChange" style="width: 100%;">
     <el-collapse-item title="Source" name="1">
-      <div ref="container" style="width: 100%; height: 100%; background-color:#def; color: black;" tabindex="0"></div>
+      <div ref="container" style="width: 100%; height: 100%; background-color:white; color: black;" tabindex="0"></div>
     </el-collapse-item>
   </el-collapse>
 </template>

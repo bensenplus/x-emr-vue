@@ -5,6 +5,10 @@
           <el-icon><home-filled /></el-icon>
           <span>首页</span>
         </el-menu-item>
+        <el-menu-item index="mutil">
+          <el-icon><document /></el-icon>
+          <span>多文档</span>
+        </el-menu-item>
         <el-menu-item index="editor">
           <el-icon><document /></el-icon>
           <span>文档配置</span>
