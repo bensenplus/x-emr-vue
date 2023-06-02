@@ -3,6 +3,7 @@ import Home from './pages/Home.vue'
 import Command from './pages/Command.vue'
 import DocData from './pages/BindData.vue'
 import MutilDoc from './pages/MutilDoc.vue'
+import AppendDoc from './pages/AppendDoc.vue'
 import EditorSource from './pages/EditorSource.vue'
 
 const routes = [
@@ -11,6 +12,7 @@ const routes = [
     { path: '/cmd', component: Command },
     { path: '/data', component: DocData },
     { path: '/mutil', component: MutilDoc },
+    { path: '/append', component: AppendDoc },
     { path: '/editor', component: EditorSource }
 ]
 

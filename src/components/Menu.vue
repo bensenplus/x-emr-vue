@@ -9,6 +9,10 @@
           <el-icon><document /></el-icon>
           <span>多文档</span>
         </el-menu-item>
+        <el-menu-item index="append">
+          <el-icon><document /></el-icon>
+          <span>病程合并</span>
+        </el-menu-item>
         <el-menu-item index="editor">
           <el-icon><document /></el-icon>
           <span>文档配置</span>

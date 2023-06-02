@@ -51,7 +51,7 @@
                 let doc =  window.frameElement.getAttribute('doc')
                 //指定文档ID加载病历文档
                 if(doc) {
-                    editor.loadHtml(doc, '1').then(function(){
+                    editor.loadUrl(doc, '1').then(function(){
                         let e = new Event('doc-loaded')
                         e.editor = editor
                         window.frameElement.dispatchEvent(e)
