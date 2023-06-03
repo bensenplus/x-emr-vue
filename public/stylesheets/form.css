@@ -47,16 +47,19 @@ textarea {
     outline: none;
 }
 
-field {
+field{
     outline: none;
     text-decoration: none;
     color: #000;
-    background-color: #eff;
     min-height: 20px;
 }
 
-field[contenteditable=false] {
-    background-color: white;
+field[contenteditable=true], field[type=DateTime], field[type=DropdownList]{
+    background-color: #eff;
+}
+
+field[readonly]{
+    background-color: #fff;
 }
 
 field:focus {

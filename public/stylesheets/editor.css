@@ -384,12 +384,14 @@ input[readonly=true] {
 }
 
 #_path div {
-    padding: 0 5px;
+    transform: scale(.8);
+    padding: 0 2px;
+    /* background-color: lightblue; */
     cursor: pointer;
 }
 
 #_path div:hover {
-    background: lightgray;
+    background: lightskyblue;
     font-weight: bold;
 }
 
