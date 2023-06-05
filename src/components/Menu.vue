@@ -25,6 +25,10 @@
           <el-icon><document /></el-icon>
           <span>数据绑定</span>
         </el-menu-item>
+        <el-menu-item index="sign">
+          <el-icon><document /></el-icon>
+          <span>电子签名</span>
+        </el-menu-item>
       </el-menu>
   </template>
   

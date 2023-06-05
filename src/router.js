@@ -5,6 +5,7 @@ import DocData from './pages/BindData.vue'
 import MutilDoc from './pages/MutilDoc.vue'
 import AppendDoc from './pages/AppendDoc.vue'
 import EditorSource from './pages/EditorSource.vue'
+import Signature from './pages/Signature.vue'
 
 const routes = [
     { path: '/', component: Home },
@@ -13,6 +14,7 @@ const routes = [
     { path: '/data', component: DocData },
     { path: '/mutil', component: MutilDoc },
     { path: '/append', component: AppendDoc },
+    { path: '/sign', component: Signature },
     { path: '/editor', component: EditorSource }
 ]
 
