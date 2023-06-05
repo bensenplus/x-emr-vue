@@ -32,8 +32,6 @@ import Editor from '@/components/Editor.vue';
 import Source from '@/components/Source.vue';
 import { ref } from 'vue'
 
-const activeName = ref('1')
-
 var editor
 //文档加载完成
 const onDocLoaded = (e) => {
