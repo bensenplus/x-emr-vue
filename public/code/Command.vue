@@ -16,7 +16,7 @@
                <el-button plain type="primary" @click="execCommand('exportXml')">导出XML</el-button>
           </el-button-group>
           <el-button-group style="margin-left: 20px;">
-               <el-button plain type="primary" @click="execCommand('mobile')">移动填报</el-button>
+               <el-button plain type="primary" @click="execCommand('mobile')">手机填报</el-button>
           </el-button-group>
      </el-row>
      <el-row>

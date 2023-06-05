@@ -4,7 +4,7 @@ import Command from './pages/Command.vue'
 import DocData from './pages/BindData.vue'
 import MutilDoc from './pages/MutilDoc.vue'
 import AppendDoc from './pages/AppendDoc.vue'
-import EditorSource from './pages/EditorSource.vue'
+import TabSample from './pages/TabSample.vue'
 import Signature from './pages/Signature.vue'
 
 const routes = [
@@ -15,7 +15,7 @@ const routes = [
     { path: '/mutil', component: MutilDoc },
     { path: '/append', component: AppendDoc },
     { path: '/sign', component: Signature },
-    { path: '/editor', component: EditorSource }
+    { path: '/tab', component: TabSample }
 ]
 
 const router = VueRouter.createRouter({

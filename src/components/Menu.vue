@@ -9,13 +9,9 @@
           <el-icon><document /></el-icon>
           <span>多文档</span>
         </el-menu-item>
-        <el-menu-item index="append">
+        <el-menu-item index="tab">
           <el-icon><document /></el-icon>
-          <span>病程合并</span>
-        </el-menu-item>
-        <el-menu-item index="editor">
-          <el-icon><document /></el-icon>
-          <span>文档配置</span>
+          <span>Tab示例</span>
         </el-menu-item>
         <el-menu-item index="cmd">
           <el-icon><icon-menu /></el-icon>
@@ -24,6 +20,10 @@
         <el-menu-item index="data">
           <el-icon><document /></el-icon>
           <span>数据绑定</span>
+        </el-menu-item>
+        <el-menu-item index="append">
+          <el-icon><document /></el-icon>
+          <span>病程合并</span>
         </el-menu-item>
         <el-menu-item index="sign">
           <el-icon><document /></el-icon>

@@ -7,10 +7,8 @@
             <Editor doc="/doc/999.html"></Editor>
         </el-col>
     </el-row>
-    <el-row :span="12">
-        <el-col>
-            <Source src="/code/MutilDoc.vue"></Source>
-        </el-col>
+    <el-row>
+     <Source src="/code/MutilDoc.vue"></Source>
     </el-row>
 </template>
 
