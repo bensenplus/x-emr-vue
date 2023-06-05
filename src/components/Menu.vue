@@ -13,6 +13,10 @@
           <el-icon><document /></el-icon>
           <span>Tab示例</span>
         </el-menu-item>
+        <el-menu-item index="readonly">
+          <el-icon><icon-menu /></el-icon>
+          <span>只读文档</span>
+        </el-menu-item>
         <el-menu-item index="cmd">
           <el-icon><icon-menu /></el-icon>
           <span>文档命令</span>

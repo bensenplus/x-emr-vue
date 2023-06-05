@@ -14,27 +14,8 @@
             //配置项可以不设置，会使用默认设置
             let option = {
                 license:'f1e462r9QMdQoYpeTI33ftw5xXE7pX1n1ecS5nA6ZUMZWrHurHpxhNkavsvDpvOJ/LsCdOLSw8/Zfay96JOl5AAIZNYozCYFMBGAUOFj3cjoU5kN7EMJIFqHKPFR6GXxSd+81XyvFF4maeHfKnl7PAJ8VkVoQiUFc1Fj3rSyz/w=',
-                mode:'form',                     //form:表单模式，design:设计模式
-                scale: 1,                       //缩放比例
-                container:'#editor',             //编辑器容器对象ID
-                baseUrl:'./',                    //基本URL
-                saveUrl:'/doc/',                 //保存URL
-                toolbar :{
-                    hide: false,                 //是否隐藏工具栏
-                    disableCommand:['template'], //屏蔽文档命令，同时隐藏对应工具栏按钮
-                    file : {hide : false},       //是否隐藏文件
-                    start : {hide : false},      //是否隐藏开始
-                    insert : {hide: false},      //是否隐藏插入
-                    revision : {hide: false},    //是否隐藏审阅
-                    page : {hide: false},        //是否隐藏页面
-                    print : {hide:false},        //是否隐藏打印
-                    export : {hide:false},       //是否隐藏导出
-                    help : {hide: false}         //是否隐藏帮助
-                },
-                statusbar : {
-                    hide: false                  //是否隐藏状态栏
-                },
-                dictionary: [           //知识库
+                mode:'form',  //form:表单模式，design:设计模式
+                dictionary: [  //知识库
                     {type:'symptoms', title: '体征', isParent:true, treeUrl:'https://www.x-emr.cn/dict', itemUrl:'https://www.x-emr.cn/dictitem'},
                     {type:'signs', title: '症状', isParent:true, treeUrl:'https://www.x-emr.cn/dict', itemUrl:'https://www.x-emr.cn/dictitem'},
                     {type:'meta', title: '卫生信息数据元', isParent:true, treeUrl:'https://www.x-emr.cn/dict', itemUrl:'https://www.x-emr.cn/dictitem'},
@@ -43,20 +24,30 @@
                     {type:'province', title: 'A省数据平台标准', isParent:true, treeUrl:'https://www.x-emr.cn/province', itemUrl:'https://www.x-emr.cn/provitem'},
                 ]
             }
-            //编辑器初始化
-            editor.init(option)
 
             //用于父页面调用
             if(window.frameElement){
-                let doc =  window.frameElement.getAttribute('doc')
+                //初始化前
+                let e1 = new Event('before-init')
+                e1.editor = editor
+                e1.option = option
+                window.frameElement.dispatchEvent(e1)
+                //编辑器初始化
+                editor.init(option)
                 //指定文档ID加载病历文档
+                let doc =  window.frameElement.getAttribute('doc')
                 if(doc) {
                     editor.loadUrl(doc, '1').then(function(){
-                        let e = new Event('doc-loaded')
-                        e.editor = editor
-                        window.frameElement.dispatchEvent(e)
+                        let e3 = new Event('doc-loaded')
+                        e3.editor = editor
+                        window.frameElement.dispatchEvent(e3)
                     })
                 }
+                
+                //初始化后
+                let e2 = new Event('after-init')
+                e2.editor = editor
+                window.frameElement.dispatchEvent(e2)
             }
           })
       </script>

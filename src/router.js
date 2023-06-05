@@ -6,6 +6,7 @@ import MutilDoc from './pages/MutilDoc.vue'
 import AppendDoc from './pages/AppendDoc.vue'
 import TabSample from './pages/TabSample.vue'
 import Signature from './pages/Signature.vue'
+import Readonly from './pages/Readonly.vue'
 
 const routes = [
     { path: '/', component: Home },
@@ -15,7 +16,8 @@ const routes = [
     { path: '/mutil', component: MutilDoc },
     { path: '/append', component: AppendDoc },
     { path: '/sign', component: Signature },
-    { path: '/tab', component: TabSample }
+    { path: '/tab', component: TabSample },
+    { path: '/readonly', component: Readonly }
 ]
 
 const router = VueRouter.createRouter({
