@@ -9,7 +9,7 @@
 
 <Editor doc="/doc/9001.html"  @DocLoaded="onDocLoaded" style="margin: 10px 0;"></Editor>
 
-<Source src="/code/Signature.vue"></Source>
+<Source src="/code/AppendDoc.vue"></Source>
 
 </template>
 
