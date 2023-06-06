@@ -5,9 +5,9 @@
           <el-icon><home-filled /></el-icon>
           <span>首页</span>
         </el-menu-item>
-        <el-menu-item index="mutil">
-          <el-icon><document /></el-icon>
-          <span>多文档</span>
+        <el-menu-item index="mode">
+          <el-icon><icon-menu /></el-icon>
+          <span>文档模式</span>
         </el-menu-item>
         <el-menu-item index="tab">
           <el-icon><document /></el-icon>

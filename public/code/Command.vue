@@ -1,7 +1,6 @@
 <template>
      <el-row>
           <el-button-group>
-               <el-button plain type="primary" @click="execCommand('readonly')">只读模式</el-button>
                <el-button plain type="primary" @click="execCommand('form')">表单模式</el-button>
                <el-button plain type="primary" @click="execCommand('design')">设计模式</el-button>
           </el-button-group>
@@ -20,7 +19,7 @@
           </el-button-group>
      </el-row>
      <el-row>
-          <Editor doc="/doc/999.html" @DocLoaded="onDocLoaded" style="margin: 10px 0;"></Editor>
+          <Editor doc="/doc/999.html" @DocLoaded="onDocLoaded" style="margin: 10px 0;" mode="design"></Editor>
      </el-row>
 
      <Source src="/code/Command.vue"></Source>

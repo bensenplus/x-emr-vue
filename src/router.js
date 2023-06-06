@@ -7,6 +7,7 @@ import AppendDoc from './pages/AppendDoc.vue'
 import TabSample from './pages/TabSample.vue'
 import Signature from './pages/Signature.vue'
 import Readonly from './pages/Readonly.vue'
+import DocMode from './pages/DocMode.vue'
 
 const routes = [
     { path: '/', component: Home },
@@ -17,7 +18,8 @@ const routes = [
     { path: '/append', component: AppendDoc },
     { path: '/sign', component: Signature },
     { path: '/tab', component: TabSample },
-    { path: '/readonly', component: Readonly }
+    { path: '/readonly', component: Readonly },
+    { path: '/mode', component: DocMode }
 ]
 
 const router = VueRouter.createRouter({

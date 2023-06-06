@@ -7,10 +7,10 @@
         <el-switch v-model="dark" @change="changeStyle()" :active-icon="Moon" :inactive-icon="Sunny" inline-prompt/>
       </el-header>
       <el-container>
-        <el-aside width="150px" id="_menuAside">
+        <el-aside class="menu-aside">
           <Menu></Menu>
         </el-aside>
-        <el-main style="padding: 10px;">
+        <el-main class="main-view">
           <router-view></router-view>
         </el-main>
       </el-container>
@@ -19,10 +19,27 @@
 
 <style>
   .menu-header{
+    position: fixed;
+    top: 0;
     display:flex;
     align-items:center;
-    height:45px; 
-    border-bottom: 1px solid var(--el-menu-border-color); 
+    height:45px; width: 100%;
+    border-bottom: 1px solid var(--el-menu-border-color);
+    z-index: 1;
+    background-color: var(--bg-clolor);
+  }
+
+  .menu-aside{
+    position: fixed;
+    width: 150px;
+    top: 45px;
+    z-index: 1;
+    background-color: var(--bg-clolor);
+  }
+
+  .main-view{
+    padding: 10px; 
+    margin:45px 0 0 150px;
   }
 
 </style>
@@ -44,11 +61,14 @@
   }
 
   const toggleClick = function(){
-    let display = document.getElementById('_menuAside').style.display
-    if(display == 'none'){
-      document.getElementById('_menuAside').style.display = 'block'
+    let menu = document.querySelector('.menu-aside')
+    let main = document.querySelector('.main-view')
+    if(menu.style.display == 'none'){
+      menu.style.display = 'block'
+      main.style.marginLeft = '150px'
     }else{
-      document.getElementById('_menuAside').style.display = 'none'
+      menu.style.display = 'none'
+      main.style.marginLeft = '0'
     }
 
   }

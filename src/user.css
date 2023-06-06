@@ -1,5 +1,10 @@
+html {
+    --bg-clolor:#ffffff;
+}
+
 html.dark {
-    background-color: #22272e;
+    --bg-clolor:#22272e;
+    background-color: var(--bg-clolor);
 }
 
 html,
