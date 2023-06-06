@@ -10,8 +10,8 @@
                <el-button plain type="primary" @click="execCommand('exportXml')">导出XML</el-button>
           </el-button-group>
      </el-row>
+     <Editor @BeforeInit="onBeforeInit"  @AfterInit="onAfterInit" style="margin: 10px 0;"></Editor>
      <Source src="/code/ReadOnly.vue"></Source>
-    <Editor @BeforeInit="onBeforeInit"  @AfterInit="onAfterInit" style="margin: 10px 0;"></Editor>
 
 </template>
     
