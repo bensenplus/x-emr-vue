@@ -99,7 +99,8 @@ table {
 
 td {
     border: 1px solid gray;
-    padding: 4px;
+    padding: 2px;
+    height: 1.5em;
     word-break: break-all;
 }
 
@@ -305,4 +306,21 @@ group{
     top: -10px;
     left: 5px;
     border-color: transparent transparent #ff6969;
+}
+
+.td-line-style1 {
+    outline: none;
+    background-color: rgb(255, 255, 255);
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiPjxsaW5lIHgxPSIwIiB5MT0iMCIgeDI9IjEwMCIgeTI9IjEwMCIgc3R5bGU9InN0cm9rZTpncmF5O3N0cm9rZS13aWR0aDoxcHg7Ii8+PC9zdmc+IA==");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+
+.td-line-style2 {
+    outline: none;
+    background-color: rgb(255, 255, 255);
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiPjxsaW5lIHgxPSIxMDAiIHkxPSIwIiB4Mj0iMCIgeTI9IjEwMCIgc3R5bGU9InN0cm9rZTpncmF5O3N0cm9rZS13aWR0aDoxcHg7Ii8+PC9zdmc+IA==");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
