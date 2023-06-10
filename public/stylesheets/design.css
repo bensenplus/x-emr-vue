@@ -91,6 +91,10 @@ img {
     max-width: 100%
 }
 
+img[type=sign]{
+    background-color: #f9f9f9;
+}
+
 table {
     border-collapse: collapse;
     border: 1px solid gray;
