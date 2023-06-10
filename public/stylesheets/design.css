@@ -96,12 +96,32 @@ table {
     border: 1px solid gray;
     word-break: break-all;
 }
+thead, tfoot {
+     outline: 1px dashed rgba(255, 0, 0, 1);
+}
+
+thead::before, tfoot::before{
+    font-size: xx-small;
+    content: '每页打印';
+    cursor: pointer;
+    white-space: nowrap;
+    color: white;
+    padding: 0px 5px;
+    position: absolute;
+    left: -35px;
+    background-color: rgba(255, 0, 0, 0.5);
+    border-radius: 3px;
+}
 
 td {
     border: 1px solid gray;
     padding: 2px;
     height: 1.5em;
     word-break: break-all;
+}
+
+td.selected {
+  background-color: rgba(0, 0, 255, 0.1)!important;
 }
 
 group{
