@@ -61,7 +61,7 @@ field[readonly]{
     background-color: #fff;
 }
 
-field:focus {
+field[contenteditable=true]:focus {
     background-color: #aff;
 }
 
