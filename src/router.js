@@ -8,6 +8,7 @@ import TabSample from './pages/TabSample.vue'
 import Signature from './pages/Signature.vue'
 import Readonly from './pages/Readonly.vue'
 import DocMode from './pages/DocMode.vue'
+import SaveDoc from './pages/SaveDoc.vue'
 
 const routes = [
     { path: '/', component: Home },
@@ -19,6 +20,7 @@ const routes = [
     { path: '/sign', component: Signature },
     { path: '/tab', component: TabSample },
     { path: '/readonly', component: Readonly },
+    { path: '/save', component: SaveDoc },
     { path: '/mode', component: DocMode }
 ]
 

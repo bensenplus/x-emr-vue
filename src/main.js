@@ -7,8 +7,11 @@ import '@/user.css'
 import App from './App.vue'
 import router from './router'
 
+// import Editor from '@/components/Editor.vue'
+// import Source from '@/components/Source.vue'
 
 const app = createApp(App)
+//app.component('Editor', Editor).component('Source', Source)
 app.use(ElementPlus)
 app.use(router)
 app.mount('#app')
