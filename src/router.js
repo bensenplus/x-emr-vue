@@ -9,6 +9,7 @@ import Signature from './pages/Signature.vue'
 import Readonly from './pages/Readonly.vue'
 import DocMode from './pages/DocMode.vue'
 import SaveDoc from './pages/SaveDoc.vue'
+import DataTable from './pages/DataTable.vue'
 
 const routes = [
     { path: '/', component: Home },
@@ -21,7 +22,8 @@ const routes = [
     { path: '/tab', component: TabSample },
     { path: '/readonly', component: Readonly },
     { path: '/save', component: SaveDoc },
-    { path: '/mode', component: DocMode }
+    { path: '/mode', component: DocMode },
+    { path: '/dataTable', component: DataTable }
 ]
 
 const router = VueRouter.createRouter({
