@@ -117,11 +117,15 @@ thead::before, tfoot::before{
     border-radius: 3px;
 }
 
-td {
+table td {
     border: 1px solid gray;
     padding: 2px;
     height: 1.5em;
     word-break: break-all;
+}
+
+table.noborder td {
+    border: 1px dashed #ddd;
 }
 
 td.selected {
