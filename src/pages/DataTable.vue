@@ -6,6 +6,8 @@
         <el-col :span="1"></el-col>
         <el-col :span="2"><el-button plain type="primary" @click="bindDataForTable">获取表格数据</el-button></el-col>
         <el-col :span="1"></el-col>
+        <el-col :span="2"><el-button plain type="primary" @click="clearDataTable">清除表格数据</el-button></el-col>
+        <el-col :span="1"></el-col>
         <el-col :span="2"><el-button plain type="primary" @click="execCommand('print')">打印</el-button></el-col>
     </el-row>
      <Editor @BeforeInit="onBeforeInit" doc="/doc/data_table.html" mode="design" style="margin: 10px 0;"></Editor>
@@ -32,11 +34,15 @@
             onBeforeInit: function(e) {
                 this.editor = e.editor
             },
-            //仅保存HTML文档
+            //获取数据到表格
             bindDataForTable: function() {
                 axios.get(this.dataUrl).then(res=>{
                     this.editor.bindDataList('list', res.data)
                 })
+            },
+            //清除数据表格
+            clearDataTable: function() {
+                this.editor.bindDataList('list', [])
             },
             execCommand : function(cmd){
                     this.editor.execCommand(cmd)
