@@ -20,6 +20,7 @@
 
 body {
     word-break: break-all;
+    font-family: '宋体';
 }
 
 #_page {
@@ -28,9 +29,7 @@ body {
     outline: 1px solid #ccc;
 }
 
-h1,
-h2,
-h3 {
+h1,h2,h3 {
     margin: 0
 }
 

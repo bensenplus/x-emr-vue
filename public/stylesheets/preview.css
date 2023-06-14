@@ -37,6 +37,7 @@
 body {
     background-color: #666;
     word-break: break-all;
+    font-family: '宋体';
 }
 
 input {
@@ -49,9 +50,7 @@ input[disabled] {
     color: #000;
 }
 
-h1,
-h2,
-h3 {
+h1,h2,h3 {
     margin: 0
 }
 

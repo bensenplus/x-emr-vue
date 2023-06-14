@@ -25,11 +25,10 @@ html {
 
 body {
     word-break: break-all;
+    font-family: '宋体';
 }
 
-h1,
-h2,
-h3 {
+h1,h2,h3 {
     margin: 0
 }
 
@@ -187,6 +186,7 @@ group{
 }
 
 #_contexMenu {
+    font-family: -apple-system, "PingFang SC",  "Microsoft YaHei";
     position: absolute;
     z-index: 2;
     cursor: hand;
