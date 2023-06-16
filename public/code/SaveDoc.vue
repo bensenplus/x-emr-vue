@@ -38,7 +38,7 @@
                     console.log('res=>',res)
                 })
             },
-            //保存文档及机构化数据
+            //保存文档及结构化数据
             saveHtmlAndData: function() {
                 let data = {
                     'doc': this.editor.getHtml(),
