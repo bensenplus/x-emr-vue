@@ -1,6 +1,6 @@
 <template>
      <el-switch v-model="drawer" size="large" active-text="显示绑定数据"/>
-     <Editor id='302' doc="/doc/302.html" @DocLoaded="onDocLoaded" style="margin: 10px 0;"></Editor>
+     <Editor id='302' doc="/mock/bind_data.html" @DocLoaded="onDocLoaded" style="margin: 10px 0;"></Editor>
 
      <el-drawer v-model="drawer" title="数据">
           <el-form  @change="bindData()">

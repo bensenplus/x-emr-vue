@@ -6,7 +6,7 @@
     </el-button-group>
 </el-row>
 
-<Editor doc="/doc/233.html"  @DocLoaded="onDocLoaded" style="margin: 10px 0;"></Editor>
+<Editor doc="https://www.x-emr.cn/doc/233.html"  @DocLoaded="onDocLoaded" style="margin: 10px 0;"></Editor>
 
 <Source src="/code/AppendDoc.vue"></Source>
 

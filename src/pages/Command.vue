@@ -19,7 +19,7 @@
           </el-button-group>
      </el-row>
      <el-row>
-          <Editor doc="/doc/999.html" @DocLoaded="onDocLoaded" style="margin: 10px 0;" mode="design"></Editor>
+          <Editor doc="https://www.x-emr.cn/doc/999.html" @DocLoaded="onDocLoaded" style="margin: 10px 0;" mode="design"></Editor>
      </el-row>
 
      <Source src="/code/Command.vue"></Source>

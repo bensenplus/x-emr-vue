@@ -11,7 +11,7 @@
         </el-button-group>
     </el-row>
     
-    <Editor doc="/doc/9001.html"  @DocLoaded="onDocLoaded" style="margin: 10px 0;"></Editor>
+    <Editor doc="/mock/sign.html"  @DocLoaded="onDocLoaded" style="margin: 10px 0;"></Editor>
     
     <Source src="/code/Signature.vue"></Source>
     

@@ -1,10 +1,10 @@
 <template>
     <el-row :gutter="10">
         <el-col :span="12">
-            <Editor doc="/doc/157.html" @BeforeInit="onBeforeInit1"  mode="form"></Editor>
+            <Editor doc="https://www.x-emr.cn/doc/157.html" @BeforeInit="onBeforeInit1"  mode="form"></Editor>
         </el-col>
         <el-col :span="12">
-            <Editor doc="/doc/999.html"  @BeforeInit="onBeforeInit2" mode="readonly"></Editor>
+            <Editor doc="https://www.x-emr.cn/doc/999.html"  @BeforeInit="onBeforeInit2" mode="readonly"></Editor>
         </el-col>
     </el-row>
     <el-row>

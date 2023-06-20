@@ -27,7 +27,7 @@
     }
     //初始化后
     const onAfterInit = function(e) {
-        e.editor.loadUrl('/doc/999.html')
+        e.editor.loadUrl('https://www.x-emr.cn/doc/999.html')
     }
     //文档命令
     const execCommand = (cmd) => {
