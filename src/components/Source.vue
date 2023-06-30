@@ -1,13 +1,14 @@
 <template>
   <el-collapse v-model="activeName" accordion @change="handleChange" style="width: 100%;">
-    <el-collapse-item title="Source" name="1">
-      <div ref="container" style="width: 100%; height: 100%; background-color:white; color: black;" tabindex="0"></div>
+    <el-collapse-item title="源码" name="1">
+      <div ref="container" style="width: 100%; height: 100%;" tabindex="0"></div>
     </el-collapse-item>
   </el-collapse>
 </template>
 
 <script>
 import {EditorView, basicSetup} from "codemirror"
+import { oneDark } from "@codemirror/theme-one-dark"
 import {javascript} from "@codemirror/lang-javascript"
 import axios from 'axios'//引入axios
 import { ref } from 'vue'
@@ -28,7 +29,7 @@ export default {
       axios.get(this.src).then((result) => {
           new EditorView({
             parent: this.$refs.container,
-            extensions: [basicSetup, javascript()],
+            extensions: [basicSetup, javascript(), oneDark],
             doc: result.data,
             readonly: ''
           })
