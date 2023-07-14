@@ -41,6 +41,10 @@
           <el-icon><document /></el-icon>
           <span>电子签名</span>
         </el-menu-item>
+        <el-menu-item index="echart">
+          <el-icon><document /></el-icon>
+          <span>统计图表</span>
+        </el-menu-item>
       </el-menu>
   </template>
   

@@ -12,6 +12,7 @@
     "@codemirror/state": "^6.2.0",
     "@codemirror/theme-one-dark": "^6.1.2",
     "codemirror": "^6.0.1",
+    "echarts": "^5.4.2",
     "element-plus": "^2.3.4",
     "rollup-plugin-copy": "^3.4.0",
     "vue": "^3.2.45",

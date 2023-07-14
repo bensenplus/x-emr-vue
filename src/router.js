@@ -10,6 +10,7 @@ import Readonly from './pages/Readonly.vue'
 import DocMode from './pages/DocMode.vue'
 import SaveDoc from './pages/SaveDoc.vue'
 import DataTable from './pages/DataTable.vue'
+import EChart from './pages/EChart.vue'
 
 const routes = [
     { path: '/', component: Home },
@@ -23,7 +24,8 @@ const routes = [
     { path: '/readonly', component: Readonly },
     { path: '/save', component: SaveDoc },
     { path: '/mode', component: DocMode },
-    { path: '/dataTable', component: DataTable }
+    { path: '/dataTable', component: DataTable },
+    { path: '/echart', component: EChart },
 ]
 
 const router = VueRouter.createRouter({
