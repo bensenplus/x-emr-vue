@@ -3,6 +3,7 @@ import Home from './pages/Home.vue'
 import Command from './pages/Command.vue'
 import DocData from './pages/BindData.vue'
 import MutilDoc from './pages/MutilDoc.vue'
+import DocLang from './pages/DocLang.vue'
 import AppendDoc from './pages/AppendDoc.vue'
 import TabSample from './pages/TabSample.vue'
 import Signature from './pages/Signature.vue'
@@ -26,6 +27,7 @@ const routes = [
     { path: '/mode', component: DocMode },
     { path: '/dataTable', component: DataTable },
     { path: '/echart', component: EChart },
+    { path: '/lang', component: DocLang },
 ]
 
 const router = VueRouter.createRouter({

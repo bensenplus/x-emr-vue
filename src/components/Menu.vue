@@ -45,6 +45,10 @@
           <el-icon><document /></el-icon>
           <span>统计图表</span>
         </el-menu-item>
+        <el-menu-item index="lang">
+          <el-icon><document /></el-icon>
+          <span>多语言</span>
+        </el-menu-item>
       </el-menu>
   </template>
   
