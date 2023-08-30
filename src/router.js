@@ -11,6 +11,7 @@ import Readonly from './pages/Readonly.vue'
 import DocMode from './pages/DocMode.vue'
 import SaveDoc from './pages/SaveDoc.vue'
 import DataTable from './pages/DataTable.vue'
+import VitalSigns from './pages/VitalSigns.vue'
 import EChart from './pages/EChart.vue'
 
 const routes = [
@@ -26,6 +27,7 @@ const routes = [
     { path: '/save', component: SaveDoc },
     { path: '/mode', component: DocMode },
     { path: '/dataTable', component: DataTable },
+    { path: '/vitalSigns', component: VitalSigns },
     { path: '/echart', component: EChart },
     { path: '/lang', component: DocLang },
 ]

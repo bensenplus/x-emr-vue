@@ -26,7 +26,7 @@ const onDocLoaded = function(e) {
 
 //添加日常病程
 const appendHtml = function() {
-    axios.get('/doc/233.html').then((result) => {
+    axios.get('https://www.x-emr.cn/doc/233.html').then((result) => {
         editor.appendHtml(result.data)
     })
 }

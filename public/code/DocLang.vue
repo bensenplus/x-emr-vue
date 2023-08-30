@@ -9,7 +9,7 @@
      <el-row :gutter="20">
         <el-col :span="20">
             <h3>2.英文</h3>
-            <Editor mode="design" @BeforeInit="init1" doc="https://www.x-emr.cn/doc/999.html"></Editor>
+            <Editor mode="design" @BeforeInit="init1" doc="https://www.x-emr.cn/doc/1691116501534.html"></Editor>
         </el-col>
     </el-row>
      <el-row :gutter="20">

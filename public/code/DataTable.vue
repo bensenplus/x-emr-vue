@@ -2,13 +2,15 @@
 <template>
     <el-row>
         <el-col :span="2" style="vertical-align: center;">服务器地址：</el-col>
-        <el-col :span="10"><el-input v-model="dataUrl" ></el-input></el-col>
+        <el-col :span="8"><el-input v-model="dataUrl" ></el-input></el-col>
         <el-col :span="1"></el-col>
-        <el-col :span="2"><el-button plain type="primary" @click="bindDataForTable">获取表格数据</el-button></el-col>
+        <el-col :span="1"><el-button plain type="primary" @click="bindDataForTable">填充数据</el-button></el-col>
         <el-col :span="1"></el-col>
-        <el-col :span="2"><el-button plain type="primary" @click="clearDataTable">清除表格数据</el-button></el-col>
+        <el-col :span="1"><el-button plain type="primary" @click="clearDataTable">清除数据</el-button></el-col>
         <el-col :span="1"></el-col>
-        <el-col :span="2"><el-button plain type="primary" @click="execCommand('print')">打印</el-button></el-col>
+        <el-col :span="1"><el-button plain type="primary" @click="execCommand('preview')">打印预览</el-button></el-col>
+        <el-col :span="1"></el-col>
+        <el-col :span="1"><el-button plain type="primary" @click="execCommand('print')">打印</el-button></el-col>
     </el-row>
      <Editor @BeforeInit="onBeforeInit" doc="/mock/data_table.html" mode="design" style="margin: 10px 0;"></Editor>
      <Source src="/code/DataTable.vue"></Source>
