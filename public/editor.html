@@ -55,6 +55,9 @@
                 let e2 = new Event('after-init')
                 e2.editor = editor
                 window.frameElement.dispatchEvent(e2)
+            }else{
+                editor.init(option)
+                editor.loadUrl('https://www.x-emr.cn/doc/999.html')
             }
           })
       </script>
