@@ -50,6 +50,9 @@
                         e3.editor = editor
                         window.frameElement.dispatchEvent(e3)
                     })
+                //如果无则新建文档
+                }else{
+                    editor.execCommand('new') 
                 }
                 
                 //3.初始化后
