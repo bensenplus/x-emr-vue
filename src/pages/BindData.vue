@@ -1,7 +1,7 @@
 <template>
      <el-switch v-model="drawer" size="large" active-text="显示绑定数据"/>
+     <Source src="/code/BindData.vue"></Source>
      <Editor id='302' doc="/mock/bind_data.html" @DocLoaded="onDocLoaded" style="margin: 10px 0;"></Editor>
-
      <el-drawer v-model="drawer" title="数据">
           <el-form  @change="bindData()">
                <el-form-item label="姓名">
@@ -22,7 +22,6 @@
                </el-form-item>
           </el-form>
      </el-drawer>
-     <Source src="/code/BindData.vue"></Source>
 </template>
 
 <script setup>

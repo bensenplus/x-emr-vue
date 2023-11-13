@@ -1,7 +1,7 @@
 <template>
     <el-row>
           <el-button-group style="margin-left: 20px;">
-               <el-button plain type="primary" @click="createVitalSigns()">编码添加三测单</el-button>
+               <el-button plain type="primary" @click="createVitalSigns()">插入三测单</el-button>
                <el-button plain type="primary" @click="execCommand('preview')">打印预览</el-button>
                <el-button plain type="primary" @click="execCommand('print')">打印</el-button>
           </el-button-group>

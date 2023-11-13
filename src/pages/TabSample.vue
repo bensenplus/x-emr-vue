@@ -1,4 +1,5 @@
 <template>
+     <Source src="/code/TabSample.vue"></Source>
       <el-tabs v-model="activeName">
           <el-tab-pane label="病案首页" name="999">
                <Editor id="999" doc="https://www.x-emr.cn/doc/999.html" ></Editor>
@@ -10,7 +11,6 @@
                <Editor id="302" doc="https://www.x-emr.cn/doc/302.html" mode="readonly" ></Editor>
           </el-tab-pane>
      </el-tabs>
-     <Source src="/code/TabSample.vue"></Source>
 </template>
 
 <script setup>

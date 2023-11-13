@@ -1,4 +1,5 @@
 <template>
+    <Source src="/code/ReadOnly.vue"></Source>
     <el-row>
           <el-button-group style="margin-left: 20px;">
                <el-button plain type="primary" @click="execCommand('print')">打印</el-button>
@@ -11,7 +12,6 @@
           </el-button-group>
      </el-row>
      <Editor @BeforeInit="onBeforeInit"  @AfterInit="onAfterInit" style="margin: 10px 0;"></Editor>
-     <Source src="/code/ReadOnly.vue"></Source>
 
 </template>
     

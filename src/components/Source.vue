@@ -1,6 +1,6 @@
 <template>
   <el-collapse v-model="activeName" accordion @change="handleChange" style="width: 100%;">
-    <el-collapse-item title="源码" name="1">
+    <el-collapse-item title="查看源码" name="1">
       <div ref="container" style="width: 100%; height: 100%;" tabindex="0"></div>
     </el-collapse-item>
   </el-collapse>

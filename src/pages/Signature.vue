@@ -2,18 +2,16 @@
 
     <el-row>
         <el-button-group>
-            <el-button plain type="primary" @click="doctorSign()">医生签名</el-button>
-            <el-button plain type="primary" @click="signUrl()">医生签名(网络)</el-button>
+            <el-button plain type="primary" @click="doctorSign()">医生图片签名</el-button>
+            <el-button plain type="primary" @click="signUrl()">网络图片签名</el-button>
         </el-button-group>
         <el-button-group>
-            <el-button plain type="primary" @click="popSignPanl('#patient-sign')">患者签名</el-button>
-            <el-button plain type="primary" @click="popSignPanl('#patient-family-sign')">家属签名</el-button>
+            <el-button plain type="primary" @click="popSignPanl('#patient-sign')">患者手写签名</el-button>
+            <el-button plain type="primary" @click="popSignPanl('#patient-family-sign')">家属手写签名</el-button>
         </el-button-group>
     </el-row>
-    
-    <Editor doc="/mock/sign.html"  @DocLoaded="onDocLoaded" style="margin: 10px 0;"></Editor>
-    
     <Source src="/code/Signature.vue"></Source>
+    <Editor doc="/mock/sign.html"  @DocLoaded="onDocLoaded" style="margin: 10px 0;"></Editor>
     
     </template>
     

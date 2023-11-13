@@ -1,4 +1,7 @@
 <template>
+    <el-row>
+     <Source src="/code/MutilDoc.vue"></Source>
+    </el-row>
     <el-row :gutter="10">
         <el-col :span="12">
             <Editor doc="https://www.x-emr.cn/doc/157.html" @BeforeInit="onBeforeInit1"  mode="form"></Editor>
@@ -7,16 +10,13 @@
             <Editor doc="https://www.x-emr.cn/doc/999.html"  @BeforeInit="onBeforeInit2" mode="readonly"></Editor>
         </el-col>
     </el-row>
-    <el-row>
-     <Source src="/code/MutilDoc.vue"></Source>
-    </el-row>
+
 </template>
 
 
 <script setup>
 import Editor from '@/components/Editor.vue';
 import Source from '@/components/Source.vue';
-import { ref } from 'vue'
 
     //初始化前
     const onBeforeInit1 = function(e) {

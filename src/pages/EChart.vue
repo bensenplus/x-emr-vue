@@ -6,8 +6,7 @@
       <el-button plain type="primary" @click="addCanvasEChart()">添加图表(Canvas)</el-button>
     </el-button-group>
   </el-row>
-  <Source src="/code/EChart.vue">
-  </Source>
+  <Source src="/code/EChart.vue"></Source>
   <Editor doc="https://www.x-emr.cn/doc/asdf1.html" @DocLoaded="onDocLoaded" style="margin: 10px 0;"></Editor>
 </template>
 

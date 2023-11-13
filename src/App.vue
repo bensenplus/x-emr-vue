@@ -1,10 +1,9 @@
 <template>
     <el-container>
       <el-header class="menu-header">
-        <Fold color="#22A187" style="width: 2em; margin-right: 1em; cursor: pointer;" @click="toggleClick()"/>
-        <img style="width: 1em;" src="./assets/xemr.svg"/>
+        <Fold style="width: 1.5em; margin-right: 1em; cursor: pointer; color:var(--el-color-primary);" @click="toggleClick()"/>
         <span style="flex-grow: 1;"></span>
-        <el-switch v-model="dark" @change="changeStyle()" :active-icon="Moon" :inactive-icon="Sunny" inline-prompt/>
+        <el-switch v-model="dark" @change="changeStyle()" :active-icon="Sunny" :inactive-icon="Moon" inline-prompt/>
       </el-header>
       <el-container>
         <el-aside class="menu-aside">
@@ -49,7 +48,7 @@
   import { Sunny, Moon, Fold} from '@element-plus/icons-vue'
   import { ref } from 'vue'
 
-  const dark = ref(true)
+  const dark = ref(false)
   const menu = ref(null)
 
   const changeStyle = () => {
