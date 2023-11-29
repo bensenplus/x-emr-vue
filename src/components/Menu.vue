@@ -39,7 +39,7 @@
         </el-menu-item>
         <el-menu-item index="vitalSigns">
           <el-icon><document /></el-icon>
-          <span>三测单</span>
+          <span>体温单</span>
         </el-menu-item>
         <el-menu-item index="sign">
           <el-icon><document /></el-icon>
