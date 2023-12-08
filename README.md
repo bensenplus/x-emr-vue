@@ -1,6 +1,7 @@
 ## 概要
 
-基于HTML5的电子病历编辑器的Vue版演示程序。
+电子病历编辑器的Vue版演示程序。
+X-EMR是 一款简洁至上的HTML5电子病历编辑器，采用HTML5标准开放格式,支持XML,JSON,PDF格式存储; 文档格式透明，奉行简约至上的理念，界面简洁但功能全面；内置JQuery开发接口和JavaScript脚本编辑器。
 
 ![image](https://gitee.com/bensenplus/x-emr-vue/raw/master/demo.png)
 
