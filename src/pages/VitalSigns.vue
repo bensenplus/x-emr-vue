@@ -19,7 +19,6 @@
     //初始化后
     const onAfterInit = function(e) {
         editor = e.editor
-        e.editor.execCommand('new')
     }
 
     //文档命令

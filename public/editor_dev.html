@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml"/>
+        <link rel="stylesheet" href="./vender/jquery/zTreeStyle/zTreeStyle.css" type="text/css">
+        <script src = "./vender/jquery/jquery.js"></script>
+        <script src = "./vender/date97/WdatePicker.js"></script>
+        <script src = "./vender/jquery/jquery.ztree.core.min.js"></script> 
+        <script src = "./vender/jquery/jquery.ztree.exedit.min.js"></script>
+        <script src = "./vender/jquery/jquery.ztree.exhide.min.js"></script>
+        <script src = "./vender/codemirror.js"></script>
+        <script src = "./vender/fabric.js"></script>
+        <script src="./vender/requirejs/require.js"></script> 
+        <script>
+            require.config({
+                baseUrl: 'http://localhost:81/src',
+                paths: {'editor': 'editor'}
+            })
+
+            require(['editor'], function () {
+            //配置项可以不设置，会使用默认设置
+            let option = {
+                license:'HRZhN+IwLFL4ZaK46ZN5mI0w9/Z3OYny2ryWczrLxiQlwdLrtTD4AoQKS1AVEcJt1dT8dWtFLnDsBG9Gou4zv34vAB3/ue6DeU6GuBUNBHbvpsq6t/zkpMvo7M9/x+Ju/uBtFz3R9HSEnYHYCeU/+ED9DAjWGLi6m+q/6deE/v0=',
+                mode:'form',  //默认模式 form:表单模式，design:设计模式
+                pdfUrl:'https://www.x-emr.cn/pdf/post',  //pdf生成服务
+                dictionary: [  //知识库
+                    {name: '体征', isParent:true, treeUrl:'https://www.x-emr.cn/dict?category=20', itemUrl:'https://www.x-emr.cn/dictitem'},
+                    {name: '症状', isParent:true, treeUrl:'https://www.x-emr.cn/dict?category=20', itemUrl:'https://www.x-emr.cn/dictitem'},
+                    {name: '卫生信息数据元', isParent:true, treeUrl:'https://www.x-emr.cn/dict?category=40', itemUrl:'https://www.x-emr.cn/dictitem'},
+                    {name: '电子病历数据集', isParent:true, treeUrl:'https://www.x-emr.cn/dict?category=50', itemUrl:'https://www.x-emr.cn/dictitem'},
+                    {name: '国家医保标准', isParent:true, treeUrl:'https://www.x-emr.cn/dict?category=80', itemUrl:'https://www.x-emr.cn/dictitem'},
+                    {name: '省数据平台标准', isParent:true, treeUrl:'https://www.x-emr.cn/dict?category=90', itemUrl:'https://www.x-emr.cn/dictitem'},
+                ]
+            }
+
+            //用于父页面调用
+            if(window.frameElement){
+                //1.初始化前获取配置
+                let e1 = new Event('before-init')
+                e1.editor = editor
+                e1.option = option
+                window.frameElement.dispatchEvent(e1)
+                if(window.frameElement.getAttribute('mode')) {
+                    option.mode = window.frameElement.getAttribute('mode')
+                }
+
+                //开始初始化编辑器
+                editor.init(option).then(()=>{
+
+                    //2.初始化完成
+                    let e2 = new Event('after-init')
+                    e2.editor = editor
+                    window.frameElement.dispatchEvent(e2)
+
+                    //3.如果有组件有doc属性
+                    if(window.frameElement.getAttribute('doc')) {
+                        editor.loadUrl(window.frameElement.getAttribute('doc'), '1').then(function(){
+                            let e3 = new Event('doc-loaded')
+                            e3.editor = editor
+                            window.frameElement.dispatchEvent(e3)
+                        })
+                    }
+                })
+            }
+
+          })
+      </script>
+    </head>
+    <body>
+        <!-- 默认id 为editor -->
+        <div id="editor" style="width:100%; height:100%;"></div>
+    </body>
+</html>
