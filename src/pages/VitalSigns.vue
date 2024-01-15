@@ -8,7 +8,7 @@
             <el-button plain type="primary" @click="execCommand('print')">打印</el-button>
         </el-button-group>
     </el-row>
-    <Editor @BeforeInit="onBeforeInit"  @AfterInit="onAfterInit" style="margin: 10px 0;"></Editor>
+    <Editor @AfterInit="onAfterInit" style="margin: 10px 0;"></Editor>
 </template>
     
 <script setup>
@@ -61,7 +61,8 @@
     //添加新生儿体温单
     const createBabyVitalSigns = () => {
         let data = 
-            {
+            {   
+                "type": "baby",
                 "name": "吴晓莉",
                 "inDate": "2023-08-01",
                 "sex": "男",
@@ -84,7 +85,7 @@
                 "data5": "2,4,5,3,3,3,2,,2",
             }
         //第二个参数isBaby:true
-        editor.createVitalSigns(data, true)
+        editor.createVitalSigns(data)
     }
 
 </script>
