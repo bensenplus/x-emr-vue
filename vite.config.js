@@ -9,7 +9,14 @@ export default defineConfig({
   },
   plugins: [
     vue(),
-    copy({ src: 'src/pages/**/*', dest: 'dist/public/code' })
+    copy({
+      verbose: true,
+      hook: 'closeBundle',
+      targets: [
+        {src: 'src/components/Editor.vue', dest: 'public/code'},
+        {src: 'src/pages/*', dest: 'public/code'}
+      ]
+    })
   ],
   resolve: {
     alias: {
