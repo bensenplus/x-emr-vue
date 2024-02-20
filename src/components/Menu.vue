@@ -3,19 +3,11 @@
 <el-menu default-active="home"  @select="handleSelect" >
         <el-menu-item index="home">
           <el-icon><home-filled /></el-icon>
-          <span>首页</span>
+          <span>集成方法</span>
         </el-menu-item>
         <el-menu-item index="mode">
           <el-icon><icon-menu /></el-icon>
           <span>文档模式</span>
-        </el-menu-item>
-        <el-menu-item index="tab">
-          <el-icon><document /></el-icon>
-          <span>Tab示例</span>
-        </el-menu-item>
-        <el-menu-item index="readonly">
-          <el-icon><icon-menu /></el-icon>
-          <span>只读文档</span>
         </el-menu-item>
         <el-menu-item index="cmd">
           <el-icon><icon-menu /></el-icon>
@@ -47,7 +39,7 @@
         </el-menu-item>
         <el-menu-item index="echart">
           <el-icon><document /></el-icon>
-          <span>统计图表</span>
+          <span>图表</span>
         </el-menu-item>
         <el-menu-item index="lang">
           <el-icon><document /></el-icon>

@@ -1,6 +1,6 @@
 <template>
     <h3>
-        VUE 引用 editor.js 的方法
+        Vue集成X-EMR编辑器
     </h3>
     <h4>1.新建VUE组件 Editor.vue</h4>
     <Source src="/code/Editor.vue" open="true"></Source>

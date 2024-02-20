@@ -1,8 +1,10 @@
 <template>
+     <Source src="/code/Command.vue"></Source>
      <el-row>
           <el-button-group>
                <el-button plain type="primary" @click="execCommand('form')">表单模式</el-button>
                <el-button plain type="primary" @click="execCommand('design')">设计模式</el-button>
+               <el-button plain type="primary" @click="execCommand('readonly')">只读模式</el-button>
           </el-button-group>
           <el-button-group style="margin-left: 20px;">
                <el-button plain type="primary" @click="execCommand('print')">打印</el-button>
@@ -11,19 +13,17 @@
                <el-button plain type="primary" @click="execCommand('previewHtml')">预览HTML</el-button>
           </el-button-group>
           <el-button-group style="margin-left: 20px;">
-               <el-button plain type="primary" @click="execCommand('exportJson')">导出JSON</el-button>
+               <el-button plain type="primary" @click="execCommand('exportHtml')">导出模板</el-button>
+               <el-button plain type="primary" @click="execCommand('exportJson')">导出数据xml</el-button>
                <el-button plain type="primary" @click="execCommand('exportXml')">导出XML</el-button>
           </el-button-group>
           <el-button-group style="margin-left: 20px;">
-               <el-button plain type="primary" @click="execCommand('mobile')">手机填报</el-button>
+               <el-button plain type="primary" @click="execCommand('mobile')">移动填报</el-button>
           </el-button-group>
      </el-row>
      <el-row>
           <Editor doc="https://www.x-emr.cn/doc/999.html" @DocLoaded="onDocLoaded" style="margin: 10px 0;" mode="design"></Editor>
      </el-row>
-
-     <Source src="/code/Command.vue"></Source>
-
 </template>
 
 <script setup>
