@@ -37,6 +37,10 @@
             //用于父页面调用
             if(window.frameElement){
                 //1.初始化前获取配置
+                let e1 = new Event('before-init')
+                e1.editor = editor
+                e1.option = option
+                window.frameElement.dispatchEvent(e1)
                 if(window.frameElement.getAttribute('mode')) {
                     option.mode = window.frameElement.getAttribute('mode')
                 }

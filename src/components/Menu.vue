@@ -22,7 +22,7 @@
           <span>数据表格</span>
         </el-menu-item>
         <el-menu-item index="save">
-          <el-icon><icon-menu /></el-icon>
+          <el-icon><document /></el-icon>
           <span>保存文档</span>
         </el-menu-item>
         <el-menu-item index="append">

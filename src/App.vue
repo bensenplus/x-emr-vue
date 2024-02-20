@@ -2,7 +2,7 @@
     <el-container>
       <el-header class="menu-header">
         <Fold style="width: 1.5em; margin-right: 1em; cursor: pointer; color:var(--el-color-primary);" @click="toggleClick()"/>
-        <span style="flex-grow: 1;"></span>
+        <span style="flex-grow: 1;">X-EMR-VUE 示例</span>
         <el-switch v-model="dark" @change="changeStyle()" :active-icon="Sunny" :inactive-icon="Moon" inline-prompt/>
       </el-header>
       <el-container>
