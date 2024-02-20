@@ -14,15 +14,16 @@
           </el-button-group>
           <el-button-group style="margin-left: 20px;">
                <el-button plain type="primary" @click="execCommand('exportHtml')">导出模板</el-button>
-               <el-button plain type="primary" @click="execCommand('exportJson')">导出数据xml</el-button>
-               <el-button plain type="primary" @click="execCommand('exportXml')">导出XML</el-button>
+               <el-button plain type="primary" @click="execCommand('exportJson')">导出数据</el-button>
+               <el-button plain type="primary" @click="execCommand('exportPdf')">导出PDF</el-button>
+               <el-button plain type="primary" @click="execCommand('exportWord')">导出Word</el-button>
           </el-button-group>
           <el-button-group style="margin-left: 20px;">
                <el-button plain type="primary" @click="execCommand('mobile')">移动填报</el-button>
           </el-button-group>
      </el-row>
      <el-row>
-          <Editor doc="https://www.x-emr.cn/doc/999.html" @DocLoaded="onDocLoaded" style="margin: 10px 0;" mode="design"></Editor>
+          <Editor doc="https://www.x-emr.cn/doc/999.html" @afterInit="onAfterInit" style="margin: 10px 0;" mode="design"></Editor>
      </el-row>
 </template>
 
@@ -32,13 +33,16 @@ import Source from '@/components/Source.vue';
 import { ref } from 'vue'
 
 var editor
-//文档加载完成
-const onDocLoaded = (e) => {
+
+//初始化事件
+const onAfterInit = (e) => {
      editor =  e.editor
 }
 
+//文档命令I
 const execCommand = (cmd) => {
-     editor.execCommand(cmd)
+     let param = {fileName:'病案首页'}
+     editor.execCommand(cmd, param)
 }
 const current = ref("1")
 

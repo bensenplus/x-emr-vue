@@ -13,7 +13,7 @@
         <el-col :span="1"></el-col>
         <el-col :span="1"><el-button plain type="primary" @click="execCommand('print')">打印</el-button></el-col>
     </el-row>
-    <Editor @BeforeInit="onBeforeInit" doc="/mock/data_table.html" mode="design" style="margin: 10px 0;"></Editor>
+    <Editor @AfterInit="onAfterInit" doc="/mock/data_table.html" mode="design" style="margin: 10px 0;"></Editor>
 
 
 </template>
@@ -34,7 +34,7 @@
         },
         methods:{
             //初始化前
-            onBeforeInit: function(e) {
+            onAfterInit: function(e) {
                 this.editor = e.editor
             },
             //获取数据到表格

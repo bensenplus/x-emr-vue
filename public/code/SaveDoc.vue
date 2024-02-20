@@ -8,7 +8,7 @@
         <el-col :span="2"> <el-button plain type="primary" @click="saveHtmlAndData">保存数据&文档</el-button></el-col>
     </el-row>
     <Source src="/code/SaveDoc.vue"></Source>
-    <Editor @BeforeInit="onBeforeInit" doc="https://www.x-emr.cn/doc/999.html" style="margin: 10px 0;"></Editor>
+    <Editor @AfterInit="onAfterInit" doc="https://www.x-emr.cn/doc/999.html" style="margin: 10px 0;"></Editor>
 
 </template>
     
@@ -28,7 +28,7 @@
         },
         methods:{
             //初始化前
-            onBeforeInit: function(e) {
+            onAfterInit: function(e) {
                 this.editor = e.editor
             },
             //仅保存HTML文档
