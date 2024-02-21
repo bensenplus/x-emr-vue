@@ -1,6 +1,6 @@
 <template>
-     <Source src="/code/DocMode.vue"></Source>
-    <el-tabs v-model="activeName">
+      <Source src="/code/DocMode.vue"></Source>
+      <el-tabs v-model="activeName">
           <el-tab-pane label="设计模式" name="design">
                 <Editor mode="design" doc="https://www.x-emr.cn/doc/999.html"></Editor>
           </el-tab-pane>

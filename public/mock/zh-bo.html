@@ -1,0 +1,1368 @@
+<html class="preview"><head><meta charset="utf-8">
+<style id="preview" type="text/css">
+@media print {.pagebreaker {display: none !important;}}
+</style>
+<style id="printSzie" type="text/css">@page {margin: 0; size:A4 portrait;}</style> <style> ::-webkit-scrollbar { width: 6px; height: 6px; } ::-webkit-scrollbar-track { background-color: transparent; } ::-webkit-scrollbar-thumb { border-radius: 5px; box-shadow: inset 0 0 0px rgba(240, 240, 240, 0.5); background-color: rgba(100, 100, 100, 0.5); } ::selection { background: rgba(170, 210, 255, 1); } .pagebreaker { font-family: 'Times New Roman', Times, serif; display: block; height: 15px; } body { word-break: break-all; font-family: '宋体'; font-size: 12pt; } @media print { .pagebreaker { display: none !important; } html, body { margin: 0; } } #_page { position: relative; z-index: 1; box-shadow: rgba(0, 0, 0, 0.06) 0px 0px 10px 0px, rgba(0, 0, 0, 0.04) 0px 0px 0px 1px; } .preview #_page{ box-shadow:none; } #_header, #_body, #_footer{ outline: none; } /* 预览模式 */ .preview body { background-color: #666; } .preview #_page { outline: none; } h1,h2,h3 { margin: 0 } p { margin: 0; line-height: 1.5; min-height:1em; } /* 自由编辑区 */ .form span[contenteditable=true], .design span[contenteditable=true]{ outline: none; background-color: #eff; } .form span[contenteditable=true]:focus, .design span[contenteditable=true]:focus{ background-color: #aff;; } .design p::after{ font-size: 9pt; position: absolute; content: '↲'; color: lightgray; } input { outline: none; } textarea { outline: none; } field { outline: none; color: #000; caret-color: black; text-indent:0; } field[contenteditable=true], field[type=DateTime] { background-color: #eff; } field[readonly] { background-color: #fff; } field[format=number] { ime-mode: disabled; } .design field[data-expression]:not([data-expression=""]) { position: relative; } .design field[data-expression]:not([data-expression=""])::before { white-space: nowrap; font-size: 9px; content:attr(data-expression); position: absolute; padding: 0px 5px; position: absolute; bottom: 1.8em; background-color: #fdd8; border: 1px dotted red; border-radius: 3px; } field[contenteditable=true]:focus { background-color: #aff;; } field.blank { color: lightgray; } field.white-blank { color: rgba(255, 255, 255, 0) } /* 预览模式 */ .preview field { background-color: #fff; } /* 预览模式 */ .preview field.blank { color: rgba(255, 255, 255, 0) } field.error { color: red; } img { max-width: 100% } img[type=sign] { background-color: #f9f9f9; } table { border-collapse: collapse; border: 1px solid #000; word-break: break-all; } /* 设计模式 */ .design thead { outline: 1px dashed rgba(255, 0, 0, 1); } /* 设计模式 */ .design thead::before { font-size: xx-small; content: '每页打印'; cursor: pointer; white-space: nowrap; color: white; padding: 0px 5px; position: absolute; left: -35px; background-color: rgba(255, 0, 0, 0.5); border-radius: 3px; } table td, table th{ border: 1px solid #000; padding: 2px; height: 1.5em; word-break: break-all; } table.noborder td { border: none } td.noborder{ border: none } /* 设计模式 */ .design table.noborder td { border: 1px dashed lightgray; } .design td.noborder{ border: 1px dashed lightgray; } td.selected { background-color: rgba(0, 0, 255, 0.1) !important; } /* 设计模式 */ .design group { outline: 1px dashed lightgray; } .design [tag=true]::before { font-size: xx-small; content: attr(title); cursor: pointer; white-space: nowrap; color: white; padding: 0px 5px; position: absolute; left: 5px; background-color: rgba(0, 0, 0, 0.5); border-radius: 3px; } #_dropdownbox, #_datalist { z-index: 2; list-style: none; position: absolute; max-height: 300px; overflow: auto; cursor: hand; outline: none; display: none; background: #fff; border: rgba(0, 0, 0, 0.12); box-shadow: 0 2px 8px 2px rgb(68 73 77 / 26%); border-radius: 4px; padding: 1px 0; } #_dropdownbox>li, #_datalist>li { padding: 0 10px; font-size: 14px; line-height: 1.5; white-space: nowrap; align-items: center; } #_dropdownbox>li:hover, #_datalist>li:hover { background: lightgray; } .shink { animation: shink 0.5s infinite; animation-iteration-count: 1; } @keyframes shink { from { background-color: #f99; } to { background-color: #eff; } } .mask { -webkit-mask-image: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, 0.4)) } .close { position: absolute; right: 5px; cursor: pointer; width: 16px; height: 16px; background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZmlsbD0iIzAwMCIgZD0iTTguNTU0IDguMDA0bDQuNDAxIDQuMzkxLS41NC42MjJMNy45NzkgOC41OCAzLjU0IDEzLjAxNiAzIDEyLjM5NWw0LjQtNC4zOS00LjQtNC40TDMuNTQgM2w0LjQzOCA0LjQyOUwxMi40MTYgM2wuNTQuNjA2eiIgZmlsbC1ydWxlPSJldmVub2RkIi8+PC9zdmc+); } .apply { position: absolute; right: 30px; cursor: pointer; width: 16px; height: 16px; background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbD0ibm9uZSI+CiA8Zz4KICA8dGl0bGU+TGF5ZXIgMTwvdGl0bGU+CiAgPGcgc3Ryb2tlPSJudWxsIiBpZD0ic3ZnXzIiPgogICA8cmVjdCBzdHJva2U9IiMwMDAiIGZpbGw9IiNmZmYiIHg9IjEuMjczOTciIHk9IjEiIHdpZHRoPSIxMy44ODYxOSIgaGVpZ2h0PSIxMi45NjE0NiIgb3BhY2l0eT0iMCIgaWQ9InN2Z18zIi8+CiAgIDxwYXRoIHN0cm9rZT0iIzAwMCIgZmlsbD0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIyIiBkPSJtMS4yODczMiw3LjE0NzI4YzAsMCA0LjgzNDMyLDQuOTc5MTkgNC44MzQzMiw0Ljk3OTE5YzAsMCA4LjY2ODQ2LC05LjE4MDM4IDguNjY4NDYsLTkuMTgwMzgiIGlkPSJzdmdfMSIvPgogIDwvZz4KIDwvZz4KPC9zdmc+); } .pagebreak{ border-top: 2px dashed #00f; } .preview .pagebreak{ display:none; } .pageline { Width: 100%; height: 0; border-top: 1px dashed #999; position: absolute; color: #999; font-size: xx-small; text-align: right; } .pageline>span { position: absolute; bottom: 5px; right: -35px; } .pageline>ft { position: absolute; top: 5px; right: -35px; } .message { position: absolute; text-align: center; white-space: nowrap; top: 20px; left: 50%; padding: 0 5px 1px; font-size: 11px; color: #fff !important; max-width: none; background: #ff6969; z-index: 1; border-radius: 5px; user-select: none; -webkit-user-select: none; } .message::after { content: ''; width: 0; height: 0; border: 5px solid; position: absolute; top: -10px; left: 5px; border-color: transparent transparent #ff6969; } :root { --remark-width: 200px; --remark-height: 50px; --oblique-y: 40px; } .form .remark { background-color: pink; } .remark-block { position: absolute; z-index: 1; right: calc(-10px - var(--remark-width)); padding: 5px; box-sizing: border-box; width: var(--remark-width); background: #fff; border-left: solid 2px red; box-shadow: 0 2px 8px 2px rgb(68 73 77 / 26%); -webkit-box-shadow: 0 2px 8px 2px rgb(68 73 77 / 26%); user-select: none; -webkit-user-select: none; } .revision-block { border-left: solid 2px red; } .remark-block:hover { z-index: 2; background: lightyellow; } .remark-line { position: absolute; top: 0; left: 0; } .remark-note { margin-top: 24px; padding: 5px; box-sizing: border-box; max-width: var(--remark-width); width: 100%; min-height: var(--remark-height); outline: none; user-select: none; -webkit-user-select: none; } .remark-info { cursor: pointer; position: absolute; top: -15px; left: -10px; width: 15px; height: 10px; border: 1px solid lightgray; background-color: lightyellow; border-radius: 3px; } .remark-info:before { content: ""; display: inline-block; border: 4px solid transparent; border-top: 4px solid lightgray; position: absolute; left: 3px; bottom: -8px; width: 0; height: 0; } .remark-block:hover .straight, .remark-block:hover .oblique { border-top: 1px solid red; } .remark-block:hover .remark-info { border-color: red; } .remark-block:hover .remark-info:before { border-top-color: red; } .straight { position: absolute; right: calc(100% + var(--oblique-y)); border-top: 1px dashed red; } .oblique { position: absolute; border-top: dashed 1px red; left: calc(-1 * var(--oblique-y)); width: calc(1.1* var(--oblique-y)); transform: rotate(30deg); transform-origin: top left; } .remark-header { color: #999; font-size: xx-small; position: absolute; width: 100%; height: 24px; } .remark-footer { font-size: xx-small; display: flex; justify-content: flex-end; } .remark-footer span { cursor: pointer; margin: 5px; } .remark-delete { position: absolute; width: 24px; height: 24px; top: 2px; right: 2px; background-size: contain; background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cpath fill='%23464d5a' d='M17 7.714L12.714 12 17 16.286l-.714.714L12 12.714 7.714 17 7 16.286 11.286 12 7 7.714 7.714 7 12 11.286 16.286 7z'/%3E%3C/svg%3E"); cursor: pointer; } .td-line-style1 { outline: none; background-color: rgb(255, 255, 255); background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiPjxsaW5lIHgxPSIwIiB5MT0iMCIgeDI9IjEwMCIgeTI9IjEwMCIgc3R5bGU9InN0cm9rZTpncmF5O3N0cm9rZS13aWR0aDoxcHg7Ii8+PC9zdmc+IA=="); background-repeat: no-repeat; background-size: 100% 100%; } .td-line-style2 { outline: none; background-color: rgb(255, 255, 255); background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiPjxsaW5lIHgxPSIxMDAiIHkxPSIwIiB4Mj0iMCIgeTI9IjEwMCIgc3R5bGU9InN0cm9rZTpncmF5O3N0cm9rZS13aWR0aDoxcHg7Ii8+PC9zdmc+IA=="); background-repeat: no-repeat; background-size: 100% 100%; } <style> <style id="printSzie" type="text/css"> @page {margin: 0; size:A4 portrait;} </style> <title>病案首页</title></head><body><div id="_page"><div class="print-page" style="position: relative; overflow:hidden; margin:0 auto; background:#fff;width:210mm;height:297mm;max-height:297mm;">
+<div id="_header" style="outline: none; min-height: 0.65cm; padding-left: 2.01cm; padding-right: 2.41cm; padding-top: 0.65cm; position: relative;" class="" contenteditable="false"></div>
+<div id="_body" style="padding-left:2.01cm;padding-right:2.41cm;text-indent:;min-height: calc(297mm - 49px - 49px);">
+
+	<p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 36pt;">ཐེམ་ཆེན་རྫོང་བོད་ལུགས་སྨན་ཁང་།</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Center;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 26pt;"> ནད་ཐོའི་འབྲི་ཤོག་ཐོག་མ།</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 17pt;">ནད་ཁྲིའི་ཨང་།      ༡༣          </label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt;">ཚན་ཁག   ཕྱོགས་བསྡུས་ཁོང་ནད་།                ནད་སྡོད་ཨང་། ༡༥༠༠༠༡༩</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt;">
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<span style="color:#0000; line-height:0">↲</span><table style="width: 627px;"><colgroup>
+		<col style="width:648px">
+		</colgroup><tbody><tr><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 17pt;">རུས་མིང་། </label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 16pt;">ཀླུ་མཚོ་སྐྱིད། </label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 23pt;">                            </label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 17pt;">རྟེན།  </label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 15pt;">མོ།</label>
+		<label style=" font-family: 黑体; font-size: 16pt;">  </label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 23pt;">                      </label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 17pt;">ལོ་གྲངས། ༤༣</label>
+		<label style=" font-family: 黑体; font-size: 16pt;">   </label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 17pt;">    </label></p></td></tr>
+		<tr><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 17pt;">མི་རིགས།   བོད་རིགས།                                      ལས་བྱ།  </label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 15pt;">ཕྱུགས་ལས།                            </label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 17pt;">གཉེན་སྒྲིག   </label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 15pt;">བྱས་ཟིན།     </label></p></td></tr>
+		<tr><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 17pt;">ཕ་ཡུལ།   </label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 15pt;">མཚོ་སྔོན་ཞིང་ཆེན།</label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 17pt;">                                  སྡོད་གནས།   </label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt;">ཐེམ་ཆེན་རྫོང་ཅོང་ཆུ་གྲོང་བརྡལ་ཧྲེ་ལྔ་བ། </label></p></td></tr>
+		<tr><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt;">སྨན་ཁང་སྡོད་ཉིན།    སྤྱི་ལོ་༢༠༡༥ལོའི་༡༡ པའི་ཚེས་༩ཉིན་གྱི་སྔ་དྲོའི་དུས་ཚོད་༩ སྟེང། </label></p></td></tr>
+		<tr><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt;">ཟིན་ཐོ་འགོད་དུས།     སྤྱི་ལོ་༢༠༡༥ལོའི་༡༡ པའི་ཚེས་༩ཉིན་གྱི་ཕྱི་དྲོའི་དུས་ཚོད་༣ སྟེང།</label></p></td></tr>
+		<tr><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt;">ན་ལུགས་བརྗོད་མཁན།   གསོ་བྱ་ཉིད།                                                          ཡིད་རྟོན་རུང་མིན།        རུང་བ།  </label></p></td></tr>
+		<tr><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">ན་ལུགས་གཙོ་བོ།</label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt;">   གསོ་བྱའི་སྙིང་ཁམས་མི་བདེ་བ་ལུས་ཐང་ཆད་པ་དང་མཁལ་རྐེད་ན་བ།  ཟླ་མཚན་འབྱམས་པ་སྙིང་ཁམས་</label></p></td></tr>
+		<tr><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt;">མི་བདེ་བ་རོ་སྟོད་མདུན་རྒྱབ་སྒྲེག་སྟེ་ན་བ་བཅས་ཟླ་གཅིག་ལྷག་འགོར།</label></p></td></tr>
+		<tr><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">ད་ལྟའི་ནད་ཀྱི་ལོ་རྒྱུས།</label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt;">  གསོ་བྱའི་ནད་ཀྱི་སློང་རྐྱེན་མི་གསལ་བར་སྙིང་ཁམས་མི་བདེ་བ་ལུས་ཐང་ཆད་པ་དང་མཁལ་རྐེད་ན་</label></p></td></tr>
+		<tr><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt;">བ།  ཟླ་མཚན་འབྱམས་པ་སྙིང་ཁམས་མི་བདེ་བ་རོ་སྟོད་མདུན་རྒྱབ་སྒྲེག་སྟེ་ན་བ།  རྒྱུ་ཞབས་སྦོ་བ་བཅས་ སྤྱི་ལོ༢༠༡༥ལོའི་ཟླ་༡༡ཚེས་༩ཉིན་</label></p></td></tr>
+		<tr><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt;"> སྒོ་བསྟེན་བརྒྱུད་ནད་ངོས་སྙིང་རླུང་བཟུང་ནས་རང་ཚན་ཁག་ཏུ་ཞག་སྡོད་གསོ་བཅོས་སུ་ཉར།</label></p></td></tr>
+		<tr><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">དེ་སྔའི་ལོ་རྒྱུས།</label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt;">  གསོ་བྱར་དེ་སྔོན་གཤགས་བཅོས་དང་བརྡབས་སྐྱོན། ཁྲག་གསབ་པ། གློ་གཅོང་འགོས་ནད་རིགས་ཀྱི་ནད་རྒྱུས་</label></p></td></tr>
+		</tbody>
+</table>
+</p>
+</div>
+<div id="_footer" style="outline:none; position:relative;min-height:0.65cm;padding-left:2.01cm;padding-right:2.41cm;padding-bottom:0.65cm;" class="" contenteditable="false">
+	<p style="">
+</p></div>
+</div>
+<div class="pagebreaker"></div>
+<div class="print-page" style="position: relative; overflow:hidden; margin:0 auto; background:#fff;width:210mm;height:297mm;max-height:297mm;">
+<div id="_header" style="outline: none; min-height: 0.65cm; padding-left: 2.01cm; padding-right: 2.41cm; padding-top: 0.65cm; position: relative;" class="" contenteditable="false"></div>
+<div id="_body" style="padding-left:2.01cm;padding-right:2.41cm;text-indent:;min-height: calc(297mm - 49px - 49px);">
+<p style="font-family: 宋体; font-size: 12pt; text-align: justify; text-indent: 0px;"><table style="width: 627px;"><colgroup>
+		<col style="width:648px">
+		</colgroup><tbody><tr><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;" rowspan="1"><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;"><span>
+		</span><label style=" font-family: Microsoft Himalaya; font-size: 18pt;">མེད་ལ། སྨན་རྫས་སོགས་མི་འཕྲོད་པའང་མེད་པར་བཤད།          </label></p></td></tr>
+		<tr><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt;">  </label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">སྒེར་གྱི་ལོ་རྒྱུས།</label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt;"> གསོ་བྱ་ཉིད་ཆུང་དུས་ནས་འབྲོག་ཁུལ་དུ་ནར་སོན་པས་ཟས་དཀར་གསུམ་དང་སྣུམ་བཅུད་ཀྱི་རིགས།  སྤྱོད་ལམ་</label></p></td></tr>
+		<tr><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt;">  དྲག་ཤུལ་ཀྱི་ལས་ལ་གོམས་ཤིང་།  ས་གནས་རང་བཞིན་ཅན་གྱི་འགོས་གཅོང་ནད་མེད་ལ། དེ་མིན་ས་ཆ་གཞན་དུ་བསྡད་མ་མྱོང་ལ་ཆང་</label></p></td></tr>
+		<tr><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt;">དང་ཐ་མག་ལ་གོམས་མེད།</label></p></td></tr>
+		<tr><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">གཉེན་སྒྲིག་གི་ལོ་རྒྱུས།</label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt;">  གཉེན་སྒྲིག་བྱས་ཟིན་ལ་བྱིས་པ་གཉིས་ཡོད། བཟའ་ཟླ་དང་བྱིས་བའི་ལུས་ཕུང་བདེ་ཐང་ཡིན་སྐད།</label></p></td></tr>
+		<tr><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">ཟླ་མཚན་གྱི་ལོ་རྒྱུས།</label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt;">    ཟླ་མཚན་རྒྱུན་ལྡན་ཡིན། </label></p></td></tr>
+		</tbody></table></p><p>
+		<label style=" font-family: Microsoft Himalaya; font-size: 24pt; font-weight: bold;">                           </label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 26pt; font-weight: bold;">ཐེམ་ཆེན་རྫོང་བོད་ལུགས་སྨན་ཁང་། </label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt; font-weight: bold;">    ནད་                ཐོ།</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt; font-weight: bold;">རུས་མིང་།  </label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 16pt;">ཀླུ་མཚོ་སྐྱིད། </label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 23pt;"> </label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt; font-weight: bold;">                                          ནད་སྡོད་ཨང་།     </label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt;">༡༥༠༠༠༡༩</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 24pt; font-weight: bold;">    </label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt;"> </label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">ཁྱིམ་བརྒྱུད་ཀྱི་ལོ་རྒྱུས</label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt;">། གསོ་བྱའི་གཉེན་ཉེ་དང་སྤུན་མཆེད་སོགས་ལ་མཆིན་ལྡེམ་དང་གློ་གཅོང་སོགས་</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt;">འགོས་ནད་རིགས་ཀྱི་ནད་ཀྱི་ལོ་རྒྱུས་མེད་སྐད།</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">དུག་རིགས་ཀྱི་ལོ་རྒྱུས།</label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt;"> གསོ་བྱར་ཟས་དུག གྱུར་དུག སྦྱར་དུག་དང་། དངོས་དུག་སོགས་ཕོག་པའི་གནས་ཚུལ་མེད།</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">བལྟ་རེག་བརྟག་ཐབས།</label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt;"> ལུས་དྲོད་ཏུའུ་༣༦.༦དབུགས་གྲངས་སྐར་རེར་ཐེངས༡༦ལེན། རྩའི་འཕར་གྲངས་སྐར་རེར་ཐེངས་༦༦འཕར། ཁྲག་ཤེད་འཁུམ་འདུའི་ཤུགས་༨༠དང་རྐྱོང་འབྱེད་ཤུགས་༦༠ཡིན། ལུས་ལྗིད་ཚད་སྤྱི་རྒྱ་༤༣ཤེས་བ་གསལ། སྨྲ་བརྗོད་དག གཞོགས་འདེགས་བརྟག་དཔྱད་ལ་རམ་འདེགས་བྱེད་ནུས། ལུས་བོངས་དང་ཉམས་སྟོབས་འབྲིང་། དབང་ལྔའི་ཆགས་དབྱིབས་དང་བྱེད་ལས་རྒྱུན་ལྡན། བད་རླུང་རང་བཞིན་ཅན། འཚོ་བཅུད་ལེགས། པགས་མདོག་སྐྱ་ལ་ལྡེམ་ཤུགས་ལེགས། རེག་བྱ་འཇམ་ཞིང་སྨུག་ཐིག་དང་རྣག་སྐྲངས་སོགས་མེད། ལུས་ཕྱི་ངོས་ཀྱི་རྨེན་བུ་ཁག་འབུར་ཁྲོས་སུ་གྱུར་མེད། བྱང་ཁོག་སྟོད་སྨད་ཁོད་སྙོམས། འབྲུམ་བུ་དང་རྩ་བཀྲ་མི་རིག བཤང་གཅིག་གཉིས་རྒྱུན་ལྡན། གཞང་མཚན་ལ་བརྟག་མེད།</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">ཁྱད་པར་གྱི་བལྟ་རེག</label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt;"> རྩ་རྒྱུད་ཕྲ་ལ་གྲིམས་པར་འཕར། ལྕེ་མདོག་དམར་སྐྱ་དྲེག་པ་སྐྱ་སེར་ཆགས། དྲི་ཆུར་སྐབས་སུ་བརྟག་མེད།</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;"><span>
+		</span><label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">གཞོགས་འདེགས་བརྟག་དཔྱད།</label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt;"> སྐབས་སུ་མེད།</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<span style="color:#0000; line-height:0">↲</span></p>
+</div>
+<div id="_footer" style="outline:none; position:relative;min-height:0.65cm;padding-left:2.01cm;padding-right:2.41cm;padding-bottom:0.65cm;" class="" contenteditable="false">
+	<p style="">
+</p></div>
+</div>
+<div class="pagebreaker"></div>
+<div class="print-page" style="position: relative; overflow:hidden; margin:0 auto; background:#fff;width:210mm;height:297mm;max-height:297mm;">
+<div id="_header" style="outline: none; min-height: 0.65cm; padding-left: 2.01cm; padding-right: 2.41cm; padding-top: 0.65cm; position: relative;" class="" contenteditable="false"></div>
+<div id="_body" style="padding-left:2.01cm;padding-right:2.41cm;text-indent:;min-height: calc(297mm - 49px - 49px);">
+<p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;"><span>
+		</span>
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt;">  གསོ་བྱའི་ནད་ཀྱི་སློང་རྐྱེན་མི་གསལ་བར་སྙིང་ཁམས་མི་བདེ་བ་ལུས་ཐང་ཆད་པ་དང་མཁལ་རྐེད་ན་བ། ཟླ་མཚན་འབྱམས་པ་སྙིང་ཁམས་མི་བདེ་བ་རོ་སྟོད་མདུན་རྒྱབ་སྒྲེག་སྟེ་ན་བ།  རྒྱུ་ཞབས་སྦོ་བ། རྩ་རྒྱུད་ཕྲ་ལ་གྲིམས་པར་འཕར། ལྕེ་མདོག་དམར་སྐྱ་དྲེག་པ་སྐྱ་སེར་ཆགས། གོང་གི་ནད་བབས་དང་བོད་ཕྱི་ཟུང་འབྲེལ་གྱིས་ནད་ངོས་བཟུང་བ་ གཤམ་ལྟར།   </label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 26pt; font-weight: bold;">ཐེམ་ཆེན་རྫོང་བོད་ལུགས་སྨན་ཁང་། </label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt; font-weight: bold;">   ནད་                ཐོ།</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt; font-weight: bold;">རུས་མིང་།  </label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 16pt;">ཀླུ་མཚོ་སྐྱིད། </label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt; font-weight: bold;">                                   </label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt;">    </label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt; font-weight: bold;">ནད་སྡོད་ཨང་།     </label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt;">༡༥༠༠༠༡༩</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt;">                                                                            ནད་གཞི་ངོས་འཛིན། སྤྱི།   སྙིད་ནད། </label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt;">                            བྱེ་བྲག སྙིང་རླུང་། </label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt;">                            ཕལ་བ། མཁལ་འགྲམས། </label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">གསོ་ཚུལ།</label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt;"> རླུང་ཁ་གནོན་པ་དང་ནད་བབས་དང་བསྟུན་ནས་སྨན་དཔྱད་སོགས་མཛོ་ལུག་ཁལ་ལྟ་བུའི་བཅོས་བསྟེན་དགོས། </label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">གསོ་ཐབས།</label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt;"> ཟས་ཚ་སྐྱུར་རུལ་སུངས་རིགས་སྤང་ནས་འཇུ་སླ་བ་བསྟེན། སྤྱོད་ལམ་དྲག་ཤུལ་བསིལ་རླུང་སྤང་ནས་དྲོད་འཇམ་དལ་བུར་འདུག ཁོང་སྨན་བྱུར་མར་ཉེར་ལྔ།  ཨ་གར་བརྒྱད་པ།  བདུད་རྩི་དྲུག་པ་བཅས་བསྟེན། </label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">                                                                     </label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">ནད་སྐྱོང་མངགས་བྱ།</label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt;">  ཁོང་ནད་རིམ་གསུམ།</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt;">                     </label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">གཙོ་བཅོས་སྨན་པ། </label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt;"> ཚེ་རིང་མཚོ།</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 24pt; font-weight: bold;">           </label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;"><span>
+		</span><label style=" font-family: Microsoft Himalaya; font-size: 24pt; font-weight: bold;">ཐེམ་ཆེན་རྫོང་བོད་སྨན་ཁང་།</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Center;"><span>
+		</span><span style="color:#0000; line-height:0">↲</span></p>
+</div>
+<div id="_footer" style="outline:none; position:relative;min-height:0.65cm;padding-left:2.01cm;padding-right:2.41cm;padding-bottom:0.65cm;" class="" contenteditable="false">
+	<p style="">
+</p></div>
+</div>
+<div class="pagebreaker"></div>
+<div class="print-page" style="position: relative; overflow:hidden; margin:0 auto; background:#fff;width:210mm;height:297mm;max-height:297mm;">
+<div id="_header" style="outline: none; min-height: 0.65cm; padding-left: 2.01cm; padding-right: 2.41cm; padding-top: 0.65cm; position: relative;" class="" contenteditable="false"></div>
+<div id="_body" style="padding-left:2.01cm;padding-right:2.41cm;text-indent:;min-height: calc(297mm - 49px - 49px);">
+<p style="font-family: 宋体; font-size: 12pt; text-align: center; text-indent: 0px;"><label style=" font-family: Microsoft Himalaya; font-size: 24pt; font-weight: bold;">ནད་གཞི་ཐོག་མའི་བརྒྱུད་རིམ་གྱི་ཟིན་ཐོ།</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">རུས་མིང་། </label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt;">ཀླུ་མཚོ་སྐྱིད།  </label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">རྟེན།  </label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt;">མོ། </label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">  ལོ།</label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt;">	 </label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">༤༣      མི་རིགས།      </label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt;">བོད་རིགས། </label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">    སྡོད་གནས།   </label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt;">ཐེམ་ཆེན་རྫོང་ཅོང་ཆུ་གྲོང་བརྡལ་ཧྲེ་ལྔ་བ།   </label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">མཚམས་སྦྱོར་ལས་ཁུངས།     </label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 15pt;">སྒོ་བསྟེན །  </label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">  ངོས་འཛིན་</label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt;">(</label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">བོད་ལུགས)   </label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt;">སྙིང་རླུང་། </label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;"> ཕྱི་ལུགས    </label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt;">སྙིང་རླུང་། </label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">ནད་ཁང་དུ་འབྱོར་དུས།      </label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt;">སྤྱི་ལོ་༢༠༡༥ལོའི་༡༡ པའི་ཚེས་༩ཉིན་གྱི་སྔ་དྲོའི་དུས་ཚོད་༩སྟེང།</label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;"> </label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">ཟིན་ཐོ་འགོད་པའི་དུས་ཚོད།</label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt;">སྤྱི་ལོ་༢༠༡༥ལོའི་༡༡ པའི་ཚེས་༩ཉིན་གྱི་ཕྱི་དྲོའི་དུས་ཚོད་༥སྟེང་བྲིས། </label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt;">ན་ལུགས་མདོར་བསྡུས</label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">(</label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt;">བརྟག་ཐབས་གསུམ་དང་གཞོགས་འདེགས་བརྟག་ཐབས་སོགས</label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">)</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt;">གསོ་བྱའི་ སྙིང་ཁམས་མི་བདེ་བ་ལུས་ཐང་ཆད་པ་དང་མཁལ་རྐེད་ན་བ། ཟླ་མཚན་འབྱམས་པ་སྙིང་ཁམས་མི་བདེ་བ་རོ་སྟོད་མདུན་རྒྱབ་སྒྲེག་སྟེ་ན་བ་བཅས་ན་ནས་ཟླ་གཅིག་ལྷག་འགོར།</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">དཔྱད་འཕྲང་བསལ་བ།</label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt;"> གསོ་བྱའི་ནད་ཀྱི་སློང་རྐྱེན་མི་གསལ་བར་སྙིང་ཁམས་མི་བདེ་བ་ལུས་ཐང་ཆད་པ་དང་མཁལ་རྐེད་ན་བ། ཟླ་མཚན་འབྱམས་པ་སྙིང་ཁམས་མི་བདེ་བ་རོ་སྟོད་མདུན་རྒྱབ་སྒྲེག་སྟེ་ན་བ།  རྒྱུ་ཞབས་སྦོ་བ། རྩ་རྒྱུད་ཕྲ་ལ་གྲིམས་པར་འཕར། ལྕེ་མདོག་དམར་སྐྱ་དྲེག་པ་སྐྱ་སེར་ཆགས། གོང་གི་ནད་བབས་དང་བོད་ཕྱི་ཟུང་འབྲེལ་གྱིས་ནད་ངོས་བཟུང་བ་གཤམ་ལྟར། </label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<table style="">
+		<colgroup>
+		<col style="width:68px">
+		<col style="width:96px">
+		<col style="width:413px">
+		</colgroup>
+		<tbody><tr>
+			<td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 16pt; font-weight: bold;">ངོས་</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 16pt; font-weight: bold;">གསོ་</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 16pt; font-weight: bold;">འཆར་</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 16pt; font-weight: bold;">གཞི།</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;"></p></td>
+			<td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 16pt; font-weight: bold;">ངོས་</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 16pt; font-weight: bold;">འཛིན་</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 16pt; font-weight: bold;">གསོོ་</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 16pt; font-weight: bold;">ཐབས</label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 16pt;">།</label></p></td>
+			<td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 16pt; font-weight: bold;">བོད་ལུགས་ངོས་འཛིན།</label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt;"> སྙིང་རླུང་། </label></p></td>
+		</tr>
+		<tr>
+			<td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=""></p></td>
+			<td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=""></p></td>
+			<td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 16pt; font-weight: bold;">ཕྱི་ལུགས་ངོས་འཛིན། </label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt;">  སྙིང་རླུང་།</label></p></td>
+		</tr>
+		<tr>
+			<td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=""></p></td>
+			<td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=""></p></td>
+			<td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 16pt; font-weight: bold;">གསོ་ཚུལ་རྩ་དོན། </label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt;"> མཛོ་ཁལ་ལུག་ཁལ་ལྟ་བུའི་འཚམ་པོས་བཅོས།</label></p></td>
+		</tr>
+		<tr>
+			<td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=""></p></td>
+			<td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=""></p></td>
+			<td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 16pt; font-weight: bold;">གསོ་ཐབས་དངོས། </label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt;">   བྱུར་དམར་ཉེར་ལྔ། ཨ་གར་བརྒྱད་པ།  བདུད་རྩི་དྲུག་པ། </label></p></td>
+		</tr>
+		<tr>
+			<td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=""></p></td>
+			<td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 16pt; font-weight: bold;">ནད་གཡོགས།</label></p></td>
+			<td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt;">ཁོང་ནད་རིམ་གསུམ།</label></p></td>
+		</tr>
+		</tbody></table></p><p>
+		<label style=" font-family: Microsoft Himalaya; font-size: 16pt;">                                                                                           </label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 16pt; font-weight: bold;">   སྨན་པའི་མིང་འགོད།  </label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 16pt;"> ཚེ་རིང་མཚོ།</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;"><span>
+		</span><label style=" font-family: Microsoft Himalaya; font-size: 26pt; font-weight: bold;">ཐེམ་ཆེན་རྫོང་བོད་ལུགས་སྨན་ཁང་། </label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt; font-weight: bold;">  </label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt;">ནད་བརྒྱུད་ཟིན་ཐོ། </label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;"><span style="color:#0000; line-height:0">↲</span></p>
+</div>
+<div id="_footer" style="outline:none; position:relative;min-height:0.65cm;padding-left:2.01cm;padding-right:2.41cm;padding-bottom:0.65cm;" class="" contenteditable="false">
+	<p style="">
+</p></div>
+</div>
+<div class="pagebreaker"></div>
+<div class="print-page" style="position: relative; overflow:hidden; margin:0 auto; background:#fff;width:210mm;height:297mm;max-height:297mm;">
+<div id="_header" style="outline: none; min-height: 0.65cm; padding-left: 2.01cm; padding-right: 2.41cm; padding-top: 0.65cm; position: relative;" class="" contenteditable="false"></div>
+<div id="_body" style="padding-left:2.01cm;padding-right:2.41cm;text-indent:;min-height: calc(297mm - 49px - 49px);">
+<p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;"><span>
+		</span><label style=" font-family: Microsoft Himalaya; font-size: 22pt; font-weight: bold;">རུས་མིང་།  </label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 16pt;">ཀླུ་མཚོ་སྐྱིད། </label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt; font-weight: bold;">                                      </label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt;">    </label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt; font-weight: bold;">ནད་སྡོད་ཨང་།    </label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt;">༡༥༠༠༠༡༩</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt;">༢༠༡༥ལོའི་ཟླ་༡༡པའི་ཚེས༡༠ཉིན་གྱི་ཕྱི་དྲོ་དུས་ཚོད་༦སྟེང་བྲིས། </label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt;">དེ་རིང་རང་ཚན་ཁག་གི་གསོ་བཅོས་སྨན་པ་ཡོངས་དང་མཉམ་དུ་གསོ་བྱའི་ནད་གཞིར་བརྟག་པར་ནད་ཀྱི་སློང་རྐྱེན་མི་གསལ་བར་གསོ་བྱའི་སྙིང་ཁམས་མི་བདེ་བ་ལུས་ཐང་ཆད་པ་གསོ་བྱའི་ནད་གཞི་སྔོན་དང་བསྡུར་ན་ཅུང་ཇེ་བདེར་མངོན་དང་མཁལ་རྐེད་ན་བ།ཟླ་མཚན་འབྱམས་པ་སྙིང་ཁམས་མི་བདེ་བ་རོ་སྟོད་མདུན་རྒྱབ་སྒྲེག་སྟེ་ན་བ།རྒྱུ་ཞབས་སྦོ་བ་བཅས་ལ་ཁོང་སྨན་ བྱུར་མར་ཉེར་ལྔ།  ཨ་གར་བརྒྱད་པ།  བདུད་རྩི་དྲུག་པ་བཅས་བསྟེན་རྒྱུ་མངགས་བྱ་གནངས།</label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">                                                                        </label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">          </label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 10.5pt;">                                                                                               </label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt;">གསོ་བཅོས་སྨན་པ།</label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 16pt;"> ཚེ་རིང་མཚོ།</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt;">༢༠༡༥ལོའི་ཟླ་༡༡པའི་ཚེས་༡༡ཉིན་གྱི་སྔ་དྲོ་དུས་ཚོད་༩སྟེང་བྲིས། </label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Times New Roman; font-size: 10.5pt;">       </label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt;">སྨན་པ་འབུམ་རམས་པ་རྡོ་རྒྱལ་ལགས་གཙོ་བྱས་གསོ་བྱའི་ནད་གཞིར་བརྟག་པར་ནད་བབས་གོང་བཞིན་འབྲེལ་ཡོད་གཞོགས་འདེགས་བརྟག་དཔྱད་ཁྲག་པྲ་ལས་WBC:11.3,lymph%:19.7%,དང་Xགློག་དཔར་ལས་གློ་ཡུའི་གཉན་ཚད་ཡོད་པ་མངོན་པར་ཁོང་སྨན་གོང་བཞིན་དང་དཔྱད་བཅོས་ནད་གཞི་དང་བསྟུན་ནས་བཅོས་བྱ་རྒྱུའི་དགོངས་འཆར་བཏོན།</label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">  </label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 10.5pt;">                                                                                                                                   </label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt;">  གསོ་བཅོས་སྨན་པ། </label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 16pt;">ཚེ་རིང་མཚོ།</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt;">༢༠༡༥ལོའི་ཟླ་༡༡པའི་ཚེས༡༢ཉིན་གྱི་ཕྱི་དྲོ་དུས་ཚོད་༦སྟེང་བྲིས། </label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt;">དེ་རིང་རང་ཚན་ཁག་གི་ཀྲུའུ་རིན་གཡུ་སྒྲོན་གྱིས་རང་ཚན་ཁག་གི་སྨན་པ་ཡོངས་དང་མཉམ་དུ་གསོ་བྱའི་ནད་གཞིར་བརྟག་པར་གསོ་བྱའི་ནད་གཞི་སྔོན་དང་བསྡུར་ན་ཅུང་ཇེ་བདེར་མངོན་སྙིང་ཁམས་མི་བདེ་བ་ལུས་ཐང་ཆད་པ་དང་མཁལ་རྐེད་ན་བ།ཟླ་མཚན་འབྱམས་པ་སྙིང་ཁམས་མི་བདེ་བ་རོ་སྟོད་མདུན་རྒྱབ་སྒྲེག་སྟེ་ན་བ།རྒྱུ་ཞབས་སྦོ་བ་བཅས་འབྱུང་བ་བཅས་ཇེ་བདེར་མངོན་མུ་མཐུད་དུ་གསོ་བཅོས་རྒྱུན་བསྲིངས་རྒྱུ་བྱས།</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt;">གསོ་བཅོས་སྨན་པ། </label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 16pt;">ཚེ་རིང་མཚོ།</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt;">༢༠༡༥ལོའི་ཟླ་༡༡པའི་ཚེས༡༥ཉིན་གྱི་ཕྱི་དྲོ་དུས་ཚོད་༤སྟེང་བྲིས། </label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;"><span>
+		</span><label style=" font-family: Microsoft Himalaya; font-size: 18pt;">དེ་རིང་རང་ཚན་ཁག་གི་སྨན་པ་ཡོངས་དང་མཉམ་དུ་གསོ་བྱའི་ནད་གཞིར་བརྟག་པར་གསོ་བྱའི་ནད་གཞི་སྔོན་དང་བསྡུར་ན་ཇེ་བདེར་མངོན་མཁལ་རྐེད་ན་བ།ཟླ་མཚན་འབྱམས་པ་སྙིང་ཁམས་མི་བདེ་བ་རོ་སྟོད་མདུན་རྒྱབ་སྒྲེག་སྟེ་ན་བ།རྒྱུ་ཞབས་སྦོ་བ་བཅས་ཇེ་བདེར་མངོན་གསོ་བཅོས་རྒྱུན་སྐྱོང་རྒྱུ་དང་དཔྱད་སྐབས་བསྟུན་བྱ།</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;"><span>
+		</span><label style=" font-family: Microsoft Himalaya; font-size: 18pt;">གསོ་བཅོས་སྨན་པ། </label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 16pt;">ཚེ་རིང་མཚོ།</label>
+	</p><span style="color:#0000; line-height:0">↲</span><p></p>
+</div>
+<div id="_footer" style="outline:none; position:relative;min-height:0.65cm;padding-left:2.01cm;padding-right:2.41cm;padding-bottom:0.65cm;" class="" contenteditable="false">
+	<p style="">
+</p></div>
+</div>
+<div class="pagebreaker"></div>
+<div class="print-page" style="position: relative; overflow:hidden; margin:0 auto; background:#fff;width:210mm;height:297mm;max-height:297mm;">
+<div id="_header" style="outline: none; min-height: 0.65cm; padding-left: 2.01cm; padding-right: 2.41cm; padding-top: 0.65cm; position: relative;" class="" contenteditable="false"></div>
+<div id="_body" style="padding-left:2.01cm;padding-right:2.41cm;text-indent:;min-height: calc(297mm - 49px - 49px);">
+<p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;"><span>
+	</span></p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 10.5pt;">                                                    </label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Center;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 24pt; font-weight: bold;">ཐེམ་ཆེན་རྫོང་བོད་སྨན་ཁང་།</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 24pt; font-weight: bold;">ནད་པ་དང་ཡང་ན་ཡུལ་མིར་གླེང་་མོལ་བྱས་པའི་ཟིན་ཐོ།		གཅིག	</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<span style="color:#0000; line-height:0">↲</span><table style="width: 627px;"><colgroup>
+		<col style="width:88px">
+		<col style="width:19px">
+		<col style="width:118px">
+		<col style="width:19px">
+		<col style="width:59px">
+		<col style="width:29px">
+		<col style="width:68px">
+		<col style="width:19px">
+		<col style="width:39px">
+		<col style="width:29px">
+		<col style="width:10px">
+		<col style="width:88px">
+		<col style="width:65px">
+		</colgroup><tbody><tr><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt;">རུས་མིང་།</label></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;" colspan="3">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt;">སྐལ་བཟང་ཆོས་སྒྲོན།</label></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;" colspan="2">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt;">ནད་ཁང་།</label></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt;">༦-༨</label></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;" colspan="2">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt;">མལ་ཁྲི</label></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;" colspan="2">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt;">༨</label></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt;">སྡོད་ཨང་།</label></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt;">༡༥༠༠༠༤༡</label></p></td></tr>
+		<tr><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;" colspan="13">
+	<p style=" font-family: 宋体; font-size: 12pt; text-align: Center;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt;">ཞག་སྡོད་བྱས་ཉིན་གྱི་གླེང་མོལ་ཟིན་ཐོ།</label></p></td></tr>
+		<tr><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;" colspan="2">
+	<p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt;">དུས་ཚོད།</label></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt;">༢༠༡༥.༡༡.༡༢</label></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;" colspan="2">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt;">ས་གནས།</label></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;" colspan="3">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt;">ཞག་སྡོད་ཁང་།</label></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;" colspan="2">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt;">སྨན་པ།</label></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;" colspan="3">
+	<p style=" font-family: 宋体; font-size: 12pt;"></p></td></tr>
+		<tr><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;" colspan="2"><span>
+	</span><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt;">གླེང་</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt;">མོལ་</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;"><span>
+		</span><label style=" font-family: Microsoft Himalaya; font-size: 22pt;">གྱི་</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt;">ནང་</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;"><span>
+		</span><label style=" font-family: Microsoft Himalaya; font-size: 22pt;">དོན་</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;"></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;" colspan="11"><span>
+	</span><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt;">༡ ཐོག་མའི་ནད་ངོས།           སྙིང་ཚད།  མཁྲིས་ཚད།</label></p></td></tr></tbody>
+</table>
+</p>
+</div>
+<div id="_footer" style="outline:none; position:relative;min-height:0.65cm;padding-left:2.01cm;padding-right:2.41cm;padding-bottom:0.65cm;" class="" contenteditable="false">
+	<p style="">
+</p></div>
+</div>
+<div class="pagebreaker"></div>
+<div class="print-page" style="position: relative; overflow:hidden; margin:0 auto; background:#fff;width:210mm;height:297mm;max-height:297mm;">
+<div id="_header" style="outline: none; min-height: 0.65cm; padding-left: 2.01cm; padding-right: 2.41cm; padding-top: 0.65cm; position: relative;" class="" contenteditable="false"></div>
+<div id="_body" style="padding-left:2.01cm;padding-right:2.41cm;text-indent:;min-height: calc(297mm - 49px - 49px);">
+<p style="font-family: 宋体; font-size: 12pt; text-align: justify; text-indent: 0px;"><table style="width: 627px;"><colgroup>
+		<col style="width:88px">
+		<col style="width:19px">
+		<col style="width:118px">
+		<col style="width:19px">
+		<col style="width:59px">
+		<col style="width:29px">
+		<col style="width:68px">
+		<col style="width:19px">
+		<col style="width:39px">
+		<col style="width:29px">
+		<col style="width:10px">
+		<col style="width:88px">
+		<col style="width:65px">
+		</colgroup><tbody><tr><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;" colspan="2" rowspan="1"><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;"><span>
+		</span><label style=" font-family: Microsoft Himalaya; font-size: 22pt;">གནད་</label><span>
+	</span></p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt;">བསྡུས།</label></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;" colspan="11" rowspan="1"></td></tr>
+		<tr><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=""></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=""></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;" colspan="11">
+	<p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt;">༢ ཐོག་མའི་བརྟག་བཅོས་འཆར་གཞི།</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt;">ཐོག་མར་འབྲེལ་ཡོད་བརྟག་དཔྱད་ཆ་ཚང་བྱས་ནས་ནད་ངོས་གསལ་བོར་འཛིན་པ་དང་བར་ཏུ་གསོ་ཐབས་དངོས་བསྟེན་པ། ཐ་མར་ནད་རྗེས་གཅོད་པའོ།</label></p></td></tr>
+		<tr><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=""></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=""></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;" colspan="11">
+	<p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt;">༣ རྗེས་དཔག       ཕན་སྙམ།</label></p></td></tr>
+		<tr><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=""></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=""></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;" colspan="11">
+	<p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt;">༤ གཞན།           མི་མཐུན་པའི་ཟས་སྤྱོད་སྤང་།</label></p></td></tr>
+		<tr><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;" colspan="13">
+	<p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt;">ནད་པའི་མིང་འགོད།                      ཡུལ་མིའི་མིང་འགོད།                གཉིས་ཀའི་འབྲེལ་བ།</label></p></td></tr>
+		</tbody></table></p><p>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt; font-weight: bold;">    </label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 24pt; font-weight: bold;">       ཐེམ་ཆེན་རྫོང་བོད་སྨན་ཁང་།</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 24pt; font-weight: bold;"> ནད་པ་དང་ཡང་ན་ཡུལ་མིར་གླེང་་མོལ་བྱས་པའི་ཟིན་ཐོ།	 </label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 24pt; font-weight: bold; text-decoration: underline;">གཉིས།</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Center;">
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Center;">
+		<span style="color:#0000; line-height:0">↲</span><table style="width: 627px;"><colgroup>
+		<col style="width:78px">
+		<col style="width:147px">
+		<col style="width:88px">
+		<col style="width:127px">
+		<col style="width:109px">
+		<col style="width:92px">
+		</colgroup><tbody><tr><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;" colspan="6">
+	<p style=" font-family: 宋体; font-size: 12pt; text-align: Center;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt;">ཞག་སྡོད་སྐབས་ཀྱི་གླེང་མོལ་ཟིན་ཐོ།(ཐོག་མ)</label></p></td></tr>
+		<tr><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt;">དུས་ཚོད།</label></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt;">༢༠༡༥.༡༡.༡༣</label></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt;">ས་གནས།</label></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt;">ནད་ཁང་།</label></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt;">སྨན་པ།</label></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;"></p></td></tr>
+		<tr><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;"><span>
+	</span><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt;">གླེང་</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt;">མོལ་</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt;">གྱི་</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;"><span>
+		</span><label style=" font-family: Microsoft Himalaya; font-size: 22pt;">ནང་</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt;">དོན་</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt;">གནད་</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;"><span>
+		</span><label style=" font-family: Microsoft Himalaya; font-size: 22pt;">བསྡུས།</label></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;" colspan="5"><span>
+	</span><p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt;">༡མིག་སྔར་ནད་ངོས།</label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt;">               </label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt;">སྙིང་ཚད།        མཁྲིས་ཚད།</label></p></td></tr>
+		</tbody>
+</table>
+</p>
+</div>
+<div id="_footer" style="outline:none; position:relative;min-height:0.65cm;padding-left:2.01cm;padding-right:2.41cm;padding-bottom:0.65cm;" class="" contenteditable="false">
+	<p style="">
+</p></div>
+</div>
+<div class="pagebreaker"></div>
+<div class="print-page" style="position: relative; overflow:hidden; margin:0 auto; background:#fff;width:210mm;height:297mm;max-height:297mm;">
+<div id="_header" style="outline: none; min-height: 0.65cm; padding-left: 2.01cm; padding-right: 2.41cm; padding-top: 0.65cm; position: relative;" class="" contenteditable="false"></div>
+<div id="_body" style="padding-left:2.01cm;padding-right:2.41cm;text-indent:;min-height: calc(297mm - 49px - 49px);">
+<p style="font-family: 宋体; font-size: 12pt; text-align: center; text-indent: 0px;"><table style="width: 627px;"><colgroup>
+		<col style="width:78px">
+		<col style="width:147px">
+		<col style="width:88px">
+		<col style="width:127px">
+		<col style="width:109px">
+		<col style="width:92px">
+		</colgroup><tbody><tr><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;" rowspan="1"><span>
+	</span><p style=""></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;" colspan="5" rowspan="1"><span>
+	</span><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt;">༢ནད་གཞི་ངོ་སྤྲོད་དང་གསོ་བཅོས་འཆར་གཞི།</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt;">གསོ་བྱའི་སྙིང་ཁམས་མི་བདེ་བ་དང་། ཡར་འཚངས་བ། རྐང་མཐིལ་ལག་མཐིལ་ངར་བ།  མགོ་ན་བ།  ལན་རེར་དྲན་མེད་བརྒྱལ་བ་Bའཕྲོ་ལས་མཁྲིས་ཚད་དང་མཆིན་པའི་ཁྲག་སྐྲན་སོགས་ཀྱི་ནད་འགྱུར་མངོན་ནས་བོད་ཕྱི་ཟུང་འབྲེལ་གྱི་གསོ་བཅོས་བྱེད་རྒྱུ།</label></p></td></tr>
+		<tr><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=""></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;" colspan="5">
+	<p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt;">༣རྗེས་དཔག    ཕན་སྙམ།</label></p></td></tr>
+		<tr><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=""></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;" colspan="5">
+	<p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt;">༤གཞན་།     མི་མཐུན་པའི་ཟས་སྤྱོད་སྤང་།</label></p></td></tr>
+		<tr><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;" colspan="6">
+	<p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt;">ནད་པའི་མིང་འགོད།                          ཡུལ་མིའི་མིང་འགོད།                       གཉིས་ཀའི་འབྲེལ་བ།</label></p></td></tr>
+		</tbody></table></p><p>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Center;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 24pt; font-weight: bold;">ཐེམ་ཆེན་རྫོང་བོད་སྨན་ཁང་།</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 24pt; font-weight: bold;">  ནད་པ་དང་ཡང་ན་ཡུལ་མིར་གླེང་མོལ་བྱས་པའི་ཟིན་ཐོ།	  གསུམ།</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<span style="color:#0000; line-height:0">↲</span><table style="width: 627px;"><colgroup>
+		<col style="width:88px">
+		<col style="width:118px">
+		<col style="width:78px">
+		<col style="width:161px">
+		<col style="width:93px">
+		<col style="width:112px">
+		</colgroup><tbody><tr><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;" colspan="6">
+	<p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt;">                 </label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt;">                  ཞག་སྡོད་སྐབས་ཀྱི་གླེང་མོལ་ཟིན་ཐོ།(  )</label></p></td></tr>
+		<tr><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt;">དུས་ཚོད།</label></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;"></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt;">ས་གནས།</label></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;"></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt;">སྨན་པ།</label></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;"></p></td></tr>
+		<tr><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;"><span>
+	</span><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt;">གླེང་</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt;">མོལ་</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt;">གྱི་</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;"><span>
+		</span><label style=" font-family: Microsoft Himalaya; font-size: 22pt;">ནང་</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt;">དོན་གནད་</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;"><span>
+		</span><label style=" font-family: Microsoft Himalaya; font-size: 22pt;">བསྡུས།</label><span>
+	</span></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;" colspan="5"><span>
+	</span><p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt;">༡མིག་སྔར་ནད་ངོས།</label></p></td></tr></tbody>
+</table>
+</p>
+</div>
+<div id="_footer" style="outline:none; position:relative;min-height:0.65cm;padding-left:2.01cm;padding-right:2.41cm;padding-bottom:0.65cm;" class="" contenteditable="false">
+	<p style="">
+</p></div>
+</div>
+<div class="pagebreaker"></div>
+<div class="print-page" style="position: relative; overflow:hidden; margin:0 auto; background:#fff;width:210mm;height:297mm;max-height:297mm;">
+<div id="_header" style="outline: none; min-height: 0.65cm; padding-left: 2.01cm; padding-right: 2.41cm; padding-top: 0.65cm; position: relative;" class="" contenteditable="false"></div>
+<div id="_body" style="padding-left:2.01cm;padding-right:2.41cm;text-indent:;min-height: calc(297mm - 49px - 49px);">
+<p style="font-family: 宋体; font-size: 12pt; text-align: justify; text-indent: 0px;"><table style="width: 627px;"><colgroup>
+		<col style="width:88px">
+		<col style="width:118px">
+		<col style="width:78px">
+		<col style="width:161px">
+		<col style="width:93px">
+		<col style="width:112px">
+		</colgroup><tbody><tr><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;" rowspan="1"><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;"></p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;"></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;" colspan="5" rowspan="1"></td></tr>
+		<tr><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=""></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;" colspan="5">
+	<p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt;">༢སྔོན་གྱི་བཅོས་འབྲས་དང་རྗེས་མའི་བརྟག་བཅོས་འཆར་གཞི།</label></p></td></tr>
+		<tr><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=""></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;" colspan="5">
+	<p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt;">༣རྗེས་དཔག</label></p></td></tr>
+		<tr><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=""></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;" colspan="5">
+	<p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt;">༤གཞན།</label></p></td></tr>
+		<tr><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;" colspan="6">
+	<p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt;">ནད་པའི་མིང་འགོད།                           ཡུལ་མིའི་མིང་འགོད།                       གཉིས་ཀའི་འབྲེལ་བ།</label></p></td></tr>
+		</tbody></table></p><p>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Center;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 24pt; font-weight: bold;">ཐེམ་ཆེན་རྫོང་བོད་སྨན་ཁང་།</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 24pt; font-weight: bold;">ནད་པ་དང་ཡང་ན་ཡུལ་མིར་གླེང་་མོལ་བྱས་པའི་ཟིན་ཐོ།	 བཞི།	</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<span style="color:#0000; line-height:0">↲</span><table style="width: 627px;"><colgroup>
+		<col style="width:90px">
+		<col style="width:37px">
+		<col style="width:74px">
+		<col style="width:34px">
+		<col style="width:56px">
+		<col style="width:22px">
+		<col style="width:58px">
+		<col style="width:80px">
+		<col style="width:25px">
+		<col style="width:45px">
+		<col style="width:55px">
+		<col style="width:34px">
+		<col style="width:39px">
+		</colgroup><tbody><tr><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt;">རུས་མིང་།</label></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;" colspan="2">
+	<p style=" font-family: 宋体; font-size: 12pt;"></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;" colspan="2">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt;">ནད་ཁང་།</label></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;" colspan="2">
+	<p style=" font-family: 宋体; font-size: 12pt;"></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt;">མལ་ཁྲི</label></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;" colspan="2">
+	<p style=" font-family: 宋体; font-size: 12pt;"></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;" colspan="2">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt;">སྡོད་ཨང་།</label></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;"></p></td></tr>
+		<tr><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;" colspan="13">
+	<p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt;">                                       སྨན་ཁང་ནས་བུད་དུས་ཀྱི་གླེང་མོལ་ཟིན་ཐོ།</label></p></td></tr>
+		<tr><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;" colspan="2">
+	<p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt;">དུས་ཚོད།</label></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;" colspan="2">
+	<p style=" font-family: 宋体; font-size: 12pt;"></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;" colspan="2">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt;">ས་གནས</label></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;" colspan="3">
+	<p style=" font-family: 宋体; font-size: 12pt;"></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;" colspan="2">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt;">སྨན་པ།</label></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;" colspan="2">
+	<p style=" font-family: 宋体; font-size: 12pt;"></p></td></tr>
+		<tr><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;" colspan="2"><span>
+	</span><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt;">གླེང་མོལ་</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt;">གྱི་ནང་</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt;">དོན་ནད་</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;"><span>
+		</span><label style=" font-family: Microsoft Himalaya; font-size: 22pt;">བསྡུས། </label></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;" colspan="11">
+	<p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt;">༡ ནད་ངོས།</label></p></td></tr>
+		<tr><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=""></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=""></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;" colspan="11">
+	<p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt;">༢ བརྟག་བཅོས་འབྲས་བུ།</label></p></td></tr>
+		<tr><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=""></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=""></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;" colspan="11">
+	<p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt;">༣ སྨན་པའི་མངགས་བྱ།</label></p></td></tr>
+		<tr><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;"><span>
+	</span><p style=""></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=""></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;" colspan="11">
+	<p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt;">༤ རྗེས་དཔག</label></p></td></tr>
+		</tbody>
+</table>
+</p>
+</div>
+<div id="_footer" style="outline:none; position:relative;min-height:0.65cm;padding-left:2.01cm;padding-right:2.41cm;padding-bottom:0.65cm;" class="" contenteditable="false">
+	<p style="">
+</p></div>
+</div>
+<div class="pagebreaker"></div>
+<div class="print-page" style="position: relative; overflow:hidden; margin:0 auto; background:#fff;width:210mm;height:297mm;max-height:297mm;">
+<div id="_header" style="outline: none; min-height: 0.65cm; padding-left: 2.01cm; padding-right: 2.41cm; padding-top: 0.65cm; position: relative;" class="" contenteditable="false"></div>
+<div id="_body" style="padding-left:2.01cm;padding-right:2.41cm;text-indent:;min-height: calc(297mm - 49px - 49px);">
+<p style="font-family: 宋体; font-size: 12pt; text-align: justify; text-indent: 0px;"><table style="width: 627px;"><colgroup>
+		<col style="width:90px">
+		<col style="width:37px">
+		<col style="width:74px">
+		<col style="width:34px">
+		<col style="width:56px">
+		<col style="width:22px">
+		<col style="width:58px">
+		<col style="width:80px">
+		<col style="width:25px">
+		<col style="width:45px">
+		<col style="width:55px">
+		<col style="width:34px">
+		<col style="width:39px">
+		</colgroup><tbody><tr><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;" rowspan="1"><span>
+	</span><p style=""></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;" rowspan="1"><span>
+	</span><p style=""></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;" colspan="11" rowspan="1"><span>
+	</span><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt;">༤གཞན</label></p></td></tr>
+		<tr><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;" colspan="13">
+	<p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt;">ནད་པའི་མིང་འགོད།                       ཡུལ་མིའི་མིང་འགོད།                      གཉིས་ཀའི་འབྲེལ་བ།</label></p></td></tr>
+		</tbody></table></p><p>
+		<label style=" font-family: Microsoft Himalaya; font-size: 36pt; font-weight: bold;">ཐེམ་ཆེན་རྫོང་བོད་སྨན་ཁང་།</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 26pt; font-weight: bold;">ནད་པ་ཕྱིར་འབུད་དུས་ཀྱི་ཟིན་ཐོ།</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt; font-weight: bold;">										         </label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 15pt; font-weight: bold;"> སྡོད་གནས་ཨང་གྲངས།  </label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 15pt;">༡༥༠༠༠༡༦</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt; font-weight: bold;">རུས་མིང་།	</label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt;">པ་ཁུ།</label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt; font-weight: bold;">		རྟེན།	</label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt;">མོ། </label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">  </label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt; font-weight: bold;">	ལོ།		</label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">༦༥</label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt;">   </label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt; font-weight: bold;">སྡོད་གནས  </label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt;">སུ་རུ་ཤང་རུ་ཁག་༢</label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt; font-weight: bold;">		ནད་སྡོད་ཉིན་གྲངས།		</label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">༧</label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt; font-weight: bold;">	</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt; font-weight: bold;">ནད་ཁང་དུ་འབྱོར་ཉིན། </label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt;">༢༠༡༥.༡༡.༠༤        </label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt; font-weight: bold;">ཕྱིར་བུད་ཉིན །  </label>
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt;">༢༠༡༥.༡༡.༡༡</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt; font-weight: bold;">ནད་ཁང་དུ་འབྱོར་དུས་གནས་ཚུལ།												</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt;">གློ་ལུ་ཞིང་ལུད་པ་ཐོན་དཀའ་བ། མིད་པར་ཟ་འཕྲུག་ལངས་བ།  མགོ་དང་ཚིགས་གཞི་ན་བ། ལུས་ལ་ཚ་དྲོད་རྒྱས་བ།  གྲང་ཤུམ་བྱེད་པ།  སྒྱིད་ལུག་པ། </label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt; font-weight: bold;">ནད་སྡོད་བྱས་རྗེས་ཀྱི་གནས་ཚུལ།</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt;">གོང་གི་ནད་བབས་དག་མངོན་གསལ་གྱིས་བདེ་རུ་སོང་།</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt; font-weight: bold;">ཐོག་མའི་ད་ངོས་འཛིན།</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt;">ཆམ་རིམས། </label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 22pt; font-weight: bold;">ཕྱིར་བུད་དུས་ངོས་འཛིན།</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt;">༡ཆམ་རིམས།</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt;">༢ གློ་ཡུའི་གཉན་ཚད།</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;"><span>
+		</span><label style=" font-family: Microsoft Himalaya; font-size: 22pt; font-weight: bold;">ཕྱིར་བུད་རྗེས་གཟབ་བྱ།</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 15pt;">༡ ཟས་ཚ་སྐྱུར་དང་སྤྱོད་ལམ་དྲགས་ཤུལ་སྤང་།</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 15pt;">༢ སྒོ་བསྟེན་སྐབས་བཅོས། </label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 15pt;">༣ ཁོང་སྨན་དུས་བསྟེན།</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;"><span>
+		</span><label style=" font-family: Microsoft Himalaya; font-size: 22pt; font-weight: bold;">									 སྨན་པའི་མིང་འགོད།</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+	</p><span style="color:#0000; line-height:0">↲</span><p></p>
+</div>
+<div id="_footer" style="outline:none; position:relative;min-height:0.65cm;padding-left:2.01cm;padding-right:2.41cm;padding-bottom:0.65cm;" class="" contenteditable="false">
+	<p style="">
+</p></div>
+</div>
+<div class="pagebreaker"></div>
+<div class="print-page" style="position: relative; overflow:hidden; margin:0 auto; background:#fff;width:210mm;height:297mm;max-height:297mm;">
+<div id="_header" style="outline: none; min-height: 0.65cm; padding-left: 2.01cm; padding-right: 2.41cm; padding-top: 0.65cm; position: relative;" class="" contenteditable="false"></div>
+<div id="_body" style="padding-left:2.01cm;padding-right:2.41cm;text-indent:;min-height: calc(297mm - 49px - 49px);">
+<p style=" font-family: 宋体; font-size: 12pt; text-align: Center;"><span>
+	</span></p><p style=" font-family: 宋体; font-size: 12pt; text-align: Center;">
+		<label style=" font-family: 宋体; font-size: 18pt;">天峻县藏医医院</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Center;">
+		<label style=" font-family: 宋体; font-size: 22pt;">住院病人病案概要</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt;">
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<table style="">
+		<colgroup>
+		<col style="width:617px">
+		</colgroup>
+		<tbody><tr>
+			<td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: 黑体; font-size: 12pt;">科别                        病房                        住院号</label></p></td>
+		</tr>
+		<tr>
+			<td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: 黑体; font-size: 12pt;">姓名               性别     年龄      籍贯        职业        已、未婚</label></p></td>
+		</tr>
+		<tr>
+			<td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: 黑体; font-size: 12pt;">本市通讯处</label></p></td>
+		</tr>
+		<tr>
+			<td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: 黑体; font-size: 12pt;">固定通讯处</label></p></td>
+		</tr>
+		<tr>
+			<td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: 黑体; font-size: 12pt;">住院日期                        出院日期                  住院日数</label></p></td>
+		</tr>
+		<tr>
+			<td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: 黑体; font-size: 12pt;">科主任             主治医师          住院医师         实习医师</label></p></td>
+		</tr>
+		<tr>
+			<td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: 黑体; font-size: 12pt;">住院病因</label></p></td>
+		</tr>
+		<tr>
+			<td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: 黑体; font-size: 12pt;">入院后临床印象</label></p></td>
+		</tr>
+		<tr>
+			<td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: 黑体; font-size: 12pt;">出院时诊断（并发症如系交互感染应注明，死亡应注明原因，诊断应按次序注明）。</label></p></td>
+		</tr>
+		<tr>
+			<td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;"></p></td>
+		</tr>
+		<tr>
+			<td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;"></p></td>
+		</tr>
+		<tr>
+			<td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;"></p></td>
+		</tr>
+		<tr>
+			<td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;"></p></td>
+		</tr>
+		<tr>
+			<td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: 黑体; font-size: 12pt;">药物过敏：</label></p></td>
+		</tr>
+		<tr>
+			<td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: 黑体; font-size: 12pt;">中医诊断：</label></p></td>
+		</tr>
+		<tr>
+			<td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;"></p></td>
+		</tr>
+		<tr>
+			<td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;"></p></td>
+		</tr>
+		<tr>
+			<td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: 黑体; font-size: 12pt;">入出院诊断符合情况：       符合      大致符合      不符合     不能肯定</label></p></td>
+		</tr>
+		<tr>
+			<td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: 黑体; font-size: 12pt;">治疗结果：痊愈，进步，无进步，恶化，死亡，未治疗，转院，自愿出院，尸检</label></p></td>
+		</tr>
+		</tbody></table></p><p>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Center;">
+		<label style=" font-family: 宋体; font-size: 22pt;">天峻县藏医医院住院病历首页</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Center;">
+		<label style=" font-family: 宋体; font-size: 16pt;">       </label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Center;">
+		<label style=" font-family: 宋体; font-size: 16pt;">       病历号</label>
+		<label style=" font-family: 宋体; font-size: 16pt; text-decoration: underline;">          </label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Center;">
+		<label style=" font-family: 宋体; font-size: 14pt; text-decoration: underline;">                                                              </label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: 宋体; font-size: 14pt;">姓名</label>
+		<label style=" font-family: 宋体; font-size: 14pt; text-decoration: underline;">         </label>
+		<label style=" font-family: 宋体; font-size: 14pt;">性别</label>
+		<label style=" font-family: 宋体; font-size: 14pt; text-decoration: underline;">   </label>
+		<label style=" font-family: 宋体; font-size: 14pt;">出生</label>
+		<label style=" font-family: 宋体; font-size: 14pt; text-decoration: underline;">     </label>
+		<label style=" font-family: 宋体; font-size: 14pt;">年</label>
+		<label style=" font-family: 宋体; font-size: 14pt; text-decoration: underline;">   </label>
+		<label style=" font-family: 宋体; font-size: 14pt;">月</label>
+		<label style=" font-family: 宋体; font-size: 14pt; text-decoration: underline;">    </label>
+		<label style=" font-family: 宋体; font-size: 14pt;">日年龄</label>
+		<label style=" font-family: 宋体; font-size: 14pt; text-decoration: underline;">    </label>
+		<label style=" font-family: 宋体; font-size: 14pt;">婚龄</label><span>
+		</span><label style=" font-family: 宋体; font-size: 14pt; text-decoration: underline;">      </label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: 宋体; font-size: 14pt;">职业</label>
+		<label style=" font-family: 宋体; font-size: 14pt; text-decoration: underline;">         </label>
+		<label style=" font-family: 宋体; font-size: 14pt;">籍贯</label>
+		<label style=" font-family: 宋体; font-size: 14pt; text-decoration: underline;">     </label>
+		<label style=" font-family: 宋体; font-size: 14pt;">民族</label>
+		<label style=" font-family: 宋体; font-size: 14pt; text-decoration: underline;">     </label>
+		<label style=" font-family: 宋体; font-size: 14pt;">国籍</label>
+		<label style=" font-family: 宋体; font-size: 14pt; text-decoration: underline;">     </label>
+		<label style=" font-family: 宋体; font-size: 14pt;">身份证号</label>
+		<label style=" font-family: 宋体; font-size: 14pt; text-decoration: underline;">             </label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: 宋体; font-size: 14pt;">工作单位与地址</label>
+		<label style=" font-family: 宋体; font-size: 14pt; text-decoration: underline;">                     </label>
+		<label style=" font-family: 宋体; font-size: 14pt;">电话</label>
+		<label style=" font-family: 宋体; font-size: 14pt; text-decoration: underline;">          </label>
+		<label style=" font-family: 宋体; font-size: 14pt;">邮编</label>
+		<label style=" font-family: 宋体; font-size: 14pt; text-decoration: underline;">       </label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: 宋体; font-size: 14pt;">家庭住址</label>
+		<label style=" font-family: 宋体; font-size: 14pt; text-decoration: underline;">                           </label>
+		<label style=" font-family: 宋体; font-size: 14pt;">电话</label>
+		<label style=" font-family: 宋体; font-size: 14pt; text-decoration: underline;">          </label>
+		<label style=" font-family: 宋体; font-size: 14pt;">邮编</label>
+		<label style=" font-family: 宋体; font-size: 14pt; text-decoration: underline;">       </label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;"><span>
+		</span><label style=" font-family: 宋体; font-size: 14pt;">亲友或负责人姓名</label>
+		<label style=" font-family: 宋体; font-size: 14pt; text-decoration: underline;">                   </label>
+		<label style=" font-family: 宋体; font-size: 14pt;">关系</label>
+		<label style=" font-family: 宋体; font-size: 14pt; text-decoration: underline;">                     </label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: 宋体; font-size: 14pt;">地址</label>
+		<label style=" font-family: 宋体; font-size: 14pt; text-decoration: underline;">                               </label>
+		<label style=" font-family: 宋体; font-size: 14pt;">电话</label>
+		<label style=" font-family: 宋体; font-size: 14pt; text-decoration: underline;">                     </label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<span style="color:#0000; line-height:0">↲</span></p>
+</div>
+<div id="_footer" style="outline:none; position:relative;min-height:0.65cm;padding-left:2.01cm;padding-right:2.41cm;padding-bottom:0.65cm;" class="" contenteditable="false">
+	<p style="">
+</p></div>
+</div>
+<div class="pagebreaker"></div>
+<div class="print-page" style="position: relative; overflow:hidden; margin:0 auto; background:#fff;width:210mm;height:297mm;max-height:297mm;">
+<div id="_header" style="outline: none; min-height: 0.65cm; padding-left: 2.01cm; padding-right: 2.41cm; padding-top: 0.65cm; position: relative;" class="" contenteditable="false"></div>
+<div id="_body" style="padding-left:2.01cm;padding-right:2.41cm;text-indent:;min-height: calc(297mm - 49px - 49px);">
+<p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;"><span>
+		</span>
+		<label style=" font-family: 宋体; font-size: 14pt; text-decoration: underline;">                     </label>
+		<label style=" font-family: 宋体; font-size: 14pt;">年</label>
+		<label style=" font-family: 宋体; font-size: 14pt; text-decoration: underline;">       </label>
+		<label style=" font-family: 宋体; font-size: 14pt;">月</label>
+		<label style=" font-family: 宋体; font-size: 14pt; text-decoration: underline;">        </label>
+		<label style=" font-family: 宋体; font-size: 14pt;">日</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: 宋体; font-size: 14pt;">出院日期</label>
+		<label style=" font-family: 宋体; font-size: 14pt; text-decoration: underline;">                     </label>
+		<label style=" font-family: 宋体; font-size: 14pt;">年</label>
+		<label style=" font-family: 宋体; font-size: 14pt; text-decoration: underline;">       </label>
+		<label style=" font-family: 宋体; font-size: 14pt;">月</label>
+		<label style=" font-family: 宋体; font-size: 14pt; text-decoration: underline;">        </label>
+		<label style=" font-family: 宋体; font-size: 14pt;">日</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: 宋体; font-size: 14pt;">住院天数</label>
+		<label style=" font-family: 宋体; font-size: 14pt; text-decoration: underline;">                     </label>
+		<label style=" font-family: 宋体; font-size: 14pt;">门诊诊断</label>
+		<label style=" font-family: 宋体; font-size: 14pt; text-decoration: underline;">                     </label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: 宋体; font-size: 14pt;">入院情况：1、危      2、急     3、一般</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: 宋体; font-size: 14pt;">入院诊断</label>
+		<label style=" font-family: 宋体; font-size: 14pt; text-decoration: underline;">                     </label>
+		<label style=" font-family: 宋体; font-size: 14pt;">确诊日期</label>
+		<label style=" font-family: 宋体; font-size: 14pt; text-decoration: underline;">       </label>
+		<label style=" font-family: 宋体; font-size: 14pt;">年</label>
+		<label style=" font-family: 宋体; font-size: 14pt; text-decoration: underline;">   </label>
+		<label style=" font-family: 宋体; font-size: 14pt;">月</label>
+		<label style=" font-family: 宋体; font-size: 14pt; text-decoration: underline;">    </label>
+		<label style=" font-family: 宋体; font-size: 14pt;">日</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Center;">
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<table style="">
+		<colgroup>
+		<col style="width:193px">
+		<col style="width:193px">
+		<col style="width:193px">
+		</colgroup>
+		<tbody><tr>
+			<td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt; text-align: Center;">
+		<label style=" font-family: 宋体; font-size: 14pt;">出院诊断</label></p></td>
+			<td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: 宋体; font-size: 14pt;">治疗结果</label></p></td>
+			<td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: 宋体; font-size: 14pt;">疾病分类</label></p></td>
+		</tr>
+		<tr>
+			<td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt; text-align: Center;">
+		<label style=" font-family: 宋体; font-size: 14pt;">主要诊断</label></p></td>
+			<td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;"></p></td>
+			<td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;"></p></td>
+		</tr>
+		<tr>
+			<td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt; text-align: Center;">
+		<label style=" font-family: 宋体; font-size: 14pt;">其它诊断</label></p></td>
+			<td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;"></p></td>
+			<td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;"></p></td>
+		</tr>
+		</tbody></table></p><p>
+		<label style=" font-family: 宋体; font-size: 14pt;">诊断符合情况： 门诊与出院□     入院与出院□    临床与检验□</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: 宋体; font-size: 14pt;">（填写此数字：1符合    2大致符合   3不符合   4不能确定）</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: 宋体; font-size: 14pt;">治疗结果：A、治愈     B、好转     C、未愈    D、死亡</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: 宋体; font-size: 14pt;">出院医嘱：</label>
+		<label style=" font-family: 宋体; font-size: 14pt; text-decoration: underline;">                                                   </label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: 宋体; font-size: 14pt;">死亡日期：              年   月    日    时   分</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: 宋体; font-size: 14pt;">死亡原因： </label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: 宋体; font-size: 14pt;">费用类别：1、公费2、自费3、免费4、医改5、医保6、其它</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: 宋体; font-size: 14pt;">住院费用总计：</label>
+		<label style=" font-family: 宋体; font-size: 14pt; text-decoration: underline;">    </label>
+		<label style=" font-family: 宋体; font-size: 14pt;">床位</label>
+		<label style=" font-family: 宋体; font-size: 14pt; text-decoration: underline;">    </label>
+		<label style=" font-family: 宋体; font-size: 14pt;">藏药</label>
+		<label style=" font-family: 宋体; font-size: 14pt; text-decoration: underline;">    </label>
+		<label style=" font-family: 宋体; font-size: 14pt;">中西药</label>
+		<label style=" font-family: 宋体; font-size: 14pt; text-decoration: underline;">    </label>
+		<label style=" font-family: 宋体; font-size: 14pt;">检查</label>
+		<label style=" font-family: 宋体; font-size: 14pt; text-decoration: underline;">    </label>
+		<label style=" font-family: 宋体; font-size: 14pt;">治疗</label>
+		<label style=" font-family: 宋体; font-size: 14pt; text-decoration: underline;">     </label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: 宋体; font-size: 14pt;">病历质量：1、甲    2、乙    3、丙    评审医师：</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: 宋体; font-size: 14pt;">科主任：</label>
+		<label style=" font-family: 宋体; font-size: 14pt; text-decoration: underline;">                       </label>
+		<label style=" font-family: 宋体; font-size: 14pt;">主治医师：</label>
+		<label style=" font-family: 宋体; font-size: 14pt; text-decoration: underline;">                     </label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: 宋体; font-size: 14pt;">住院医师：</label>
+		<label style=" font-family: 宋体; font-size: 14pt; text-decoration: underline;">                     </label>
+		<label style=" font-family: 宋体; font-size: 14pt;">实习医师：</label>
+		<label style=" font-family: 宋体; font-size: 14pt; text-decoration: underline;">                    </label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Center;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 26pt; font-weight: bold;">བོད་ལུགས་སྨན་ཁང་གི་སྡོད་བཅོས་ནད་ཐོ་ཞིབ་བཤེར་སྐར་གྲངས་</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Center;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 26pt; font-weight: bold;">ཐོ་འགོད་རེའུ་མིག</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">ཚན་ཁག	སྨན་པ		སྐར་གྲངས		རིམ་པ		ལོའི་ཟླ།		ཚེས	</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">ནད་པའི་མིང།	ཕོ་མོ།		ལོ་ཚོད།	ཉལ་ཁྲི།	སྡོད་བཅོས་ཨང་།</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<span style="color:#0000; line-height:0">↲</span><table style="width: 627px;"><colgroup>
+		<col style="width:118px">
+		<col style="width:63px">
+		<col style="width:64px">
+		<col style="width:97px">
+		<col style="width:109px">
+		<col style="width:104px">
+		<col style="width:83px">
+		</colgroup><tbody><tr><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;" colspan="2"><span>
+	</span><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;"><span>
+		</span><label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">ནང་དོན།</label></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">སྐར་གྲངས</label></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">ཐོབས་སྐར།</label></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;" colspan="2">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">ནང་དོན།</label></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">སྐར་གྲངས།</label></p></td></tr>
+		<tr><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;" colspan="2">
+	<p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">གཞི་རྩའི་གནས་ཚུལ།</label></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">༤</label></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;"></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;" colspan="2">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">གསོ་བྱེད་ཐབས།</label></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">༢</label></p></td></tr>
+		<tr><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;" colspan="2">
+	<p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">ན་ལུགས་གཙོ་བོ།</label></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">༥</label></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;"></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;" colspan="2">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">ནད་སྐྱོང་།</label></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">༢</label></p></td></tr>
+		<tr><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;" colspan="2"><span>
+	</span><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;"><span>
+		</span><label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">ད་ལྟའི་ནད་ཀྱི་ལོ་རྒྱུས།</label></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">༡༠</label></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;"></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;" colspan="2">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">ཐོག་མའི་ཟིན་ཐོ།</label></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">༢</label></p></td></tr>
+		<tr><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;" colspan="2">
+	<p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">དེ་སྔའི་ལོ་རྒྱུས།</label></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">༢</label></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;"></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;" colspan="2">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">ནད་ཐོ་གནད་བསྡུས།</label></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">༤</label></p></td></tr>
+		</tbody>
+</table>
+</p>
+</div>
+<div id="_footer" style="outline:none; position:relative;min-height:0.65cm;padding-left:2.01cm;padding-right:2.41cm;padding-bottom:0.65cm;" class="" contenteditable="false">
+	<p style="">
+</p></div>
+</div>
+<div class="pagebreaker"></div>
+<div class="print-page" style="position: relative; overflow:hidden; margin:0 auto; background:#fff;width:210mm;height:297mm;max-height:297mm;">
+<div id="_header" style="outline: none; min-height: 0.65cm; padding-left: 2.01cm; padding-right: 2.41cm; padding-top: 0.65cm; position: relative;" class="" contenteditable="false"></div>
+<div id="_body" style="padding-left:2.01cm;padding-right:2.41cm;text-indent:;min-height: calc(297mm - 49px - 49px);">
+<p style="font-family: 宋体; font-size: 12pt; text-align: justify; text-indent: 0px;"><table style="width: 627px;"><colgroup>
+		<col style="width:118px">
+		<col style="width:63px">
+		<col style="width:64px">
+		<col style="width:97px">
+		<col style="width:109px">
+		<col style="width:104px">
+		<col style="width:83px">
+		</colgroup><tbody><tr><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;" colspan="2" rowspan="1"><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;"><span>
+		</span><label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">སྒེར་གྱི་ལོ་རྒྱུས།</label></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;" rowspan="1"><p style=" font-family: 宋体; font-size: 12pt;"><span>
+		</span><label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">༤</label></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;" rowspan="1"><p style=" font-family: 宋体; font-size: 12pt;"></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;" colspan="2" rowspan="1"><p style=" font-family: 宋体; font-size: 12pt;"><span>
+		</span><label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">ནད་ངོས་འཛིན།</label></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;" rowspan="1"><p style=" font-family: 宋体; font-size: 12pt;"><span>
+		</span><label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">༢</label></p></td></tr>
+		<tr><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;" colspan="2">
+	<p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">གཉེན་སྒྲིག་གི་ལོ་རྒྱུས།</label></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">༢</label></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;"></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;" colspan="2">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">བརྟག་བཅོས་འཆར་གཞི།</label></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">༡</label></p></td></tr>
+		<tr><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;" colspan="2">
+	<p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">ཁྱིམ་རྒྱུད་ཀྱི་ལོ་རྒྱུས།</label></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">༢</label></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;"></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;" colspan="2">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">རྒྱུན་ལྡན་ཟིན་ཐོ།</label></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">༤</label></p></td></tr>
+		<tr><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;" colspan="2">
+	<p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">བལྟ་རེག་གིས་བརྟག།</label></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">༥</label></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;"></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;" colspan="2">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">ཁྱད་པར་ཅན་གྱི་ཟིན་ཐོ།</label></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">༣</label></p></td></tr>
+		<tr><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">ཁྱད་པར་</label>
+	</p><p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">བལྟ་རེག</label></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">ལྕེ།</label></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">༡</label></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;"></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;" colspan="2">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">ནད་གཞི་གྲོས་བསྡུར་ཟིན་ཐོ།</label></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">༣</label></p></td></tr>
+		<tr><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=""></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">ཆུ།</label></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">༢</label></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;"></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;" colspan="2">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">སྤྱི་བསྡོམས་ཟིན་ཐོ།</label></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">༤</label></p></td></tr>
+		<tr><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=""></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">རྩ་རྒྱུད།</label></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">༡</label></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;"></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">གོང་རིམ་སྨན་པའི་འོས་འགན།</label></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">༡</label></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">༥</label></p></td></tr>
+		<tr><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;" colspan="2">
+	<p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">གཞོགས དེགསབརྟགདཔྱད།</label></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">༡</label></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;"></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=""></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">༢</label></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">༩</label></p></td></tr>
+		<tr><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;" colspan="2">
+	<p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">དཔྱད་ཕྲེང་བསལ་ཐབས།</label></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">༡༠</label></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;"></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;" colspan="2">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">གཞན་དག</label></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">༦</label></p></td></tr>
+		<tr><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;" colspan="2">
+	<p style=" font-family: 宋体; font-size: 12pt; text-align: Justify;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">ནད་ངོས་འཛིན།</label></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">༤</label></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;"></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;" colspan="2">
+	<p style=" font-family: 宋体; font-size: 12pt;">
+		<label style=" font-family: Microsoft Himalaya; font-size: 18pt; font-weight: bold;">ནད་ཐོ་ཞིབ་གཤེར་མཁན།</label></p></td><td style=" font-family: 宋体; font-size: 12pt;padding-left:5.5pt;padding-right:5.5pt;">
+	<p style=" font-family: 宋体; font-size: 12pt;"></p></td></tr>
+		</tbody></table></p><p>
+</p></div><div id="_footer" style="outline:none; position:relative;min-height:0.65cm;padding-left:2.01cm;padding-right:2.41cm;padding-bottom:0.65cm;" class="" contenteditable="false">
+	<p style="">
+</p></div>
+</div><div class="pagebreaker"></div>
+<div></div></div></body></html><script>document.querySelectorAll("input[type]").forEach((o)=> {o.addEventListener("click", (e)=>{e.preventDefault()})})</script>
