@@ -14,7 +14,9 @@ export default defineConfig({
       hook: 'closeBundle',
       targets: [
         {src: 'src/components/Editor.vue', dest: 'public/code'},
-        {src: 'src/pages/*', dest: 'public/code'}
+        {src: 'src/components/Editor.vue', dest: 'dist/code'},
+        {src: 'src/pages/*', dest: 'public/code'},
+        {src: 'src/pages/*', dest: 'dist/code'}
       ]
     })
   ],
