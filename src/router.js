@@ -8,6 +8,7 @@ import AppendDoc from './pages/AppendDoc.vue'
 import Signature from './pages/Signature.vue'
 import DocMode from './pages/DocMode.vue'
 import SaveDoc from './pages/SaveDoc.vue'
+import Calculate from './pages/Calculate.vue'
 import DataTable from './pages/DataTable.vue'
 import VitalSigns from './pages/VitalSigns.vue'
 import EChart from './pages/EChart.vue'
@@ -26,6 +27,7 @@ const routes = [
     { path: '/vitalSigns', component: VitalSigns },
     { path: '/echart', component: EChart },
     { path: '/lang', component: DocLang },
+    { path: '/calculate', component: Calculate },
 ]
 
 const router = VueRouter.createRouter({

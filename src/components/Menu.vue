@@ -27,7 +27,7 @@
         </el-menu-item>
         <el-menu-item index="append">
           <el-icon><document /></el-icon>
-          <span>病程合并</span>
+          <span>合并文档</span>
         </el-menu-item>
         <el-menu-item index="vitalSigns">
           <el-icon><document /></el-icon>
@@ -36,6 +36,10 @@
         <el-menu-item index="sign">
           <el-icon><document /></el-icon>
           <span>电子签名</span>
+        </el-menu-item>
+        <el-menu-item index="calculate">
+          <el-icon><document /></el-icon>
+          <span>计算式</span>
         </el-menu-item>
         <el-menu-item index="echart">
           <el-icon><document /></el-icon>
