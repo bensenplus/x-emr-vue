@@ -53,7 +53,7 @@
   </template>
   
   <script setup>
-  import router from '../router'
+  import router from './router'
   import {Document, Menu as IconMenu, HomeFilled} from '@element-plus/icons-vue'
   
   const handleSelect = (key) => {

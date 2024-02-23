@@ -44,7 +44,7 @@
 </style>
 
 <script setup>
-  import Menu from './components/Menu.vue';
+  import Menu from './Menu.vue';
   import { Sunny, Moon, Fold} from '@element-plus/icons-vue'
   import { ref } from 'vue'
 
