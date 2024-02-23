@@ -1,38 +1,26 @@
 import * as VueRouter from 'vue-router'
-import Home from './pages/Home.vue'
-import Command from './pages/Command.vue'
-import DocData from './pages/BindData.vue'
-import MutilDoc from './pages/MutilDoc.vue'
-import DocLang from './pages/DocLang.vue'
-import AppendDoc from './pages/AppendDoc.vue'
-import Signature from './pages/Signature.vue'
-import DocMode from './pages/DocMode.vue'
-import SaveDoc from './pages/SaveDoc.vue'
-import Calculate from './pages/Calculate.vue'
-import DataTable from './pages/DataTable.vue'
-import VitalSigns from './pages/VitalSigns.vue'
-import EChart from './pages/EChart.vue'
+import Home from '@/pages/Home.vue'
 
-const routes = [
-    { path: '/', component: Home },
-    { path: '/home', component: Home },
-    { path: '/cmd', component: Command },
-    { path: '/data', component: DocData },
-    { path: '/mutil', component: MutilDoc },
-    { path: '/append', component: AppendDoc },
-    { path: '/sign', component: Signature },
-    { path: '/save', component: SaveDoc },
-    { path: '/mode', component: DocMode },
-    { path: '/dataTable', component: DataTable },
-    { path: '/vitalSigns', component: VitalSigns },
-    { path: '/echart', component: EChart },
-    { path: '/lang', component: DocLang },
-    { path: '/calculate', component: Calculate },
-]
+function generateRoutes() {
+    const pages = import.meta.globEager('@/pages/*.vue')
+    let routers = [
+        //默认路由
+        { path: '/', component: Home }
+    ]
+
+    //自动发现路由
+    Object.keys(pages).forEach(path => {
+        routers.push({
+            path: path.replace('/src/pages', '').replace('.vue', ''),
+            component: pages[path].default
+        })
+    })
+    return routers
+}
 
 const router = VueRouter.createRouter({
     history: VueRouter.createWebHashHistory(),
-    routes,
+    routes: generateRoutes()
 })
 
 export default router
