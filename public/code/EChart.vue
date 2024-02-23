@@ -12,8 +12,6 @@
 
 
 <script setup>
-import Editor from '@/components/Editor.vue'
-import Source from '@/components/Source.vue'
 import * as echarts from 'echarts';
 
 let editor = null

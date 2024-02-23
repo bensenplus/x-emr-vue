@@ -15,8 +15,6 @@
 
 
 <script setup>
-import Editor from '@/components/Editor.vue';
-import Source from '@/components/Source.vue';
 
     //初始化前
     const onAfterInit1 = function(e) {

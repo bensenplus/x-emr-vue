@@ -19,12 +19,10 @@
 </template>
     
 <script>
-    import Editor from '@/components/Editor.vue'
-    import Source from '@/components/Source.vue'
+
     import axios from 'axios'
 
     export default{
-        components: {Editor,Source},
         data(){
             return{
                 editor:null,

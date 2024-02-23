@@ -14,8 +14,6 @@
 </template>
     
 <script setup>
-    import Editor from '@/components/Editor.vue'
-    import Source from '@/components/Source.vue'
     import { ref } from 'vue'
     const activeName = ref('design')
 

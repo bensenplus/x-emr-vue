@@ -13,8 +13,6 @@
 
 
 <script setup>
-import Editor from '@/components/Editor.vue'
-import Source from '@/components/Source.vue'
 import axios from 'axios'//引入axios
 
 let editor = null

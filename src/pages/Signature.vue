@@ -17,8 +17,6 @@
     
     
     <script setup>
-    import Editor from '@/components/Editor.vue'
-    import Source from '@/components/Source.vue'
     
     let editor = null
     //文档加载完成
