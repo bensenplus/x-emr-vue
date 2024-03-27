@@ -12,7 +12,7 @@ X-EMR是 一款简洁至上的HTML5电子病历编辑器，采用HTML5标准开�
 编辑器使用说明参考 [www.x-emr.cn](https://www.x-emr.cn)
 
 ### NPM镜像
-不使用镜像的，下载会很慢，或下载不了依赖项目
+使用国内镜像，可以加快下载速度
 ```sh
 npm config set registry http://registry.npmmirror.com 
 ```
